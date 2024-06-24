@@ -8,22 +8,32 @@
 //Clock calculation rules:
 /*
 CLK_VCO = CLK_IN * M / D 
-	M£ºCLKFBOUT_MULT_F
-	D£ºDIVCLK_DIVIDE
+	M??CLKFBOUT_MULT_F
+	D??DIVCLK_DIVIDE
 	
 CLK_OUT = CLK_IN * M / (D * O)
-	O£ºCLKOUT_DIVIDE  £¨out0 Îª CLKOUT0_DIVIDE_F£©
+	O??CLKOUT_DIVIDE  ??out0 ? CLKOUT0_DIVIDE_F??
 */
+/* Example
 
+get_clk_PLL#(
+    .CLK_DEVICE ( "MMCM"    )      // Mode selection (MMCM or PLL)
+)u_get_clk_PLL( 
+    .reset    ( reset       ),     // clock reset
+    .clk_in   ( clk_in      ),     // input clock
+    .clk_out0 ( clk_out0    ),     // output clock0 
+    .clk_out1 ( clk_out1    ),     // output clock1
+    .locked   ( locked      )      // output locked   
+);
+*/
 module get_clk_PLL #(
     parameter CLK_DEVICE = "MMCM"
 ) (
-    input reset,  // clock reset
-    input clk_in, // input clock from lvds
-    output pclk, // output clock data clk
-    output lvds_clk, // lvds clock
-    //output clk_div2, // parallel clock
-    output locked
+    input   reset,          // clock reset
+    input   clk_in,         // input clock
+    output  clk_out0,       // output clock0 
+    output  clk_out1,       // output clock1
+    output  locked          // output locked   
 );
 
 wire clkfb;
@@ -35,8 +45,8 @@ wire clkout4;
 wire clkout5;
 wire clkout6;
 
-BUFG clkout0_bufg_i (.I(clkout0),    .O(lvds_clk));    // The obtained clock must be added with BUFG
-BUFG clkout1_bufg_i (.I(clkout1),    .O(pclk));
+BUFG clkout0_bufg_i (.I(clkout0),    .O(clk_out0));    // The obtained clock must be added with BUFG
+BUFG clkout1_bufg_i (.I(clkout1),    .O(clk_out1));
 //BUFG clkout2_bufg_i (.I(clkout2),    .O(clk_div2));
 
 generate
@@ -46,13 +56,13 @@ MMCME2_ADV #(
     .BANDWIDTH            ("OPTIMIZED"),
     .COMPENSATION         ("ZHOLD"),
     .DIVCLK_DIVIDE        (1),
-    .CLKFBOUT_MULT_F      (6.000),      // VCO= 189M * 6 = 1134MHz  (Multiplied by a value, because it needs to be multiplied to a value between 800-1500M and then divided to obtain the desired frequency)
+    .CLKFBOUT_MULT_F      (20.000),      // VCO= 50M * 20 = 1000MHz  (Multiplied by a value, because it needs to be multiplied to a value between 800-1500M and then divided to obtain the desired frequency)
     .CLKFBOUT_PHASE       (45.0),
     .CLKFBOUT_USE_FINE_PS ("FALSE"),
-    .CLKOUT0_DIVIDE_F     (6),        // 1134/6=189MHz      // The coefficient divided by is used to obtain the clock
-    .CLKOUT1_DIVIDE       (42),          // 1134/42=27Mhz
+    .CLKOUT0_DIVIDE_F     (10),        // 1000/10=100MHz      // The coefficient divided by is used to obtain the clock
+    .CLKOUT1_DIVIDE       (5),          // 1000/5=200Mhz
     //.CLKOUT2_DIVIDE       (20),          
-    .CLKIN1_PERIOD        (5.291005)       // 189MHz    This is the input clock cycle
+    .CLKIN1_PERIOD        (20)       // 50MHz    This is the input clock cycle
 )
 mmcm_i
 (
