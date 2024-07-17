@@ -29,19 +29,11 @@ get_clk_PLL#(
 module get_clk_PLL #(
     parameter CLK_DEVICE = "MMCM"
 ) (
-<<<<<<< HEAD
-    input reset,  // clock reset
-    input clk_in, // input clock from lvds
-    output pclk, // output clock data clk
-    output lvds_clk, // lvds clock
-    output locked
-=======
     input   reset,          // clock reset
     input   clk_in,         // input clock
     output  clk_out0,       // output clock0 
     output  clk_out1,       // output clock1
     output  locked          // output locked   
->>>>>>> 68db99972d86aba8b2da2cef412d3bf14a80d2f9
 );
 
 wire clkfb;
