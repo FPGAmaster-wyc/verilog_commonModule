@@ -22,7 +22,6 @@ module get_clk_PLL #(
     input clk_in, // input clock from lvds
     output pclk, // output clock data clk
     output lvds_clk, // lvds clock
-    //output clk_div2, // parallel clock
     output locked
 );
 
