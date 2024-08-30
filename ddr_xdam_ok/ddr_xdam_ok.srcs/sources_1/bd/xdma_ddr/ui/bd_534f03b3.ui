@@ -1,0 +1,47 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.57007",
+   "Default View_TopLeft":"-149,-63",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port pcie -pg 1 -lvl 5 -x 1340 -y 610 -defaultsOSRD
+preplace port pcie_clk -pg 1 -lvl 0 -x 0 -y 650 -defaultsOSRD
+preplace port DDR3 -pg 1 -lvl 5 -x 1340 -y 200 -defaultsOSRD
+preplace port PL_DDR3_CLK -pg 1 -lvl 0 -x 0 -y 230 -defaultsOSRD
+preplace port pcie_rst_n -pg 1 -lvl 0 -x 0 -y 720 -defaultsOSRD
+preplace inst rst_mig_7series_0_100M -pg 1 -lvl 2 -x 510 -y 130 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 3 -x 870 -y 530 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 3 -x 870 -y 360 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 4 -x 1170 -y 530 -defaultsOSRD
+preplace inst mig_7series_0 -pg 1 -lvl 4 -x 1170 -y 240 -defaultsOSRD
+preplace inst util_ds_buf -pg 1 -lvl 1 -x 170 -y 650 -defaultsOSRD
+preplace inst xdma_0 -pg 1 -lvl 2 -x 510 -y 650 -defaultsOSRD
+preplace netloc util_ds_buf_IBUF_OUT 1 1 1 NJ 640
+preplace netloc ACLK_1 1 2 1 710 370n
+preplace netloc mig_7series_0_ui_clk 1 1 4 330 260 690 270 1010J 340 1310
+preplace netloc mig_7series_0_mmcm_locked 1 1 4 320 20 NJ 20 NJ 20 1320
+preplace netloc mig_7series_0_ui_clk_sync_rst 1 1 4 340 30 NJ 30 NJ 30 1310
+preplace netloc rst_mig_7series_0_100M_peripheral_aresetn 1 2 2 700 260 1030J
+preplace netloc xdma_0_axi_aresetn 1 2 1 730 550n
+preplace netloc pcie_reset_1 1 0 4 NJ 720 320 250 NJ 250 N
+preplace netloc diff_clock_rtl_0_1 1 0 1 NJ 650
+preplace netloc SYS_CLK_0_1 1 0 4 NJ 230 NJ 230 NJ 230 NJ
+preplace netloc axi_bram_ctrl_0_BRAM_PORTB 1 3 1 N 540
+preplace netloc mig_7series_0_DDR3 1 4 1 NJ 200
+preplace netloc axi_smc_M00_AXI 1 3 1 1020 210n
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 3 1 N 520
+preplace netloc xdma_0_pcie_mgt 1 2 3 NJ 610 NJ 610 NJ
+preplace netloc xdma_0_M_AXI 1 2 1 680 330n
+preplace netloc xdma_0_M_AXI_LITE 1 2 1 720 510n
+levelinfo -pg 1 0 170 510 870 1170 1340
+pagesize -pg 1 -db -bbox -sgen -150 0 1430 790
+"
+}
+{
+   "da_axi4_cnt":"1",
+   "da_board_cnt":"12",
+   "da_clkrst_cnt":"4",
+   "da_ps7_cnt":"2",
+   "da_xdma_cnt":"2"
+}

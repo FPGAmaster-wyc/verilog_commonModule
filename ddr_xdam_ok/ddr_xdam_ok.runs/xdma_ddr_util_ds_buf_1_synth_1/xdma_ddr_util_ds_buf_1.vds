@@ -1,0 +1,354 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Apr 26 10:05:51 2024
+# Process ID: 15444
+# Current directory: E:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.runs/xdma_ddr_util_ds_buf_1_synth_1
+# Command line: vivado.exe -log xdma_ddr_util_ds_buf_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source xdma_ddr_util_ds_buf_1.tcl
+# Log file: E:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.runs/xdma_ddr_util_ds_buf_1_synth_1/xdma_ddr_util_ds_buf_1.vds
+# Journal file: E:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.runs/xdma_ddr_util_ds_buf_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source xdma_ddr_util_ds_buf_1.tcl -notrace
+Command: synth_design -top xdma_ddr_util_ds_buf_1 -part xc7z100ffg900-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z100'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z100'
+INFO: [Device 21-403] Loading part xc7z100ffg900-2
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1520 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1088.324 ; gain = 234.367
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'xdma_ddr_util_ds_buf_1' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_util_ds_buf_1/synth/xdma_ddr_util_ds_buf_1.vhd:65]
+	Parameter C_BUF_TYPE bound to: ibufdsgte2 - type: string 
+	Parameter C_SIZE bound to: 1 - type: integer 
+	Parameter C_BUFGCE_DIV bound to: 1 - type: integer 
+	Parameter C_BUFG_GT_SYNC bound to: 0 - type: integer 
+	Parameter C_SIM_DEVICE bound to: VERSAL_AI_CORE_ES1 - type: string 
+INFO: [Synth 8-3491] module 'util_ds_buf' declared at 'e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_util_ds_buf_1/util_ds_buf.vhd:72' bound to instance 'U0' of component 'util_ds_buf' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_util_ds_buf_1/synth/xdma_ddr_util_ds_buf_1.vhd:127]
+INFO: [Synth 8-638] synthesizing module 'util_ds_buf' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_util_ds_buf_1/util_ds_buf.vhd:134]
+	Parameter C_BUF_TYPE bound to: ibufdsgte2 - type: string 
+	Parameter C_SIZE bound to: 1 - type: integer 
+	Parameter C_BUFGCE_DIV bound to: 1 - type: integer 
+	Parameter C_BUFG_GT_SYNC bound to: 0 - type: integer 
+	Parameter C_SIM_DEVICE bound to: VERSAL_AI_CORE_ES1 - type: string 
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'IBUF_P_I' to cell 'IBUF' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_util_ds_buf_1/util_ds_buf.vhd:178]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'IBUF_N_I' to cell 'IBUF' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_util_ds_buf_1/util_ds_buf.vhd:180]
+	Parameter CLKCM_CFG bound to: 1 - type: bool 
+	Parameter CLKRCV_TRST bound to: 1 - type: bool 
+	Parameter CLKSWING_CFG bound to: 2'b11 
+INFO: [Synth 8-113] binding component instance 'IBUFDS_GTE2_I' to cell 'IBUFDS_GTE2' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_util_ds_buf_1/util_ds_buf.vhd:182]
+WARNING: [Synth 8-3848] Net BUFG_O in module/entity util_ds_buf does not have driver. [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_util_ds_buf_1/util_ds_buf.vhd:105]
+WARNING: [Synth 8-3848] Net BUFGCE_O in module/entity util_ds_buf does not have driver. [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_util_ds_buf_1/util_ds_buf.vhd:110]
+WARNING: [Synth 8-3848] Net BUFH_O in module/entity util_ds_buf does not have driver. [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_util_ds_buf_1/util_ds_buf.vhd:115]
+WARNING: [Synth 8-3848] Net BUFHCE_O in module/entity util_ds_buf does not have driver. [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_util_ds_buf_1/util_ds_buf.vhd:120]
+WARNING: [Synth 8-3848] Net BUFG_GT_O in module/entity util_ds_buf does not have driver. [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_util_ds_buf_1/util_ds_buf.vhd:129]
+INFO: [Synth 8-256] done synthesizing module 'util_ds_buf' (1#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_util_ds_buf_1/util_ds_buf.vhd:134]
+INFO: [Synth 8-256] done synthesizing module 'xdma_ddr_util_ds_buf_1' (2#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_util_ds_buf_1/synth/xdma_ddr_util_ds_buf_1.vhd:65]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_O[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFGCE_O[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFH_O[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFHCE_O[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_O[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port IOBUF_IO_IO[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port IBUF_DS_CEB[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port OBUF_IN[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port IOBUF_IO_T[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port IOBUF_IO_I[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_I[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFGCE_I[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFGCE_CE[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFGCE_CLR[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFH_I[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFHCE_I[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFHCE_CE[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_I[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_CE[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_CEMASK[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_CLR[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_CLRMASK[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_DIV[2]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_DIV[1]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_DIV[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1166.047 ; gain = 312.090
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1166.047 ; gain = 312.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1166.047 ; gain = 312.090
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1166.047 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_util_ds_buf_1/xdma_ddr_util_ds_buf_1_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_util_ds_buf_1/xdma_ddr_util_ds_buf_1_ooc.xdc] for cell 'U0'
+Parsing XDC File [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_util_ds_buf_1/xdma_ddr_util_ds_buf_1_board.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_util_ds_buf_1/xdma_ddr_util_ds_buf_1_board.xdc] for cell 'U0'
+Parsing XDC File [E:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.runs/xdma_ddr_util_ds_buf_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.runs/xdma_ddr_util_ds_buf_1_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1186.922 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Timing 38-2] Deriving generated clocks
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1198.160 ; gain = 11.238
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1198.160 ; gain = 344.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z100ffg900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1198.160 ; gain = 344.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  E:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.runs/xdma_ddr_util_ds_buf_1_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1198.160 ; gain = 344.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1198.160 ; gain = 344.203
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2020 (col length:140)
+BRAMs: 1510 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_O[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFGCE_O[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFH_O[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFHCE_O[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_O[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port IOBUF_IO_IO[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port IBUF_DS_CEB[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port OBUF_IN[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port IOBUF_IO_T[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port IOBUF_IO_I[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_I[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFGCE_I[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFGCE_CE[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFGCE_CLR[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFH_I[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFHCE_I[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFHCE_CE[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_I[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_CE[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_CEMASK[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_CLR[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_CLRMASK[0]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_DIV[2]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_DIV[1]
+WARNING: [Synth 8-3331] design util_ds_buf has unconnected port BUFG_GT_DIV[0]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1198.160 ; gain = 344.203
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1215.695 ; gain = 361.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1215.695 ; gain = 361.738
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1225.270 ; gain = 371.312
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1240.074 ; gain = 386.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1240.074 ; gain = 386.117
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1240.074 ; gain = 386.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1240.074 ; gain = 386.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1240.074 ; gain = 386.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1240.074 ; gain = 386.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |IBUFDS_GTE2 |     1|
+|2     |IBUF        |     2|
++------+------------+------+
+
+Report Instance Areas: 
++------+---------+------------+------+
+|      |Instance |Module      |Cells |
++------+---------+------------+------+
+|1     |top      |            |     3|
+|2     |  U0     |util_ds_buf |     3|
++------+---------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1240.074 ; gain = 386.117
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 25 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1240.074 ; gain = 354.004
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1240.074 ; gain = 386.117
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1240.074 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1266.293 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+18 Infos, 55 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 1266.293 ; gain = 796.891
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1266.293 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.runs/xdma_ddr_util_ds_buf_1_synth_1/xdma_ddr_util_ds_buf_1.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP xdma_ddr_util_ds_buf_1, cache-ID = 6138bf1c35d8fd34
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1266.293 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.runs/xdma_ddr_util_ds_buf_1_synth_1/xdma_ddr_util_ds_buf_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file xdma_ddr_util_ds_buf_1_utilization_synth.rpt -pb xdma_ddr_util_ds_buf_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 26 10:06:46 2024...

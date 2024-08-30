@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Apr 26 10:05:51 2024
+# Process ID: 15000
+# Current directory: E:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.runs/xdma_ddr_xdma_0_0_synth_1
+# Command line: vivado.exe -log xdma_ddr_xdma_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source xdma_ddr_xdma_0_0.tcl
+# Log file: E:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.runs/xdma_ddr_xdma_0_0_synth_1/xdma_ddr_xdma_0_0.vds
+# Journal file: E:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.runs/xdma_ddr_xdma_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source xdma_ddr_xdma_0_0.tcl -notrace

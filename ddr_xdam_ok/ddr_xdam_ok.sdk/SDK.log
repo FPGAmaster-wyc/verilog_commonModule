@@ -1,0 +1,9 @@
+10:56:19 INFO  : Registering command handlers for SDK TCF services
+10:56:20 INFO  : Launching XSCT server: xsct.bat -interactive D:\my_work\QT7013\ddr_xdma\ddr_xdma.sdk\temp_xsdb_launch_script.tcl
+10:56:21 INFO  : XSCT server has started successfully.
+10:56:21 INFO  : Successfully done setting XSCT server connection channel  
+10:56:21 INFO  : Successfully done setting SDK workspace  
+10:56:21 INFO  : Processing command line option -hwspec D:/my_work/QT7013/ddr_xdma/ddr_xdma.sdk/xdma_ddr_wrapper.hdf.
+11:03:08 INFO  : Invoking Bootgen: bootgen -image fsbl.bif -arch zynq -o D:\my_work\QT7013\ddr_xdma\ddr_xdma.sdk\fsbl\bootimage\BOOT.bin
+11:03:08 INFO  : Creating new bif file D:\my_work\QT7013\ddr_xdma\ddr_xdma.sdk\fsbl\bootimage\fsbl.bif
+11:03:10 INFO  : Bootgen command execution is done.

@@ -1,0 +1,1877 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Apr 26 10:05:51 2024
+# Process ID: 15884
+# Current directory: E:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.runs/xdma_ddr_axi_smc_0_synth_1
+# Command line: vivado.exe -log xdma_ddr_axi_smc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source xdma_ddr_axi_smc_0.tcl
+# Log file: E:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.runs/xdma_ddr_axi_smc_0_synth_1/xdma_ddr_axi_smc_0.vds
+# Journal file: E:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.runs/xdma_ddr_axi_smc_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source xdma_ddr_axi_smc_0.tcl -notrace
+Command: synth_design -top xdma_ddr_axi_smc_0 -part xc7z100ffg900-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z100'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z100'
+INFO: [Device 21-403] Loading part xc7z100ffg900-2
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7536 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1101.566 ; gain = 234.355
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'xdma_ddr_axi_smc_0' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/synth/xdma_ddr_axi_smc_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'bd_eb0a' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/synth/bd_eb0a.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_129N1VC' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/synth/bd_eb0a.v:788]
+INFO: [Synth 8-6157] synthesizing module 'bd_eb0a_one_0' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_0/synth/bd_eb0a_one_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/34f7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 1 - type: integer 
+	Parameter CONST_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant' (1#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/34f7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'bd_eb0a_one_0' (2#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_0/synth/bd_eb0a_one_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'bd_eb0a_psr0_0' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_1/synth/bd_eb0a_psr0_0.vhd:74]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_1/synth/bd_eb0a_psr0_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+	Parameter INIT bound to: 1'b1 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
+	Parameter INIT bound to: 1'b1 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
+	Parameter INIT bound to: 1'b1 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'lpf' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+INFO: [Synth 8-3491] module 'SRL16' declared at 'D:/wyc/vivado2019.2/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77949' bound to instance 'POR_SRL_I' of component 'SRL16' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
+INFO: [Synth 8-6157] synthesizing module 'SRL16' [D:/wyc/vivado2019.2/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77949]
+	Parameter INIT bound to: 16'b0000000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (3#1) [D:/wyc/vivado2019.2/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77949]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter C_CDC_TYPE bound to: 1 - type: integer 
+	Parameter C_RESET_STATE bound to: 0 - type: integer 
+	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
+	Parameter C_FLOP_INPUT bound to: 0 - type: integer 
+	Parameter C_VECTOR_WIDTH bound to: 2 - type: integer 
+	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (4#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (5#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+	Parameter C_SIZE bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (6#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (7#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (8#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'bd_eb0a_psr0_0' (9#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_1/synth/bd_eb0a_psr0_0.vhd:74]
+WARNING: [Synth 8-7023] instance 'psr0' of module 'bd_eb0a_psr0_0' has 10 connections declared, but only 6 given [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/synth/bd_eb0a.v:829]
+INFO: [Synth 8-638] synthesizing module 'bd_eb0a_psr_aclk_0' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_2/synth/bd_eb0a_psr_aclk_0.vhd:74]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_2/synth/bd_eb0a_psr_aclk_0.vhd:129]
+INFO: [Synth 8-256] done synthesizing module 'bd_eb0a_psr_aclk_0' (10#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_2/synth/bd_eb0a_psr_aclk_0.vhd:74]
+WARNING: [Synth 8-7023] instance 'psr_aclk' of module 'bd_eb0a_psr_aclk_0' has 10 connections declared, but only 6 given [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/synth/bd_eb0a.v:836]
+INFO: [Synth 8-638] synthesizing module 'bd_eb0a_psr_aclk1_0' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_3/synth/bd_eb0a_psr_aclk1_0.vhd:74]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_3/synth/bd_eb0a_psr_aclk1_0.vhd:129]
+INFO: [Synth 8-256] done synthesizing module 'bd_eb0a_psr_aclk1_0' (11#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_3/synth/bd_eb0a_psr_aclk1_0.vhd:74]
+WARNING: [Synth 8-7023] instance 'psr_aclk1' of module 'bd_eb0a_psr_aclk1_0' has 10 connections declared, but only 6 given [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/synth/bd_eb0a.v:843]
+WARNING: [Synth 8-3848] Net aresetn_out in module/entity clk_map_imp_129N1VC does not have driver. [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/synth/bd_eb0a.v:806]
+INFO: [Synth 8-6155] done synthesizing module 'clk_map_imp_129N1VC' (12#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/synth/bd_eb0a.v:788]
+INFO: [Synth 8-6157] synthesizing module 'm00_exit_pipeline_imp_VFDZVN' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/synth/bd_eb0a.v:852]
+INFO: [Synth 8-6157] synthesizing module 'bd_eb0a_m00e_0' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_14/synth/bd_eb0a_m00e_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_eb0a_m00e_0' (21#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_14/synth/bd_eb0a_m00e_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'm00_exit_pipeline_imp_VFDZVN' (22#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/synth/bd_eb0a.v:852]
+INFO: [Synth 8-6157] synthesizing module 'bd_eb0a_m00s2a_0' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_13/synth/bd_eb0a_m00s2a_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_eb0a_m00s2a_0' (24#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_13/synth/bd_eb0a_m00s2a_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_eb0a_s00a2s_0' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_7/synth/bd_eb0a_s00a2s_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_eb0a_s00a2s_0' (26#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_7/synth/bd_eb0a_s00a2s_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 's00_entry_pipeline_imp_1V9JQHS' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/synth/bd_eb0a.v:1223]
+INFO: [Synth 8-6157] synthesizing module 'bd_eb0a_s00mmu_0' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_4/synth/bd_eb0a_s00mmu_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_eb0a_s00mmu_0' (29#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_4/synth/bd_eb0a_s00mmu_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_eb0a_s00sic_0' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_6/synth/bd_eb0a_s00sic_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_eb0a_s00sic_0' (32#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_6/synth/bd_eb0a_s00sic_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_eb0a_s00tr_0' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_5/synth/bd_eb0a_s00tr_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_eb0a_s00tr_0' (35#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_5/synth/bd_eb0a_s00tr_0.sv:58]
+WARNING: [Synth 8-7023] instance 's00_transaction_regulator' of module 'bd_eb0a_s00tr_0' has 86 connections declared, but only 84 given [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/synth/bd_eb0a.v:1779]
+INFO: [Synth 8-6155] done synthesizing module 's00_entry_pipeline_imp_1V9JQHS' (36#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/synth/bd_eb0a.v:1223]
+INFO: [Synth 8-6157] synthesizing module 's00_nodes_imp_1SBPAM2' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/synth/bd_eb0a.v:1866]
+INFO: [Synth 8-6157] synthesizing module 'bd_eb0a_sarn_0' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_8/synth/bd_eb0a_sarn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram' [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8322]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+	Parameter MEMORY_TYPE bound to: 1 - type: integer 
+	Parameter MEMORY_SIZE bound to: 6016 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: 1 - type: integer 
+	Parameter CLOCKING_MODE bound to: 1 - type: integer 
+	Parameter ECC_MODE bound to: 0 - type: integer 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 1 - type: integer 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 188 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 188 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 188 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 5 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 2 - type: integer 
+	Parameter WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 188 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 188 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 188 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 5 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: 1 - type: integer 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: distributed - type: string 
+	Parameter P_MIN_WIDTH_DATA_A bound to: 188 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_B bound to: 188 - type: integer 
+	Parameter P_MIN_WIDTH_DATA bound to: 188 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_ECC bound to: 188 - type: integer 
+	Parameter P_MAX_DEPTH_DATA bound to: 32 - type: integer 
+	Parameter P_ECC_MODE bound to: no_ecc - type: string 
+	Parameter P_MEMORY_OPT bound to: yes - type: string 
+	Parameter P_WIDTH_COL_WRITE_A bound to: 188 - type: integer 
+	Parameter P_WIDTH_COL_WRITE_B bound to: 188 - type: integer 
+	Parameter P_NUM_COLS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_COLS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_B bound to: 1 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_A bound to: 5 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_B bound to: 5 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_A bound to: 5 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_B bound to: 5 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_B bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_B bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_A bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_B bound to: 0 - type: integer 
+	Parameter P_SDP_WRITE_MODE bound to: yes - type: string 
+	Parameter rsta_loop_iter bound to: 188 - type: integer 
+	Parameter rstb_loop_iter bound to: 188 - type: integer 
+	Parameter NUM_CHAR_LOC bound to: 0 - type: integer 
+	Parameter MAX_NUM_CHAR bound to: 0 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 188 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (41#1) [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram' (42#1) [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8322]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:358]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (44#1) [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'bd_eb0a_sarn_0' (52#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_8/synth/bd_eb0a_sarn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_eb0a_sawn_0' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_10/synth/bd_eb0a_sawn_0.sv:58]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'bd_eb0a_sawn_0' (53#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_10/synth/bd_eb0a_sawn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_eb0a_sbn_0' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_12/synth/bd_eb0a_sbn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized0' [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8322]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+	Parameter MEMORY_TYPE bound to: 1 - type: integer 
+	Parameter MEMORY_SIZE bound to: 736 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: 1 - type: integer 
+	Parameter CLOCKING_MODE bound to: 1 - type: integer 
+	Parameter ECC_MODE bound to: 0 - type: integer 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 1 - type: integer 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 23 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 23 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 23 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 5 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 2 - type: integer 
+	Parameter WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 23 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 23 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 23 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 5 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: 1 - type: integer 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: distributed - type: string 
+	Parameter P_MIN_WIDTH_DATA_A bound to: 23 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_B bound to: 23 - type: integer 
+	Parameter P_MIN_WIDTH_DATA bound to: 23 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_ECC bound to: 23 - type: integer 
+	Parameter P_MAX_DEPTH_DATA bound to: 32 - type: integer 
+	Parameter P_ECC_MODE bound to: no_ecc - type: string 
+	Parameter P_MEMORY_OPT bound to: yes - type: string 
+	Parameter P_WIDTH_COL_WRITE_A bound to: 23 - type: integer 
+	Parameter P_WIDTH_COL_WRITE_B bound to: 23 - type: integer 
+	Parameter P_NUM_COLS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_COLS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_B bound to: 1 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_A bound to: 5 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_B bound to: 5 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_A bound to: 5 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_B bound to: 5 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_B bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_B bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_A bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_B bound to: 0 - type: integer 
+	Parameter P_SDP_WRITE_MODE bound to: yes - type: string 
+	Parameter rsta_loop_iter bound to: 24 - type: integer 
+	Parameter rstb_loop_iter bound to: 24 - type: integer 
+	Parameter NUM_CHAR_LOC bound to: 0 - type: integer 
+	Parameter MAX_NUM_CHAR bound to: 0 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 23 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (53#1) [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized0' (53#1) [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8322]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'bd_eb0a_sbn_0' (54#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_12/synth/bd_eb0a_sbn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_eb0a_srn_0' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_9/synth/bd_eb0a_srn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized1' [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8322]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized1' [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+	Parameter MEMORY_TYPE bound to: 1 - type: integer 
+	Parameter MEMORY_SIZE bound to: 5280 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: 1 - type: integer 
+	Parameter CLOCKING_MODE bound to: 1 - type: integer 
+	Parameter ECC_MODE bound to: 0 - type: integer 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 1 - type: integer 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 165 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 165 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 165 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 5 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 2 - type: integer 
+	Parameter WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 165 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 165 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 165 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 5 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: 1 - type: integer 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: distributed - type: string 
+	Parameter P_MIN_WIDTH_DATA_A bound to: 165 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_B bound to: 165 - type: integer 
+	Parameter P_MIN_WIDTH_DATA bound to: 165 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_ECC bound to: 165 - type: integer 
+	Parameter P_MAX_DEPTH_DATA bound to: 32 - type: integer 
+	Parameter P_ECC_MODE bound to: no_ecc - type: string 
+	Parameter P_MEMORY_OPT bound to: yes - type: string 
+	Parameter P_WIDTH_COL_WRITE_A bound to: 165 - type: integer 
+	Parameter P_WIDTH_COL_WRITE_B bound to: 165 - type: integer 
+	Parameter P_NUM_COLS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_COLS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_B bound to: 1 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_A bound to: 5 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_B bound to: 5 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_A bound to: 5 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_B bound to: 5 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_B bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_B bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_A bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_B bound to: 0 - type: integer 
+	Parameter P_SDP_WRITE_MODE bound to: yes - type: string 
+	Parameter rsta_loop_iter bound to: 168 - type: integer 
+	Parameter rstb_loop_iter bound to: 168 - type: integer 
+	Parameter NUM_CHAR_LOC bound to: 0 - type: integer 
+	Parameter MAX_NUM_CHAR bound to: 0 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 165 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized1' (56#1) [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized1' (56#1) [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8322]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'bd_eb0a_srn_0' (57#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_9/synth/bd_eb0a_srn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_eb0a_swn_0' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_11/synth/bd_eb0a_swn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized2' [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8322]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized2' [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+	Parameter MEMORY_TYPE bound to: 1 - type: integer 
+	Parameter MEMORY_SIZE bound to: 5696 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: 1 - type: integer 
+	Parameter CLOCKING_MODE bound to: 1 - type: integer 
+	Parameter ECC_MODE bound to: 0 - type: integer 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 1 - type: integer 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 178 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 178 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 178 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 5 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 2 - type: integer 
+	Parameter WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 178 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 178 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 178 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 5 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: 1 - type: integer 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: distributed - type: string 
+	Parameter P_MIN_WIDTH_DATA_A bound to: 178 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_B bound to: 178 - type: integer 
+	Parameter P_MIN_WIDTH_DATA bound to: 178 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_ECC bound to: 178 - type: integer 
+	Parameter P_MAX_DEPTH_DATA bound to: 32 - type: integer 
+	Parameter P_ECC_MODE bound to: no_ecc - type: string 
+	Parameter P_MEMORY_OPT bound to: yes - type: string 
+	Parameter P_WIDTH_COL_WRITE_A bound to: 178 - type: integer 
+	Parameter P_WIDTH_COL_WRITE_B bound to: 178 - type: integer 
+	Parameter P_NUM_COLS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_COLS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_B bound to: 1 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_A bound to: 5 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_B bound to: 5 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_A bound to: 5 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_B bound to: 5 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_B bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_B bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_A bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_B bound to: 0 - type: integer 
+	Parameter P_SDP_WRITE_MODE bound to: yes - type: string 
+	Parameter rsta_loop_iter bound to: 180 - type: integer 
+	Parameter rstb_loop_iter bound to: 180 - type: integer 
+	Parameter NUM_CHAR_LOC bound to: 0 - type: integer 
+	Parameter MAX_NUM_CHAR bound to: 0 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 178 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized2' (58#1) [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized2' (58#1) [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8322]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'bd_eb0a_swn_0' (59#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_11/synth/bd_eb0a_swn_0.sv:58]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 's00_nodes_imp_1SBPAM2' (60#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/synth/bd_eb0a.v:1866]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'bd_eb0a' (61#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/synth/bd_eb0a.v:10]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_optimization = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'xdma_ddr_axi_smc_0' (62#1) [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/synth/xdma_ddr_axi_smc_0.v:57]
+WARNING: [Synth 8-3331] design sc_util_v1_0_4_onehot_to_binary has unconnected port din[0]
+WARNING: [Synth 8-3331] design sc_util_v1_0_4_pipeline__parameterized0 has unconnected port aclk
+WARNING: [Synth 8-3331] design sc_util_v1_0_4_pipeline__parameterized0 has unconnected port aclken
+WARNING: [Synth 8-3331] design sc_util_v1_0_4_pipeline__parameterized0 has unconnected port areset
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port sleep
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port rsta
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port regcea
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port injectsbiterra
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port injectdbiterra
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port regceb
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port web[0]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[177]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[176]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[175]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[174]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[173]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[172]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[171]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[170]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[169]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[168]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[167]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[166]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[165]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[164]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[163]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[162]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[161]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[160]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[159]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[158]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[157]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[156]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[155]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[154]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[153]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[152]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[151]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[150]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[149]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[148]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[147]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[146]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[145]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[144]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[143]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[142]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[141]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[140]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[139]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[138]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[137]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[136]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[135]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[134]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[133]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[132]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[131]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[130]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[129]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[128]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[127]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[126]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[125]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[124]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[123]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[122]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[121]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[120]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[119]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[118]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[117]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[116]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[115]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[114]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[113]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[112]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[111]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[110]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[109]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[108]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[107]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[106]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[105]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[104]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[103]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[102]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[101]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[100]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[99]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[98]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[97]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[96]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[95]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[94]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[93]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[92]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[91]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[90]
+WARNING: [Synth 8-3331] design xpm_memory_base__parameterized2 has unconnected port dinb[89]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1261.379 ; gain = 394.168
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1261.379 ; gain = 394.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1261.379 ; gain = 394.168
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1292.484 ; gain = 6.371
+INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/ooc.xdc] for cell 'inst'
+Parsing XDC File [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_1/bd_eb0a_psr0_0_board.xdc] for cell 'inst/clk_map/psr0/U0'
+Finished Parsing XDC File [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_1/bd_eb0a_psr0_0_board.xdc] for cell 'inst/clk_map/psr0/U0'
+Parsing XDC File [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_1/bd_eb0a_psr0_0.xdc] for cell 'inst/clk_map/psr0/U0'
+Finished Parsing XDC File [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_1/bd_eb0a_psr0_0.xdc] for cell 'inst/clk_map/psr0/U0'
+Parsing XDC File [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_2/bd_eb0a_psr_aclk_0_board.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_2/bd_eb0a_psr_aclk_0_board.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Parsing XDC File [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_2/bd_eb0a_psr_aclk_0.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_2/bd_eb0a_psr_aclk_0.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Parsing XDC File [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_3/bd_eb0a_psr_aclk1_0_board.xdc] for cell 'inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_3/bd_eb0a_psr_aclk1_0_board.xdc] for cell 'inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_3/bd_eb0a_psr_aclk1_0.xdc] for cell 'inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ip/xdma_ddr_axi_smc_0/bd_0/ip/ip_3/bd_eb0a_psr_aclk1_0.xdc] for cell 'inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [E:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.runs/xdma_ddr_axi_smc_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.runs/xdma_ddr_axi_smc_0_synth_1/dont_touch.xdc]
+Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Finished Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Finished Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Finished Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Finished Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Finished Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Finished Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Finished Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Finished Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Finished Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addra_to_rd_clk'
+Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+Finished Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_async_clocks.inst_cdc_addrb_to_wr_clk'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/xdma_ddr_axi_smc_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/xdma_ddr_axi_smc_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/wyc/vivado2019.2/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/xdma_ddr_axi_smc_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/xdma_ddr_axi_smc_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1631.719 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 39 instances were transformed.
+  FDR => FDRE: 36 instances
+  SRL16 => SRL16E: 3 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.283 . Memory (MB): peak = 1633.734 ; gain = 2.016
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1633.734 ; gain = 766.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z100ffg900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1633.734 ; gain = 766.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  E:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.runs/xdma_ddr_axi_smc_0_synth_1/dont_touch.xdc, line 89).
+Applied set_property DONT_TOUCH = true for inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_async_clocks.inst_cdc_addra_to_rd_clk . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_async_clocks.inst_cdc_addra_to_rd_clk . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/s00_nodes/s00_b_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_async_clocks.inst_cdc_addra_to_rd_clk . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/s00_nodes/s00_r_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_async_clocks.inst_cdc_addra_to_rd_clk . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/s00_nodes/s00_w_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_async_clocks.inst_cdc_addra_to_rd_clk . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_async_clocks.inst_cdc_addrb_to_wr_clk . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_async_clocks.inst_cdc_addrb_to_wr_clk . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/s00_nodes/s00_b_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_async_clocks.inst_cdc_addrb_to_wr_clk . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/s00_nodes/s00_r_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_async_clocks.inst_cdc_addrb_to_wr_clk . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/s00_nodes/s00_w_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_async_clocks.inst_cdc_addrb_to_wr_clk . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/s00_nodes/s00_b_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/s00_nodes/s00_r_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/s00_nodes/s00_w_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1633.734 ; gain = 766.523
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [e:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.srcs/sources_1/bd/xdma_ddr/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1633.734 ; gain = 766.523
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 3     
+	   3 Input      8 Bit       Adders := 2     
+	   4 Input      8 Bit       Adders := 4     
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 34    
+	   2 Input      5 Bit       Adders := 4     
+	   3 Input      5 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 11    
+	   2 Input      1 Bit       Adders := 3     
+	   3 Input      1 Bit       Adders := 2     
++---XORs : 
+	   2 Input      6 Bit         XORs := 10    
+	   2 Input      1 Bit         XORs := 85    
++---Registers : 
+	             2178 Bit    Registers := 4     
+	              512 Bit    Registers := 2     
+	              188 Bit    Registers := 2     
+	              178 Bit    Registers := 1     
+	              165 Bit    Registers := 1     
+	               64 Bit    Registers := 4     
+	               47 Bit    Registers := 1     
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               23 Bit    Registers := 1     
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 24    
+	                7 Bit    Registers := 6     
+	                6 Bit    Registers := 59    
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 17    
+	                3 Bit    Registers := 20    
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 145   
++---Muxes : 
+	   2 Input   2178 Bit        Muxes := 2     
+	   2 Input    512 Bit        Muxes := 2     
+	   2 Input    128 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 6     
+	   2 Input     47 Bit        Muxes := 1     
+	   2 Input     33 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 35    
+	   7 Input      8 Bit        Muxes := 4     
+	   4 Input      8 Bit        Muxes := 4     
+	   2 Input      7 Bit        Muxes := 16    
+	   4 Input      7 Bit        Muxes := 4     
+	   2 Input      6 Bit        Muxes := 8     
+	   2 Input      4 Bit        Muxes := 11    
+	   4 Input      3 Bit        Muxes := 9     
+	  11 Input      3 Bit        Muxes := 9     
+	   2 Input      3 Bit        Muxes := 10    
+	   2 Input      2 Bit        Muxes := 31    
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 89    
+	   6 Input      1 Bit        Muxes := 54    
+	  12 Input      1 Bit        Muxes := 9     
+	   4 Input      1 Bit        Muxes := 6     
+	  10 Input      1 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module lpf 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module upcnt_n 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module sequence_psr 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 5     
+Module sc_util_v1_0_4_axic_reg_srl_fifo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               47 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     47 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	  11 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 5     
+	  12 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module sc_util_v1_0_4_axic_reg_srl_fifo__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               33 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	  11 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 5     
+	  12 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module sc_exit_v1_0_9_exit 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 4     
+Module sc_exit_v1_0_9_top 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module sc_mmu_v1_0_8_top 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 6     
+Module sc_util_v1_0_4_axic_reg_srl_fifo__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	  11 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 5     
+	  12 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module sc_util_v1_0_4_axic_reg_srl_fifo__parameterized3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	  11 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 5     
+	  12 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module sc_util_v1_0_4_axi_reg_stall__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	             2178 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input   2178 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 2     
+	  10 Input      1 Bit        Muxes := 3     
+	   7 Input      1 Bit        Muxes := 2     
+Module sc_util_v1_0_4_axic_reg_srl_fifo__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+	  11 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 5     
+	  12 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module sc_util_v1_0_4_axic_reg_srl_fifo__parameterized4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+	  11 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 5     
+	  12 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module sc_si_converter_v1_0_9_splitter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 3     
+	   3 Input      8 Bit       Adders := 2     
+	   4 Input      8 Bit       Adders := 4     
+	   2 Input      6 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	              512 Bit    Registers := 2     
+	               64 Bit    Registers := 4     
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 8     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input    512 Bit        Muxes := 2     
+	   2 Input     64 Bit        Muxes := 6     
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 19    
+	   7 Input      8 Bit        Muxes := 4     
+	   2 Input      7 Bit        Muxes := 8     
+	   2 Input      4 Bit        Muxes := 6     
+	   2 Input      3 Bit        Muxes := 6     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 18    
+	   3 Input      1 Bit        Muxes := 2     
+Module sc_si_converter_v1_0_9_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 2     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 4     
+	   4 Input      7 Bit        Muxes := 4     
+Module sc_util_v1_0_4_axic_reg_srl_fifo__parameterized5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	  11 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 5     
+	  12 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module sc_util_v1_0_4_axic_reg_srl_fifo__parameterized6 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	  11 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 5     
+	  12 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module sc_transaction_regulator_v1_0_8_top 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module sc_util_v1_0_4_pipeline 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module sc_util_v1_0_4_counter__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module xpm_cdc_gray 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      6 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 5     
++---Registers : 
+	                6 Bit    Registers := 4     
+Module xpm_memory_base 
+Detailed RTL Component Info : 
++---Registers : 
+	              188 Bit    Registers := 1     
+Module sc_util_v1_0_4_counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module sc_util_v1_0_4_xpm_memory_fifo__xdcDup__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+Module sc_util_v1_0_4_counter__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module sc_node_v1_0_10_mi_handler 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module sc_node_v1_0_10_top 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module sc_util_v1_0_4_xpm_memory_fifo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+Module sc_node_v1_0_10_mi_handler__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module sc_node_v1_0_10_top__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module xpm_memory_base__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               23 Bit    Registers := 1     
+Module sc_util_v1_0_4_xpm_memory_fifo__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+Module sc_node_v1_0_10_mi_handler__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module sc_node_v1_0_10_top__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module sc_util_v1_0_4_pipeline__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	               18 Bit    Registers := 1     
+Module sc_node_v1_0_10_upsizer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 16    
+	                7 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 16    
+	   4 Input      8 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 20    
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 1     
+Module sc_node_v1_0_10_fi_regulator 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module xpm_memory_base__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	              165 Bit    Registers := 1     
+Module sc_util_v1_0_4_xpm_memory_fifo__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+Module sc_node_v1_0_10_ingress__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      1 Bit       Adders := 1     
+Module sc_node_v1_0_10_mi_handler__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module sc_node_v1_0_10_top__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module sc_node_v1_0_10_reg_slice3__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module sc_node_v1_0_10_downsizer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 2     
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module xpm_memory_base__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	              178 Bit    Registers := 1     
+Module sc_util_v1_0_4_xpm_memory_fifo__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+Module sc_node_v1_0_10_ingress__parameterized3 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      1 Bit       Adders := 1     
+Module sc_node_v1_0_10_mi_handler__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module sc_node_v1_0_10_top__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2020 (col length:140)
+BRAMs: 1510 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'inst/clk_map/psr0/U0/SEQ/core_dec_reg[1]' (FD) to 'inst/clk_map/psr0/U0/SEQ/bsr_dec_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to )
+INFO: [Synth 8-3886] merging instance 'inst/clk_map/psr_aclk/U0/SEQ/core_dec_reg[1]' (FD) to 'inst/clk_map/psr_aclk/U0/SEQ/bsr_dec_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/clk_map/psr_aclk1/U0/SEQ/core_dec_reg[1]' (FD) to 'inst/clk_map/psr_aclk1/U0/SEQ/bsr_dec_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.awaddr_incr_d_reg[0]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.awaddr_incr_d_reg[1]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.awaddr_incr_d_reg[2]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.awaddr_incr_d_reg[3]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.awaddr_incr_d_reg[4]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.awaddr_incr_d_reg[5]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.awaddr_incr_d_reg[6]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.awaddr_incr_d_reg[7]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.awaddr_incr_d_reg[8]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.awaddr_incr_d_reg[9]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.awaddr_incr_d_reg[10]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.awaddr_incr_d_reg[11]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.awsplit_len_middle_d_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.awaddr_incr_d_reg[12]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.awaddr_incr_d_reg[13]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.awaddr_incr_d_reg[14]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.awaddr_incr_d_reg[15]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.araddr_incr_d_reg[0]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.s_axi_arid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.araddr_incr_d_reg[1]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.s_axi_arid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.araddr_incr_d_reg[2]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.s_axi_arid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.araddr_incr_d_reg[3]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.s_axi_arid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.araddr_incr_d_reg[4]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.s_axi_arid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.araddr_incr_d_reg[5]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.s_axi_arid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.araddr_incr_d_reg[6]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.s_axi_arid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.araddr_incr_d_reg[7]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.s_axi_arid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.araddr_incr_d_reg[8]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.s_axi_arid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.araddr_incr_d_reg[9]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.s_axi_arid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.araddr_incr_d_reg[10]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.s_axi_arid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.araddr_incr_d_reg[11]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.s_arroute_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.araddr_incr_d_reg[12]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.s_axi_arid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.araddr_incr_d_reg[13]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.s_axi_arid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.araddr_incr_d_reg[14]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.s_axi_arid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.araddr_incr_d_reg[15]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_rsplitter.s_axi_arid_d_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_nodes/s00_r_node/inst /\inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/gen_r_ch.accum_reg[sc_route][0] )
+INFO: [Synth 8-3886] merging instance 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][2]' (FDRE) to 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][5]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][5]' (FDRE) to 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][6]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][6]' (FDRE) to 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][7]' (FDRE) to 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][8]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][8]' (FDRE) to 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][9]' (FDRE) to 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][10]' (FDRE) to 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][12]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][12]' (FDRE) to 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][13]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][13]' (FDRE) to 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][14]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][14]' (FDRE) to 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][15]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][15]' (FDRE) to 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][16]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][16]' (FDRE) to 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][17]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_nodes/s00_r_node/inst /\inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline /\gen_pipe[1].pipe_reg[1][17] )
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[0]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.awsplit_len_middle_d_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[1]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[2]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[3]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[4]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[5]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[6]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[7]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[8]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[9]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[10]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[11]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[12]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[13]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[14]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[15]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[16]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[17]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[18]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[19]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[20]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[21]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[22]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[23]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[24]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[25]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[26]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[27]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[28]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[29]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[30]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[31]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[32]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[33]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[34]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[35]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[36]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[37]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[38]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[39]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[40]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[41]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[42]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[43]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[44]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[45]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[46]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[47]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[48]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[49]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[50]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[51]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_awroute_d_reg[52]' (FDE) to 'inst/s00_entry_pipeline/s00_si_converter/inst/gen_normal.splitter_inst/gen_wsplitter.s_axi_awid_d_reg[0]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_entry_pipeline/s00_si_converter/inst /\gen_normal.splitter_inst/gen_wsplitter.aw_target_mi_d_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\s00_entry_pipeline/s00_si_converter/inst /\gen_normal.splitter_inst/gen_wsplitter.awsplit_len_middle_d_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_entry_pipeline/s00_si_converter/inst /\gen_normal.splitter_inst/gen_wsplitter.awsplit_len_last_d_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_entry_pipeline/s00_si_converter/inst /\gen_normal.splitter_inst/gen_rsplitter.ar_target_mi_d_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\s00_entry_pipeline/s00_si_converter/inst /\gen_normal.splitter_inst/gen_rsplitter.arsplit_len_middle_d_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_entry_pipeline/s00_si_converter/inst /\gen_normal.splitter_inst/gen_rsplitter.arsplit_len_last_d_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_entry_pipeline/s00_mmu/inst /\gen_endpoint.w_state_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\clk_map/psr0/U0/EXT_LPF/EXT_LPF[1].exr_lpf_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\clk_map/psr0/U0/EXT_LPF/lpf_exr_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_entry_pipeline/s00_si_converter/inst /\gen_normal.splitter_inst/gen_wsplitter.sr_axi_awlen_d_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr0/U0/FDRE_inst) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr0/U0/BSR_OUT_DFF[0].FDRE_BSR) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr0/U0/PR_OUT_DFF[0].FDRE_PER) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr0/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/FDRE_inst) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/BSR_OUT_DFF[0].FDRE_BSR) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/PR_OUT_DFF[0].FDRE_PER) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk1/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk1/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk1/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk1/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk1/U0/FDRE_inst) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk1/U0/BSR_OUT_DFF[0].FDRE_BSR) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk1/U0/PR_OUT_DFF[0].FDRE_PER) is unused and will be removed from module bd_eb0a.
+WARNING: [Synth 8-3332] Sequential element (clk_map/psr_aclk1/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N) is unused and will be removed from module bd_eb0a.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_nodes/s00_r_node/inst /\inst_mi_handler/inst_ingress/inst_incoming_count /i_1/\count_r_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_nodes/s00_r_node/inst /\inst_mi_handler/inst_ingress/inst_incoming_count /i_1/\count_r_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_nodes/s00_r_node/inst /\inst_mi_handler/inst_ingress/inst_incoming_count /i_1/\count_r_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_nodes/s00_r_node/inst /\inst_mi_handler/inst_ingress/inst_incoming_count /i_1/\count_r_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\s00_nodes/s00_r_node/inst /\inst_mi_handler/inst_ingress/inst_incoming_count /is_zero_r_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_entry_pipeline/s00_si_converter/inst /\gen_normal.splitter_inst/aw_cmd_reg /\skid_buffer_reg[1029] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_entry_pipeline/s00_si_converter/inst /\gen_normal.splitter_inst/ar_cmd_reg /\skid_buffer_reg[1029] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_entry_pipeline/s00_si_converter/inst /\gen_normal.splitter_inst/aw_cmd_reg /\m_vector_i_reg[1029] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_entry_pipeline/s00_si_converter/inst /\gen_normal.splitter_inst/ar_cmd_reg /\m_vector_i_reg[1029] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_entry_pipeline/s00_si_converter/inst /\gen_normal.splitter_inst/gen_wsplitter.w_split_fifo/gen_pipelined.mesg_reg_reg[8] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:08 ; elapsed = 00:01:11 . Memory (MB): peak = 1633.734 ; gain = 766.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+--------------+
+|Module Name                                                                                                                                                                 | RTL Object                       | Inference      | Size (Depth x Width) | Primitives   | 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+--------------+
+|xpm_memory_sdpram:/xpm_memory_base_inst                                                                                                                                     | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 188             | RAM32M x 32	 | 
+|xpm_memory_sdpram:/xpm_memory_base_inst                                                                                                                                     | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 188             | RAM32M x 32	 | 
+|inst/\s00_nodes/s00_b_node/inst /\inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 23              | RAM32M x 4	  | 
+|inst/\s00_nodes/s00_r_node/inst /\inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 165             | RAM32M x 28	 | 
+|inst/\s00_nodes/s00_w_node/inst /\inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 178             | RAM32M x 30	 | 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:17 ; elapsed = 00:01:20 . Memory (MB): peak = 1633.734 ; gain = 766.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-139] cannot merge instances inst/\clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  and inst/\clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  because of non-equivalent assertions
+INFO: [Synth 8-139] cannot merge instances inst/\clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  and inst/\clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  because of non-equivalent assertions
+INFO: [Synth 8-139] cannot merge instances inst/\clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  and inst/\clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  because of non-equivalent assertions
+INFO: [Synth 8-139] cannot merge instances inst/\clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  and inst/\clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  because of non-equivalent assertions
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:18 ; elapsed = 00:01:21 . Memory (MB): peak = 1633.734 ; gain = 766.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping	Report
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+--------------+
+|Module Name                                                                                                                                                                 | RTL Object                       | Inference      | Size (Depth x Width) | Primitives   | 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+--------------+
+|xpm_memory_sdpram:/xpm_memory_base_inst                                                                                                                                     | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 188             | RAM32M x 32	 | 
+|xpm_memory_sdpram:/xpm_memory_base_inst                                                                                                                                     | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 188             | RAM32M x 32	 | 
+|inst/\s00_nodes/s00_b_node/inst /\inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 23              | RAM32M x 4	  | 
+|inst/\s00_nodes/s00_r_node/inst /\inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 165             | RAM32M x 28	 | 
+|inst/\s00_nodes/s00_w_node/inst /\inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 178             | RAM32M x 30	 | 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-139] cannot merge instances inst/\clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  and inst/\clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  because of non-equivalent assertions
+INFO: [Synth 8-139] cannot merge instances inst/\clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  and inst/\clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  because of non-equivalent assertions
+INFO: [Synth 8-139] cannot merge instances inst/\clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  and inst/\clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  because of non-equivalent assertions
+INFO: [Synth 8-139] cannot merge instances inst/\clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  and inst/\clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  because of non-equivalent assertions
+INFO: [Synth 8-139] cannot merge instances inst/\clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  and inst/\clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  because of non-equivalent assertions
+INFO: [Synth 8-139] cannot merge instances inst/\clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  and inst/\clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  because of non-equivalent assertions
+INFO: [Synth 8-139] cannot merge instances inst/\clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  and inst/\clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  because of non-equivalent assertions
+INFO: [Synth 8-139] cannot merge instances inst/\clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  and inst/\clk_map/psr0/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to  because of non-equivalent assertions
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:20 ; elapsed = 00:01:24 . Memory (MB): peak = 1633.734 ; gain = 766.523
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop gen_wr.full_r_reg is being inverted and renamed to gen_wr.full_r_reg_inv.
+INFO: [Synth 8-5365] Flop gen_wr.full_r_reg is being inverted and renamed to gen_wr.full_r_reg_inv.
+INFO: [Synth 8-5365] Flop gen_wr.full_r_reg is being inverted and renamed to gen_wr.full_r_reg_inv.
+INFO: [Synth 8-5365] Flop gen_wr.full_r_reg is being inverted and renamed to gen_wr.full_r_reg_inv.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:25 ; elapsed = 00:01:28 . Memory (MB): peak = 1633.734 ; gain = 766.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:25 ; elapsed = 00:01:28 . Memory (MB): peak = 1633.734 ; gain = 766.523
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:25 ; elapsed = 00:01:29 . Memory (MB): peak = 1633.734 ; gain = 766.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:25 ; elapsed = 00:01:29 . Memory (MB): peak = 1633.734 ; gain = 766.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:25 ; elapsed = 00:01:29 . Memory (MB): peak = 1633.734 ; gain = 766.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 1633.734 ; gain = 766.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+---------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name      | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+---------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | shift_reg_reg | 32     | 1          | 0      | 1       | 0      | 0      | 0      | 
+|dsrl__1     | shift_reg_reg | 16     | 1          | 1      | 0       | 0      | 0      | 0      | 
++------------+---------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |    34|
+|2     |LUT1    |    68|
+|3     |LUT2    |   207|
+|4     |LUT3    |   405|
+|5     |LUT4    |   231|
+|6     |LUT5    |   327|
+|7     |LUT6    |   297|
+|8     |RAM32M  |   126|
+|9     |SRL16   |     3|
+|10    |SRL16E  |    28|
+|11    |SRLC32E |    20|
+|12    |FDR     |    20|
+|13    |FDRE    |  2029|
+|14    |FDSE    |    63|
++------+--------+------+
+
+Report Instance Areas: 
++------+-----------------------------------------------------------------+------------------------------------------------------------+------+
+|      |Instance                                                         |Module                                                      |Cells |
++------+-----------------------------------------------------------------+------------------------------------------------------------+------+
+|1     |top                                                              |                                                            |  3858|
+|2     |  inst                                                           |bd_eb0a                                                     |  3858|
+|3     |    clk_map                                                      |clk_map_imp_129N1VC                                         |   140|
+|4     |      psr0                                                       |bd_eb0a_psr0_0                                              |    41|
+|5     |        U0                                                       |proc_sys_reset_68                                           |    41|
+|6     |          EXT_LPF                                                |lpf_69                                                      |     9|
+|7     |            \ACTIVE_LOW_AUX.ACT_LO_AUX                           |cdc_sync_72                                                 |     4|
+|8     |          SEQ                                                    |sequence_psr_70                                             |    31|
+|9     |            SEQ_COUNTER                                          |upcnt_n_71                                                  |    13|
+|10    |      psr_aclk                                                   |bd_eb0a_psr_aclk_0                                          |    50|
+|11    |        U0                                                       |proc_sys_reset_62                                           |    50|
+|12    |          EXT_LPF                                                |lpf_63                                                      |    18|
+|13    |            \ACTIVE_LOW_AUX.ACT_LO_AUX                           |cdc_sync_66                                                 |     5|
+|14    |            \ACTIVE_LOW_EXT.ACT_LO_EXT                           |cdc_sync_67                                                 |     5|
+|15    |          SEQ                                                    |sequence_psr_64                                             |    31|
+|16    |            SEQ_COUNTER                                          |upcnt_n_65                                                  |    13|
+|17    |      psr_aclk1                                                  |bd_eb0a_psr_aclk1_0                                         |    49|
+|18    |        U0                                                       |proc_sys_reset                                              |    49|
+|19    |          EXT_LPF                                                |lpf                                                         |    17|
+|20    |            \ACTIVE_LOW_AUX.ACT_LO_AUX                           |cdc_sync                                                    |     4|
+|21    |            \ACTIVE_LOW_EXT.ACT_LO_EXT                           |cdc_sync_61                                                 |     5|
+|22    |          SEQ                                                    |sequence_psr                                                |    31|
+|23    |            SEQ_COUNTER                                          |upcnt_n                                                     |    13|
+|24    |    m00_exit_pipeline                                            |m00_exit_pipeline_imp_VFDZVN                                |   142|
+|25    |      m00_exit                                                   |bd_eb0a_m00e_0                                              |   142|
+|26    |        inst                                                     |sc_exit_v1_0_9_top                                          |   142|
+|27    |          exit_inst                                              |sc_exit_v1_0_9_exit                                         |   125|
+|28    |            \gen_r_cmd_fifo.r_cmd_fifo                           |sc_util_v1_0_4_axic_reg_srl_fifo                            |    91|
+|29    |              \gen_srls[10].srl_nx1                              |sc_util_v1_0_4_srl_rtl_46                                   |     2|
+|30    |              \gen_srls[11].srl_nx1                              |sc_util_v1_0_4_srl_rtl_47                                   |     2|
+|31    |              \gen_srls[12].srl_nx1                              |sc_util_v1_0_4_srl_rtl_48                                   |     2|
+|32    |              \gen_srls[13].srl_nx1                              |sc_util_v1_0_4_srl_rtl_49                                   |     2|
+|33    |              \gen_srls[14].srl_nx1                              |sc_util_v1_0_4_srl_rtl_50                                   |     2|
+|34    |              \gen_srls[15].srl_nx1                              |sc_util_v1_0_4_srl_rtl_51                                   |     3|
+|35    |              \gen_srls[1].srl_nx1                               |sc_util_v1_0_4_srl_rtl_52                                   |     2|
+|36    |              \gen_srls[2].srl_nx1                               |sc_util_v1_0_4_srl_rtl_53                                   |     2|
+|37    |              \gen_srls[3].srl_nx1                               |sc_util_v1_0_4_srl_rtl_54                                   |     2|
+|38    |              \gen_srls[4].srl_nx1                               |sc_util_v1_0_4_srl_rtl_55                                   |     2|
+|39    |              \gen_srls[5].srl_nx1                               |sc_util_v1_0_4_srl_rtl_56                                   |     2|
+|40    |              \gen_srls[6].srl_nx1                               |sc_util_v1_0_4_srl_rtl_57                                   |     2|
+|41    |              \gen_srls[7].srl_nx1                               |sc_util_v1_0_4_srl_rtl_58                                   |     2|
+|42    |              \gen_srls[8].srl_nx1                               |sc_util_v1_0_4_srl_rtl_59                                   |     2|
+|43    |              \gen_srls[9].srl_nx1                               |sc_util_v1_0_4_srl_rtl_60                                   |     2|
+|44    |            \gen_w_cmd_fifo.w_cmd_fifo                           |sc_util_v1_0_4_axic_reg_srl_fifo__parameterized0            |    32|
+|45    |              \gen_srls[1].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_45                   |     2|
+|46    |    s00_entry_pipeline                                           |s00_entry_pipeline_imp_1V9JQHS                              |  1660|
+|47    |      s00_mmu                                                    |bd_eb0a_s00mmu_0                                            |     6|
+|48    |        inst                                                     |sc_mmu_v1_0_8_top                                           |     6|
+|49    |      s00_si_converter                                           |bd_eb0a_s00sic_0                                            |  1569|
+|50    |        inst                                                     |sc_si_converter_v1_0_9_top                                  |  1569|
+|51    |          \gen_normal.splitter_inst                              |sc_si_converter_v1_0_9_splitter                             |  1567|
+|52    |            ar_cmd_reg                                           |sc_util_v1_0_4_axi_reg_stall__parameterized0                |   466|
+|53    |            aw_cmd_reg                                           |sc_util_v1_0_4_axi_reg_stall__parameterized0_19             |   428|
+|54    |            \gen_rsplitter.gen_rthread_loop[0].r_split_fifo      |sc_util_v1_0_4_axic_reg_srl_fifo__parameterized4            |    36|
+|55    |              \gen_srls[0].srl_nx1                               |sc_util_v1_0_4_srl_rtl_44                                   |     4|
+|56    |            \gen_wsplitter.gen_wthread_loop[0].b_split_fifo      |sc_util_v1_0_4_axic_reg_srl_fifo__parameterized1            |    34|
+|57    |              \gen_srls[0].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_43                   |     4|
+|58    |            \gen_wsplitter.w_split_fifo                          |sc_util_v1_0_4_axic_reg_srl_fifo__parameterized2            |    73|
+|59    |              \gen_srls[0].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_35                   |     4|
+|60    |              \gen_srls[1].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_36                   |     2|
+|61    |              \gen_srls[2].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_37                   |     2|
+|62    |              \gen_srls[3].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_38                   |     2|
+|63    |              \gen_srls[4].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_39                   |     2|
+|64    |              \gen_srls[5].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_40                   |     2|
+|65    |              \gen_srls[6].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_41                   |     2|
+|66    |              \gen_srls[7].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_42                   |     3|
+|67    |            \gen_wsplitter.wsplit_first_offset_fifo              |sc_util_v1_0_4_axic_reg_srl_fifo__parameterized3            |    58|
+|68    |              \gen_srls[0].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_28                   |     3|
+|69    |              \gen_srls[1].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_29                   |     3|
+|70    |              \gen_srls[2].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_30                   |     3|
+|71    |              \gen_srls[3].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_31                   |     3|
+|72    |              \gen_srls[4].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_32                   |     3|
+|73    |              \gen_srls[5].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_33                   |     3|
+|74    |              \gen_srls[6].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_34                   |     4|
+|75    |            \gen_wsplitter.wsplit_last_offset_fifo               |sc_util_v1_0_4_axic_reg_srl_fifo__parameterized3_20         |    79|
+|76    |              \gen_srls[0].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_21                   |     3|
+|77    |              \gen_srls[1].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_22                   |     3|
+|78    |              \gen_srls[2].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_23                   |     4|
+|79    |              \gen_srls[3].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_24                   |     3|
+|80    |              \gen_srls[4].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_25                   |     3|
+|81    |              \gen_srls[5].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_26                   |     3|
+|82    |              \gen_srls[6].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_27                   |    22|
+|83    |      s00_transaction_regulator                                  |bd_eb0a_s00tr_0                                             |    85|
+|84    |        inst                                                     |sc_transaction_regulator_v1_0_8_top                         |    85|
+|85    |          \gen_endpoint.gen_r_singleorder.r_singleorder          |sc_transaction_regulator_v1_0_8_singleorder__parameterized0 |    43|
+|86    |            \gen_id_fifo.singleorder_fifo                        |sc_util_v1_0_4_axic_reg_srl_fifo__parameterized6            |    39|
+|87    |              \gen_srls[0].srl_nx1                               |sc_util_v1_0_4_srl_rtl                                      |     2|
+|88    |              \gen_srls[1].srl_nx1                               |sc_util_v1_0_4_srl_rtl_16                                   |     2|
+|89    |              \gen_srls[2].srl_nx1                               |sc_util_v1_0_4_srl_rtl_17                                   |     2|
+|90    |              \gen_srls[3].srl_nx1                               |sc_util_v1_0_4_srl_rtl_18                                   |     3|
+|91    |          \gen_endpoint.gen_w_singleorder.w_singleorder          |sc_transaction_regulator_v1_0_8_singleorder                 |    40|
+|92    |            \gen_id_fifo.singleorder_fifo                        |sc_util_v1_0_4_axic_reg_srl_fifo__parameterized5            |    36|
+|93    |              \gen_srls[0].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0                      |     2|
+|94    |              \gen_srls[1].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_13                   |     2|
+|95    |              \gen_srls[2].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_14                   |     2|
+|96    |              \gen_srls[3].srl_nx1                               |sc_util_v1_0_4_srl_rtl__parameterized0_15                   |     3|
+|97    |    s00_nodes                                                    |s00_nodes_imp_1SBPAM2                                       |  1916|
+|98    |      s00_ar_node                                                |bd_eb0a_sarn_0                                              |   368|
+|99    |        inst                                                     |sc_node_v1_0_10_top                                         |   368|
+|100   |          inst_mi_handler                                        |sc_node_v1_0_10_mi_handler                                  |   360|
+|101   |            \gen_normal_area.inst_fifo_node_payld                |sc_node_v1_0_10_fifo__xdcDup__1                             |   358|
+|102   |              \gen_xpm_memory_fifo.inst_fifo                     |sc_util_v1_0_4_xpm_memory_fifo__xdcDup__1                   |   356|
+|103   |                \gen_async_clocks.inst_cdc_addra_to_rd_clk       |xpm_cdc_gray__10                                            |    34|
+|104   |                \gen_async_clocks.inst_cdc_addrb_to_wr_clk       |xpm_cdc_gray__11                                            |    34|
+|105   |                \gen_mem_rep[0].inst_xpm_memory                  |xpm_memory_sdpram__2                                        |   221|
+|106   |                  xpm_memory_base_inst                           |xpm_memory_base__2                                          |   221|
+|107   |                \gen_mem_rep[0].inst_wr_addra                    |sc_util_v1_0_4_counter_11                                   |    13|
+|108   |                \gen_mem_rep[0].inst_rd_addrb                    |sc_util_v1_0_4_counter_10                                   |    14|
+|109   |                \gen_wr.inst_wr_addra_p1                         |sc_util_v1_0_4_counter__parameterized0_12                   |    29|
+|110   |          inst_si_handler                                        |sc_node_v1_0_10_si_handler                                  |     3|
+|111   |            inst_arb_stall_late                                  |sc_util_v1_0_4_pipeline__1                                  |     1|
+|112   |      s00_aw_node                                                |bd_eb0a_sawn_0                                              |   368|
+|113   |        inst                                                     |sc_node_v1_0_10_top__parameterized0                         |   368|
+|114   |          inst_mi_handler                                        |sc_node_v1_0_10_mi_handler__parameterized0                  |   360|
+|115   |            \gen_normal_area.inst_fifo_node_payld                |sc_node_v1_0_10_fifo                                        |   358|
+|116   |              \gen_xpm_memory_fifo.inst_fifo                     |sc_util_v1_0_4_xpm_memory_fifo                              |   356|
+|117   |                \gen_async_clocks.inst_cdc_addra_to_rd_clk       |xpm_cdc_gray__12                                            |    34|
+|118   |                \gen_async_clocks.inst_cdc_addrb_to_wr_clk       |xpm_cdc_gray__13                                            |    34|
+|119   |                \gen_mem_rep[0].inst_xpm_memory                  |xpm_memory_sdpram                                           |   221|
+|120   |                  xpm_memory_base_inst                           |xpm_memory_base                                             |   221|
+|121   |                \gen_mem_rep[0].inst_wr_addra                    |sc_util_v1_0_4_counter_8                                    |    13|
+|122   |                \gen_mem_rep[0].inst_rd_addrb                    |sc_util_v1_0_4_counter_7                                    |    14|
+|123   |                \gen_wr.inst_wr_addra_p1                         |sc_util_v1_0_4_counter__parameterized0_9                    |    29|
+|124   |          inst_si_handler                                        |sc_node_v1_0_10_si_handler__parameterized0                  |     3|
+|125   |            inst_arb_stall_late                                  |sc_util_v1_0_4_pipeline__3                                  |     1|
+|126   |      s00_b_node                                                 |bd_eb0a_sbn_0                                               |   175|
+|127   |        inst                                                     |sc_node_v1_0_10_top__parameterized1                         |   175|
+|128   |          inst_mi_handler                                        |sc_node_v1_0_10_mi_handler__parameterized1                  |   167|
+|129   |            \gen_normal_area.inst_fifo_node_payld                |sc_node_v1_0_10_fifo__parameterized0                        |   165|
+|130   |              \gen_xpm_memory_fifo.inst_fifo                     |sc_util_v1_0_4_xpm_memory_fifo__parameterized0              |   163|
+|131   |                \gen_async_clocks.inst_cdc_addra_to_rd_clk       |xpm_cdc_gray__14                                            |    34|
+|132   |                \gen_async_clocks.inst_cdc_addrb_to_wr_clk       |xpm_cdc_gray__15                                            |    34|
+|133   |                \gen_mem_rep[0].inst_xpm_memory                  |xpm_memory_sdpram__parameterized0                           |    28|
+|134   |                  xpm_memory_base_inst                           |xpm_memory_base__parameterized0                             |    28|
+|135   |                \gen_mem_rep[0].inst_wr_addra                    |sc_util_v1_0_4_counter_5                                    |    13|
+|136   |                \gen_mem_rep[0].inst_rd_addrb                    |sc_util_v1_0_4_counter_4                                    |    14|
+|137   |                \gen_wr.inst_wr_addra_p1                         |sc_util_v1_0_4_counter__parameterized0_6                    |    29|
+|138   |          inst_si_handler                                        |sc_node_v1_0_10_si_handler__parameterized1                  |     3|
+|139   |            inst_arb_stall_late                                  |sc_util_v1_0_4_pipeline__5                                  |     1|
+|140   |      s00_r_node                                                 |bd_eb0a_srn_0                                               |   569|
+|141   |        inst                                                     |sc_node_v1_0_10_top__parameterized2                         |   569|
+|142   |          inst_mi_handler                                        |sc_node_v1_0_10_mi_handler__parameterized2                  |   561|
+|143   |            \gen_normal_area.gen_fi_regulator.inst_fi_regulator  |sc_node_v1_0_10_fi_regulator                                |     3|
+|144   |            \gen_normal_area.gen_upsizer.inst_upsizer            |sc_node_v1_0_10_upsizer                                     |   220|
+|145   |              inst_upsizer_target_pipeline                       |sc_util_v1_0_4_pipeline__parameterized4                     |     5|
+|146   |            \gen_normal_area.inst_fifo_node_payld                |sc_node_v1_0_10_fifo__parameterized1                        |   336|
+|147   |              \gen_xpm_memory_fifo.inst_fifo                     |sc_util_v1_0_4_xpm_memory_fifo__parameterized1              |   333|
+|148   |                \gen_async_clocks.inst_cdc_addra_to_rd_clk       |xpm_cdc_gray__16                                            |    34|
+|149   |                \gen_async_clocks.inst_cdc_addrb_to_wr_clk       |xpm_cdc_gray__17                                            |    34|
+|150   |                \gen_mem_rep[0].inst_xpm_memory                  |xpm_memory_sdpram__parameterized1                           |   194|
+|151   |                  xpm_memory_base_inst                           |xpm_memory_base__parameterized1                             |   194|
+|152   |                \gen_mem_rep[0].inst_rd_addrb                    |sc_util_v1_0_4_counter_1                                    |    14|
+|153   |                \gen_mem_rep[0].inst_wr_addra                    |sc_util_v1_0_4_counter_2                                    |    13|
+|154   |                \gen_wr.inst_wr_addra_p1                         |sc_util_v1_0_4_counter__parameterized0_3                    |    32|
+|155   |          inst_si_handler                                        |sc_node_v1_0_10_si_handler__parameterized2                  |     3|
+|156   |            inst_arb_stall_late                                  |sc_util_v1_0_4_pipeline__7                                  |     1|
+|157   |      s00_w_node                                                 |bd_eb0a_swn_0                                               |   436|
+|158   |        inst                                                     |sc_node_v1_0_10_top__parameterized3                         |   436|
+|159   |          inst_mi_handler                                        |sc_node_v1_0_10_mi_handler__parameterized3                  |   428|
+|160   |            \gen_normal_area.gen_downsizer.inst_downsizer        |sc_node_v1_0_10_downsizer                                   |     5|
+|161   |            \gen_normal_area.inst_fifo_node_payld                |sc_node_v1_0_10_fifo__parameterized2                        |   421|
+|162   |              \gen_xpm_memory_fifo.inst_fifo                     |sc_util_v1_0_4_xpm_memory_fifo__parameterized2              |   344|
+|163   |                \gen_async_clocks.inst_cdc_addra_to_rd_clk       |xpm_cdc_gray__18                                            |    34|
+|164   |                \gen_async_clocks.inst_cdc_addrb_to_wr_clk       |xpm_cdc_gray                                                |    34|
+|165   |                \gen_mem_rep[0].inst_xpm_memory                  |xpm_memory_sdpram__parameterized2                           |   209|
+|166   |                  xpm_memory_base_inst                           |xpm_memory_base__parameterized2                             |   209|
+|167   |                \gen_mem_rep[0].inst_wr_addra                    |sc_util_v1_0_4_counter_0                                    |    13|
+|168   |                \gen_mem_rep[0].inst_rd_addrb                    |sc_util_v1_0_4_counter                                      |    14|
+|169   |                \gen_wr.inst_wr_addra_p1                         |sc_util_v1_0_4_counter__parameterized0                      |    29|
+|170   |          inst_si_handler                                        |sc_node_v1_0_10_si_handler__parameterized3                  |     3|
+|171   |            inst_arb_stall_late                                  |sc_util_v1_0_4_pipeline                                     |     1|
++------+-----------------------------------------------------------------+------------------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 1633.734 ; gain = 766.523
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 14537 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:01:08 . Memory (MB): peak = 1633.734 ; gain = 394.168
+Synthesis Optimization Complete : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 1633.734 ; gain = 766.523
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.304 . Memory (MB): peak = 1633.734 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 183 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1633.734 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 149 instances were transformed.
+  FDR => FDRE: 20 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 126 instances
+  SRL16 => SRL16E: 3 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+351 Infos, 139 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:36 ; elapsed = 00:01:41 . Memory (MB): peak = 1633.734 ; gain = 1165.516
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1633.734 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.runs/xdma_ddr_axi_smc_0_synth_1/xdma_ddr_axi_smc_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP xdma_ddr_axi_smc_0, cache-ID = 6af335a1b42144cb
+INFO: [Coretcl 2-1174] Renamed 170 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1633.734 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/my_work/QT7013/vivado2019/OK/ddr_xdam_ok/ddr_xdam_ok.runs/xdma_ddr_axi_smc_0_synth_1/xdma_ddr_axi_smc_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file xdma_ddr_axi_smc_0_utilization_synth.rpt -pb xdma_ddr_axi_smc_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 26 10:07:47 2024...

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# 
+# Start of session at: Tue Nov 28 14:05:20 2023
+# Process ID: 5684
+# Current directory: D:/my_work/QT7013/ddr_xdma/ddr_xdma.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: D:/my_work/QT7013/ddr_xdma/ddr_xdma.sdk/webtalk/webtalk.log
+# Journal file: D:/my_work/QT7013/ddr_xdma/ddr_xdma.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl
