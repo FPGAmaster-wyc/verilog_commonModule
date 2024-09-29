@@ -96,6 +96,34 @@ module tb_top;
 
 
     /*
+    //模拟发送8次数据，分别为0~7
+        initial begin
+                #2000
+                rx_bit(8'd5);  //任务的调用，任务名+括号中要传递进任务的参数
+                rx_bit(8'd1);
+                rx_bit(8'd2);
+                rx_bit(8'd3);
+                rx_bit(8'd4);
+                rx_bit(8'd5);
+                rx_bit(8'd6);
+                rx_bit(8'd7);
+                rx_bit(8'd0);  
+                rx_bit(8'd1);
+                rx_bit(8'd2);
+                rx_bit(8'd3);
+                rx_bit(8'd4);
+                rx_bit(8'd5);
+                rx_bit(8'd6);
+                rx_bit(8'd7);
+
+
+                #20000
+                @ (posedge clk);
+                i_wr_done = 1;
+                @ (posedge clk);
+                i_wr_done = 0;
+        end
+
     task rx_bit(
     //传递到任务中的参数，调用任务的时候从外部传进来一个8位的值
         input   [7:0]   data
