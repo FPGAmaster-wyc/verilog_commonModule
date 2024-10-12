@@ -159,7 +159,7 @@ module axi_write #
                 aw_burst        <= 0;
                 aw_valid        <= 0;  
 
-                aw_addr_cnt     <= 32'h00000000;
+                aw_addr_cnt     <= 32'h10000000;
              
             end
         else
@@ -178,12 +178,18 @@ module axi_write #
                 WR_DATA :   begin
                                 aw_valid <= 0;
                                 if (i_valid)
-                                    begin
-                                        w_valid     <= 1;
+                                    begin                                        
                                         if (w_ready)
-                                            w_data <= i_data;
+                                            begin
+                                                w_valid     <= 1;
+                                                w_data <= i_data;
+
+                                            end
                                         else
-                                            w_data <= w_data;
+                                            begin
+                                                //w_valid     <= 0;
+                                                w_data <= w_data;
+                                            end                                            
                                     end
                                 else
                                     begin
@@ -228,7 +234,7 @@ module axi_write #
         case (n_state) /* full_case */
             WR_DATA :   o_ready = w_ready;
             WR_LAST :   o_ready = w_ready;            
-            WR_STOP :   o_ready = w_ready;
+            WR_STOP :   o_ready = 0;
             default :   o_ready = 0;
         endcase
     end
