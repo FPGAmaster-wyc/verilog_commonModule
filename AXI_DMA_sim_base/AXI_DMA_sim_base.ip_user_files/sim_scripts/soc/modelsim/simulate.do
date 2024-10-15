@@ -1,0 +1,16 @@
+onbreak {quit -f}
+onerror {quit -f}
+
+vsim -voptargs="+acc" -t 1ps -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L axi_bram_ctrl_v4_1_2 -L xlconstant_v1_1_6 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L smartconnect_v1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_20 -L axi_vip_v1_1_6 -L fifo_generator_v13_2_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm -lib xil_defaultlib xil_defaultlib.soc xil_defaultlib.glbl
+
+do {wave.do}
+
+view wave
+view structure
+view signals
+
+do {soc.udo}
+
+run -all
+
+quit -force

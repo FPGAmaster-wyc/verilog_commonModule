@@ -49,9 +49,9 @@ module axi_read #
     reg     [7:0]               ar_len      ;
     reg     [2:0]               ar_size     ;
     reg     [1:0]               ar_burst    ;
-    reg                         ar_valid    ; 
-    wire                        ar_ready    ; 
-    wire    [DATA_WIDTH-1:0]    r_data      ; 
+    reg                         ar_valid    ;
+    wire                        ar_ready    ;
+    wire    [DATA_WIDTH-1:0]    r_data      ;
     wire                        r_resp      ;
     wire                        r_last      ;
     wire                        r_valid     ;
@@ -66,10 +66,9 @@ module axi_read #
     reg     [2:0]               n_state     ;
     localparam  WAIT_RD     = 0,           
                 RD_ADDR     = 1,
-                RD_FIFO     = 2,
-                RD_DATA     = 3,
-                RD_LAST     = 4,
-                RD_STOP     = 5;
+                RD_DATA     = 2,
+                RD_LAST     = 3,
+                RD_STOP     = 4;
 
     //时钟、数据、突发信息传递
     wire                        i_clk       ;
@@ -157,7 +156,7 @@ module axi_read #
                 o_data          <= 0;
                 o_last          <= 0;
                 o_valid         <= 0;
-                rd_addr_buff    <= 32'h0000_0000;
+                rd_addr_buff    <= 32'h00000000;
             end
         else
             case (n_state)
@@ -165,7 +164,7 @@ module axi_read #
                                 ar_valid <= 0;
                 end
 
-                RD_ADDR :   begin                           
+                RD_ADDR :   begin
                                 ar_valid    <= 1            ;
                                 ar_addr     <= rd_addr_buff ;
                                 ar_len      <= arlen        ;
