@@ -3,7 +3,7 @@
 // Author:	FPGA_master <1975670198@qq.com>
 // Description:
 //	Transmission between FPGA and PC.
-//
+// 
 ////////////////////////////////////////////////////////////////////////////////
 
 module regfile(
@@ -43,7 +43,7 @@ assign soft_reset = reg_ctrl[0];
 assign RD_FRAM_SIZE = reg_rd_frame_size;
 assign RD_NEXT_ADDRESS = reg_rd_next_address;
 
-// write machine
+// PS to PL write machine   （读写地址不能覆盖，写进去的数据，尽量再在读的地方写一下，习惯性写法）
 always @(posedge aclk, negedge aresetn)
 begin
     if(!aresetn) begin
@@ -83,7 +83,7 @@ begin
     end
 end
 
-// read machine
+// PL to PS read machine
 always @(*)
 begin
     case(rd_addr[7:2])
