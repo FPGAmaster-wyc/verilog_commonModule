@@ -78,7 +78,7 @@ begin
         endcase
     end
     else begin
-        // self-clean registers
+        // self-clean 会把PS接收到的信号清零，一般复位采用，其余千万不要清零）
         reg_ctrl[0] <= 1'b0; // soft-reset
     end
 end
