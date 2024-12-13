@@ -4,6 +4,38 @@
 // Description:
 //	AXI lite interface regfile.
 //
+/*
+axi_lite_regfile#(
+    .ADDR_BITS=32     ( undefined ),
+    .DATA_BITS=32     ( undefined ),
+    .DATA_BYTES=DATA_BITS/8 ( undefined )
+)u_axi_lite_regfile(
+    .s_axi_aclk       ( s_axi_aclk       ),
+    .s_axi_aresetn    ( s_axi_aresetn    ),
+    .s_axi_awaddr     ( s_axi_awaddr     ),
+    .s_axi_awvalid    ( s_axi_awvalid    ),
+    .s_axi_awready    ( s_axi_awready    ),
+    .s_axi_wdata      ( s_axi_wdata      ),
+    .s_axi_wstrb      ( s_axi_wstrb      ),
+    .s_axi_wvalid     ( s_axi_wvalid     ),
+    .s_axi_wready     ( s_axi_wready     ),
+    .s_axi_bresp      ( s_axi_bresp      ),
+    .s_axi_bvalid     ( s_axi_bvalid     ),
+    .s_axi_bready     ( s_axi_bready     ),
+    .s_axi_araddr     ( s_axi_araddr     ),
+    .s_axi_arvalid    ( s_axi_arvalid    ),
+    .s_axi_arready    ( s_axi_arready    ),
+    .s_axi_rdata      ( s_axi_rdata      ),
+    .s_axi_rresp      ( s_axi_rresp      ),
+    .s_axi_rvalid     ( s_axi_rvalid     ),
+    .s_axi_rready     ( s_axi_rready     ),
+    .RD_NEXT_ADDRESS  ( RD_NEXT_ADDRESS  ),
+    .ps_pl_flag0      ( ps_pl_flag0      ),
+    .ps_pl_flag1      ( ps_pl_flag1      ),
+    .pl_wr_done       ( pl_wr_done       ),
+    .end_addr         ( end_addr         )
+);
+*/
 ////////////////////////////////////////////////////////////////////////////////
 
 module axi_lite_regfile #(

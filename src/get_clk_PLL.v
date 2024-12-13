@@ -2,7 +2,7 @@
 // File:	get_clk_PLL.v
 // Author:	FPGA_master <1975670198@qq.com>
 // Description:
-//	Replacing PLL with IP cores for use.
+//	Replacing PLL with IP cores for use, only on Xilinx.
 //
 ////////////////////////////////////////////////////////////////////////////////
 //Clock calculation rules:

@@ -4,6 +4,14 @@
 // Description:
 //	Add timestamp during data transmission.
 //
+/*
+real_clock_ms u_real_clock_ms(
+    .rst_n   ( rst_n   ),
+    .clk     ( clk     ),
+    .time_ms ( time_ms ),
+    .time_sec  ( time_sec  )
+);
+*/
 ////////////////////////////////////////////////////////////////////////////////
 
 module real_clock_ms(

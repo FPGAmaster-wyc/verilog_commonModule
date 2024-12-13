@@ -6,6 +6,15 @@
 // Usage conditions:
 //	The pulse width of a single bit signal in the slow clock domain must be greater than or equal to 2 clock cycles in the fast clock domain.
 //
+/*
+asy_1bit_slow2fast u_asy_1bit_slow2fast(
+    .clk_slow ( clk_slow ),
+    .clk_fast ( clk_fast ),
+    .rst_n    ( rst_n    ),
+    .din      ( din      ),
+    .dout     ( dout     )
+);
+*/
 ////////////////////////////////////////////////////////////////////////////////
 
 module asy_1bit_slow2fast(

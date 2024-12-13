@@ -4,6 +4,14 @@
 // Description:
 //	Resolve different clocks with the same reset.
 //
+/*
+reset_sync u_reset_sync(
+    .clk    ( clk    ),
+    .rst_in ( rst_in ),
+    .reset  ( reset  ),
+    .resetn  ( resetn  )
+);
+*/
 ////////////////////////////////////////////////////////////////////////////////
 
 module reset_sync(

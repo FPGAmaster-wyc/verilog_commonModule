@@ -6,6 +6,15 @@
 //Usage conditions:
 //	The interval between two input pulses in the fast clock domain must be greater than or equal to two clock cycles in the slow clock domain.
 //
+/*
+asy_1bit_fast2slow u_asy_1bit_fast2slow(
+    .clk_fast ( clk_fast ),
+    .clk_slow ( clk_slow ),
+    .rst_n    ( rst_n    ),
+    .din      ( din      ),
+    .dout     ( dout     )
+);
+*/
 ////////////////////////////////////////////////////////////////////////////////
 
 module asy_1bit_fast2slow(
