@@ -1,0 +1,24 @@
+`timescale 1ns/1ps
+module freq_ji_tb;
+	
+	reg clk,rst_n;
+	
+	wire clk_out;
+	
+	freq_ji freq_ji_inst(
+	.clk(clk),
+	.rst_n(rst_n),
+	.clk_out(clk_out)
+	);
+	
+	initial begin
+		clk = 0;
+		rst_n = 0;
+		#200
+		rst_n = 1;
+	end
+	
+	always #10 clk = ~clk;
+	
+endmodule
+

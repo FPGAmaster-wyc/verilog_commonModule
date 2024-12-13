@@ -1,0 +1,92 @@
+# Reading D:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do page_rd_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_rd/prj {C:/Users/86188/Desktop/FPGA/0816/page_rd/prj/my_pll.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module my_pll
+# 
+# Top level modules:
+# 	my_pll
+# vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_rd/src {C:/Users/86188/Desktop/FPGA/0816/page_rd/src/page_rd_top.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module page_rd_top
+# 
+# Top level modules:
+# 	page_rd_top
+# vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_rd/src {C:/Users/86188/Desktop/FPGA/0816/page_rd/src/page_rd.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module page_rd
+# 
+# Top level modules:
+# 	page_rd
+# vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_rd/prj {C:/Users/86188/Desktop/FPGA/0816/page_rd/prj/my_ram.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module my_ram
+# 
+# Top level modules:
+# 	my_ram
+# vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_rd/prj/db {C:/Users/86188/Desktop/FPGA/0816/page_rd/prj/db/my_pll_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module my_pll_altpll
+# 
+# Top level modules:
+# 	my_pll_altpll
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_rd/prj/../sim {C:/Users/86188/Desktop/FPGA/0816/page_rd/prj/../sim/page_rd_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module page_rd_tb
+# 
+# Top level modules:
+# 	page_rd_tb
+# vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_rd/prj/../sim {C:/Users/86188/Desktop/FPGA/0816/page_rd/prj/../sim/M24LC64.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module M24LC64
+# 
+# Top level modules:
+# 	M24LC64
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  page_rd_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps page_rd_tb 
+# Loading work.page_rd_tb
+# Loading work.page_rd_top
+# Loading work.my_pll
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading work.page_rd
+# Loading work.my_ram
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.M24LC64
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#  Note : Cyclone IV E PLL was reset
+# Time: 0  Instance: page_rd_tb.byte_rd_top_inst.my_pll_dut.altpll_component.cycloneiii_pll.pll3
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 290000  Instance: page_rd_tb.byte_rd_top_inst.my_pll_dut.altpll_component.cycloneiii_pll.pll3
+add wave -position insertpoint sim:/page_rd_tb/byte_rd_top_inst/page_rd_dut/*
+# Break key hit 
+restart
+run -all
+#  Note : Cyclone IV E PLL was reset
+# Time: 0  Instance: page_rd_tb.byte_rd_top_inst.my_pll_dut.altpll_component.cycloneiii_pll.pll3
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 290000  Instance: page_rd_tb.byte_rd_top_inst.my_pll_dut.altpll_component.cycloneiii_pll.pll3

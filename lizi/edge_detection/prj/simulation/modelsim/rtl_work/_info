@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\FPGA\lizi\edge_detection\prj\simulation\modelsim
+vedge_detection
+!i10b 1
+!s100 P@UemJPWF_21L]ER5:Fb13
+IY<KL>g^X=P[2MC0@KP@PV0
+V0Y4VWZ`ERmcEPTkend7]m1
+Z1 dD:\FPGA\lizi\edge_detection\prj\simulation\modelsim
+w1677310176
+8D:/FPGA/lizi/edge_detection/src/edge_detection.v
+FD:/FPGA/lizi/edge_detection/src/edge_detection.v
+L0 2
+Z2 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1677310188.359000
+!s107 D:/FPGA/lizi/edge_detection/src/edge_detection.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA/lizi/edge_detection/src|-O0|D:/FPGA/lizi/edge_detection/src/edge_detection.v|
+!s101 -O0
+Z3 o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+D:/FPGA/lizi/edge_detection/src -O0
+vedge_detection_tb
+I9zm5B?TbJhKZ9de4Wl^3f2
+ViDU7a:36JKYcY6j1G2:`I1
+R1
+w1662098193
+8D:/FPGA/lizi/edge_detection/prj/../sim/edge_detection_tb.v
+FD:/FPGA/lizi/edge_detection/prj/../sim/edge_detection_tb.v
+L0 1
+R2
+r1
+31
+R3
+!i10b 1
+!s100 :OR`I^T5E<XDl=>Jc6R`^3
+!s85 0
+!s108 1677310092.966000
+!s107 D:/FPGA/lizi/edge_detection/prj/../sim/edge_detection_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA/lizi/edge_detection/prj/../sim|D:/FPGA/lizi/edge_detection/prj/../sim/edge_detection_tb.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+D:/FPGA/lizi/edge_detection/prj/../sim -O0

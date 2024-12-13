@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="page_rd">
+		<CBX_INST_ENTRY INSTANCE_NAME="|page_rd_top|my_pll:my_pll_dut|altpll:altpll_component" CBX_FILE_NAME="my_pll_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|page_rd_top|my_ram:my_ram_dut|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_49i1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,9 @@
+
+State Machine - |dht11_top|dht11_ctrl:DUT|state
+Name state.S_RD_DATA state.S_READY_HIGH state.S_READY_LOW state.S_DELAY state.S_LOW_18MS state.S_WAIT_1S 
+state.S_WAIT_1S 0 0 0 0 0 0 
+state.S_LOW_18MS 0 0 0 0 1 1 
+state.S_DELAY 0 0 0 1 0 1 
+state.S_READY_LOW 0 0 1 0 0 1 
+state.S_READY_HIGH 0 1 0 0 0 1 
+state.S_RD_DATA 1 0 0 0 0 1 

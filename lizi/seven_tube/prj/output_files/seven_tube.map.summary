@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Aug 16 10:01:47 2023
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : seven_tube
+Top-level Entity Name : seven_tube
+Family : Cyclone IV E
+Total logic elements : 50
+    Total combinational functions : 50
+    Dedicated logic registers : 36
+Total registers : 36
+Total pins : 13
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

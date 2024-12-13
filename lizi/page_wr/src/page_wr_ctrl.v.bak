@@ -1,0 +1,202 @@
+module page_wr(clk_400khz,rst_n,scl,sda);
+	
+	input 				clk_400khz,rst_n;
+		
+	output reg 			scl;
+	inout 				sda;
+		
+	reg		[3:0] 	state;
+	reg		[3:0] 	cnt;				//并转串计数器
+	reg		[7:0]		data;				//地址，数据寄存器
+	reg					en;				//sda的使能信号
+	reg					sda_buff;
+	
+	//定义状态
+	parameter S0					=4'd0;
+	parameter CONTROL_BYTE		=4'd1;
+	parameter ACK1					=4'd2;
+	parameter ADDR_HIGH			=4'd3;
+	parameter ACK2					=4'd4;	
+	parameter ADDR_LOW			=4'd5;
+	parameter ACK3					=4'd6;
+	parameter WR_DATA				=4'd7;
+	parameter ACK4					=4'd8;
+	parameter STOP_READY			=4'd9;
+	parameter STOP					=4'd10;
+	
+	parameter data_ctrl 			= 8'b1010_000_0;
+	parameter data_addr_high 	= 8'h0;
+	parameter data_addr_low 	= 8'h55;
+	parameter data_byte_wr 		= 8'h63;
+	
+	
+	assign sda = (en) ? sda_buff : 1'bz;				//三态门（实现sda双向传输）
+	
+	
+	//产生200khz的scl
+	always @(negedge clk_400khz,negedge rst_n)
+	begin
+		if(!rst_n)
+			scl <= 1'd1;
+		else
+			scl <= ~scl;
+	end
+	
+	always @(posedge clk_400khz,negedge rst_n)
+	begin
+		if(!rst_n)
+			begin
+				state <= S0;
+				en <= 1'd1;
+				sda_buff <= 1'd1;
+				data <= 8'd0;
+				cnt <= 0;
+			end
+		else
+			case(state)
+				
+				S0		:		begin
+									if(scl == 1'd1)
+										begin
+											sda_buff <= 0;
+											en <= 1'd1;
+											data <= data_ctrl;
+											state <= CONTROL_BYTE;
+										end
+									else
+										state <= S0;
+								end
+								
+	CONTROL_BYTE	:		begin
+									if(scl == 0)
+										if(cnt == 4'd8)
+											begin
+												state <= ACK1;
+												cnt <= 0;
+												en <= 0;
+											end
+										else
+											begin
+												cnt <= cnt + 1'd1;
+												data <= {data[6:0],data[7]};
+												sda_buff <= data[7];
+											end
+								end
+								
+				ACK1	:		begin
+									if(scl == 1'd1)
+										if(sda == 0)
+											begin
+												state <= ADDR_HIGH;
+												data <= data_addr_high;
+											end
+									else
+										state <= S0;
+								end
+								
+		ADDR_HIGH	:		begin
+									en <= 1;
+									if(scl == 0)
+										if(cnt == 4'd8)
+											begin
+												state <= ACK2;
+												cnt <= 0;
+												en <= 0;
+											end
+										else
+											begin
+												cnt <= cnt + 1'd1;
+												data <= {data[6:0],data[7]};
+												sda_buff <= data[7];
+											end
+								end
+								
+				ACK2	:		begin
+									if(scl == 1'd1)
+										if(sda == 0)
+											begin
+												state <= ADDR_LOW;
+												data <= data_addr_low;
+											end
+									else
+										state <= S0;
+								end
+								
+			ADDR_LOW	:		begin
+									en <= 1;
+									if(scl == 0)
+										if(cnt == 4'd8)
+											begin
+												state <= ACK3;
+												cnt <= 0;
+												en <= 0;
+											end
+										else
+											begin
+												cnt <= cnt + 1'd1;
+												data <= {data[6:0],data[7]};
+												sda_buff <= data[7];
+											end
+								end
+								
+				ACK3	:		begin
+									if(scl == 1'd1)
+										if(sda == 0)
+											begin
+												state <= WR_DATA;
+												data <= data_byte_wr;
+											end
+									else
+										state <= S0;
+								end
+								
+			WR_DATA	:		begin
+									en <= 1;
+									if(scl == 0)
+										if(cnt == 4'd8)
+											begin
+												state <= ACK4;
+												cnt <= 0;
+												en <= 0;
+											end
+										else
+											begin
+												cnt <= cnt + 1'd1;
+												data <= {data[6:0],data[7]};
+												sda_buff <= data[7];
+											end
+								end
+								
+				ACK4	:		begin
+									if(scl == 1'd1)
+										if(sda == 0)
+											begin
+												state <= STOP_READY;
+												data <= 0;
+											end
+									else
+										state <= S0;
+								end
+								
+		STOP_READY	:		begin
+									if(scl == 0)
+										begin
+											en <= 1;
+											state <= STOP;
+											sda_buff <= 0;
+										end
+								end
+				
+				STOP	:		begin
+									if(scl == 1)
+										begin
+											sda_buff <= 1;
+											state <= STOP;
+										end
+								end
+								
+				default	:		state <= S0;	
+			endcase
+	end
+
+endmodule 

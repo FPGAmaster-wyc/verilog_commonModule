@@ -1,0 +1,105 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\86188\Desktop\FPGA\0730\key_scan\prj\simulation\modelsim
+vbeep_ctrl
+IJ]Li?ZHFDMHJ?fTITbTeA1
+Vb;5;ZQRD8BI<H6o:[bA3G1
+Z1 dC:\Users\86188\Desktop\FPGA\0730\key_scan\prj\simulation\modelsim
+w1659166523
+8C:/Users/86188/Desktop/FPGA/0730/key_scan/src/beep_ctrl.v
+FC:/Users/86188/Desktop/FPGA/0730/key_scan/src/beep_ctrl.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0
+!i10b 1
+!s100 7RPKji4?n3hAIh<hN:Eho0
+!s85 0
+!s108 1659168865.180000
+!s107 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/beep_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src|-O0|C:/Users/86188/Desktop/FPGA/0730/key_scan/src/beep_ctrl.v|
+!s101 -O0
+vkey_scan
+IPH2L<zJ;Q0CVU4`?LhVVV2
+VN_EGkW1;DYjFkkS9dG]dh3
+R1
+w1659168713
+8C:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan.v
+FC:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 RfIKMf?BAO8nN8<[5c8We0
+!s85 0
+!s108 1659168865.271000
+!s107 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src|-O0|C:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan.v|
+!s101 -O0
+vkey_scan_tb
+ITgG<[VEM6;@a<l`Y3d5Co2
+VAUO<>>[FnEYz4OVl7Q;HM1
+R1
+w1659168851
+8C:/Users/86188/Desktop/FPGA/0730/key_scan/sim/key_scan_tb.v
+FC:/Users/86188/Desktop/FPGA/0730/key_scan/sim/key_scan_tb.v
+L0 2
+R2
+r1
+31
+R3
+!i10b 1
+!s100 QmRmRc;B8N5<<eE:VzMGB0
+!s85 0
+!s108 1659168865.360000
+!s107 C:/Users/86188/Desktop/FPGA/0730/key_scan/sim/key_scan_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/prj/../sim|-O0|C:/Users/86188/Desktop/FPGA/0730/key_scan/sim/key_scan_tb.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/prj/../sim -O0
+vkey_scan_top
+IJoHhX3=dX3f2S1Xzg_z<73
+VBTW3VA;O^Z9?lghLo3ENa0
+R1
+w1659167673
+8C:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan_top.v
+FC:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan_top.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 5_?EmQ16GM<`hl^meiUK83
+!s85 0
+!s108 1659168865.453000
+!s107 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src|-O0|C:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan_top.v|
+!s101 -O0
+vseven_tube
+!i10b 1
+!s100 f@IoaCU^HW64n=Xlc3nX>2
+I^l70>lK2?[n^8jQfU]TA=2
+V74J>TAD<a6V@;bRm0<_S;2
+R1
+w1659159764
+8C:/Users/86188/Desktop/FPGA/0730/key_scan/src/seven_tube.v
+FC:/Users/86188/Desktop/FPGA/0730/key_scan/src/seven_tube.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1659168865.545000
+!s107 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/seven_tube.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src|-O0|C:/Users/86188/Desktop/FPGA/0730/key_scan/src/seven_tube.v|
+!s101 -O0
+R3
+R4

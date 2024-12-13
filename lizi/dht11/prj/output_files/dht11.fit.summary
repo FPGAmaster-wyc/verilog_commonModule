@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Aug 25 15:02:40 2023
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : dht11
+Top-level Entity Name : dht11_top
+Family : Cyclone IV E
+Device : EP4CE10F17C8
+Timing Models : Final
+Total logic elements : 402 / 10,320 ( 4 % )
+    Total combinational functions : 399 / 10,320 ( 4 % )
+    Dedicated logic registers : 162 / 10,320 ( 2 % )
+Total registers : 162
+Total pins : 15 / 180 ( 8 % )
+Total virtual pins : 0
+Total memory bits : 0 / 423,936 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

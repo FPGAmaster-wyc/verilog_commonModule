@@ -1,0 +1,16 @@
+|freq_ji
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt1[0].CLK
+clk => cnt1[1].CLK
+clk => cnt1[2].CLK
+rst_n => cnt1[0].ACLR
+rst_n => cnt1[1].ACLR
+rst_n => cnt1[2].ACLR
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+clk_out <= clk_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

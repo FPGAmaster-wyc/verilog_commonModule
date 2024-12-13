@@ -1,0 +1,48 @@
+module freq_ji(clk,rst_n,clk_out);
+
+
+	input clk,rst_n;
+	
+	output clk_out;
+	
+	
+	reg [3:0] cnt;
+	reg [3:0] cnt1;
+	
+	parameter t = 5;
+	wire clk_v1,clk_v2;
+	
+	//上升沿的2高1低
+	always @(posedge clk,negedge rst_n)
+	begin
+		if(!rst_n)
+			cnt <= 1'b0;
+		else
+			if(cnt == t-1 )
+				cnt <= 1'b0;
+			else
+				cnt <= cnt + 1'b1;	
+	end
+	
+	assign clk_v1 = (cnt < t / 2)? 1'b1 : 1'b0;
+	
+	//下降沿的2高1低
+	always @(negedge clk,negedge rst_n)
+	begin
+		if(!rst_n)
+			cnt1 <= 1'b0;
+		else
+			if(cnt1 == t -1)
+				cnt1 <= 1'b0;
+			else
+				cnt1 <= cnt1 + 1'b1;	
+	end
+	
+	assign clk_v2 = (cnt1 < t / 2)? 1'b1 : 1'b0;
+	
+	assign clk_out = clk_v1 | clk_v2;
+
+
+
+endmodule
+	

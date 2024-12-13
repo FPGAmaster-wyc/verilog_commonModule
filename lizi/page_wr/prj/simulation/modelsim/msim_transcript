@@ -1,0 +1,131 @@
+# Reading D:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do page_wr_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/prj {C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/my_pll.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module my_pll
+# 
+# Top level modules:
+# 	my_pll
+# vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/src {C:/Users/86188/Desktop/FPGA/0816/page_wr/src/page_wr.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module page_wr
+# 
+# Top level modules:
+# 	page_wr
+# vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/src {C:/Users/86188/Desktop/FPGA/0816/page_wr/src/page_wr_ctrl.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module page_wr_ctrl
+# 
+# Top level modules:
+# 	page_wr_ctrl
+# vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/db {C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/db/my_pll_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module my_pll_altpll
+# 
+# Top level modules:
+# 	my_pll_altpll
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/../sim {C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/../sim/page_wr_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module page_wr_tb
+# 
+# Top level modules:
+# 	page_wr_tb
+# vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/../sim {C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/../sim/M24LC64.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module M24LC64
+# 
+# Top level modules:
+# 	M24LC64
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  page_wr_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps page_wr_tb 
+# Loading work.page_wr_tb
+# Loading work.page_wr
+# Loading work.my_pll
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading work.page_wr_ctrl
+# Loading work.M24LC64
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#  Note : Cyclone IV E PLL was reset
+# Time: 0  Instance: page_wr_tb.byte_wr_top_dut.my_pll_dut.altpll_component.cycloneiii_pll.pll3
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 290000  Instance: page_wr_tb.byte_wr_top_dut.my_pll_dut.altpll_component.cycloneiii_pll.pll3
+add wave -position insertpoint sim:/page_wr_tb/byte_wr_top_dut/page_wr_ctrl_dut/*
+restart
+run -all
+#  Note : Cyclone IV E PLL was reset
+# Time: 0  Instance: page_wr_tb.byte_wr_top_dut.my_pll_dut.altpll_component.cycloneiii_pll.pll3
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 290000  Instance: page_wr_tb.byte_wr_top_dut.my_pll_dut.altpll_component.cycloneiii_pll.pll3
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/../sim -O0 C:/Users/86188/Desktop/FPGA/0816/page_wr/sim/M24LC64.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module M24LC64
+# 
+# Top level modules:
+# 	M24LC64
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/prj -O0 C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/my_pll.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module my_pll
+# 
+# Top level modules:
+# 	my_pll
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/db -O0 C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/db/my_pll_altpll.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module my_pll_altpll
+# 
+# Top level modules:
+# 	my_pll_altpll
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/src -O0 C:/Users/86188/Desktop/FPGA/0816/page_wr/src/page_wr.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module page_wr
+# 
+# Top level modules:
+# 	page_wr
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/src -O0 C:/Users/86188/Desktop/FPGA/0816/page_wr/src/page_wr_ctrl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module page_wr_ctrl
+# 
+# Top level modules:
+# 	page_wr_ctrl
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/../sim -O0 C:/Users/86188/Desktop/FPGA/0816/page_wr/sim/page_wr_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module page_wr_tb
+# 
+# Top level modules:
+# 	page_wr_tb
+restart
+# Loading work.page_wr_tb
+# Loading work.page_wr
+# Loading work.my_pll
+# Loading work.page_wr_ctrl
+# Loading work.M24LC64
+run -all
+#  Note : Cyclone IV E PLL was reset
+# Time: 0  Instance: page_wr_tb.byte_wr_top_dut.my_pll_dut.altpll_component.cycloneiii_pll.pll3
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 290000  Instance: page_wr_tb.byte_wr_top_dut.my_pll_dut.altpll_component.cycloneiii_pll.pll3
+# Break key hit 
+# Break in Module MF_cycloneiii_pll at D:/altera/13.0sp1/modelsim_ase/win32aloem/../altera/verilog/src/altera_mf.v line 16831

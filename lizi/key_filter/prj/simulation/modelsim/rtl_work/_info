@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\FPGA\lizi\key_filter\prj\simulation\modelsim
+vkey_filter
+IBSh[fQYZXo<>6T?fAA2gG2
+V4SD86a6G?dYOk8VgKQY_M1
+Z1 dD:\FPGA\lizi\key_filter\prj\simulation\modelsim
+w1660569057
+8D:/FPGA/lizi/key_filter/src/key_filter.v
+FD:/FPGA/lizi/key_filter/src/key_filter.v
+L0 2
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+!i10b 1
+!s100 ?Fe`SM6<Uc]WXU8R3hkZ83
+!s85 0
+!s108 1677309962.861000
+!s107 D:/FPGA/lizi/key_filter/src/key_filter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA/lizi/key_filter/src|D:/FPGA/lizi/key_filter/src/key_filter.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+D:/FPGA/lizi/key_filter/src -O0
+vkey_filter_tb
+!i10b 1
+!s100 ]aU6>]B?>CP5>;8@aZC2a3
+I1CAzQGN?>E97LPl0H6R9k3
+VT6bW6H4OZ8Z;cP@K;akW^3
+R1
+w1677309954
+8D:/FPGA/lizi/key_filter/prj/../src/key_filter_tb.v
+FD:/FPGA/lizi/key_filter/prj/../src/key_filter_tb.v
+L0 2
+R2
+r1
+!s85 0
+31
+!s108 1677309962.978000
+!s107 D:/FPGA/lizi/key_filter/prj/../src/key_filter_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA/lizi/key_filter/prj/../src|D:/FPGA/lizi/key_filter/prj/../src/key_filter_tb.v|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+D:/FPGA/lizi/key_filter/prj/../src -O0

@@ -1,0 +1,51 @@
+module top(
+	input clk,
+	input rst_n,
+	
+	inout dht11,
+	output v3_3,
+	output clk_1M,
+	output [7:0] seg,
+	output [2:0] sel	
+);
+
+	wire [31:0] data;
+	wire [11:0] temp_seg,humi_seg;
+	
+	my_pll p1(
+	.areset(~rst_n),
+	.inclk0(clk),
+	.c0(clk_1M),
+	.locked()
+);
+	
+	bin2bcd b1(
+		.bin_in(data[31:24]),
+		.bcd_out(humi_seg)
+	);
+	bin2bcd b2(
+		.bin_in(data[15:8]),
+		.bcd_out(temp_seg)
+	);
+
+	wendu DUT(
+		.clk(clk),
+		.rst_n(rst_n),
+		.data(data),
+		.dht11(dht11)
+	);
+
+
+	seven_tube s1(
+		.clk(clk),
+		.rst_n(rst_n),
+		.data_in({temp_seg,humi_seg}),
+		.seg(seg),
+		.sel(sel)
+	);
+	
+	assign v3_3 = 1;
+	
+	
+	
+endmodule 

@@ -1,0 +1,161 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'dht11_ctrl:DUT|clk_1us'
+Slack : -6.719
+TNS   : -556.141
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -3.843
+TNS   : -128.476
+
+Type  : Slow 1200mV 85C Model Setup 'seven_tube:TUBE|clk_1khz'
+Slack : -0.377
+TNS   : -0.692
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.073
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'dht11_ctrl:DUT|clk_1us'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'seven_tube:TUBE|clk_1khz'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'clk'
+Slack : -0.717
+TNS   : -6.453
+
+Type  : Slow 1200mV 85C Model Recovery 'dht11_ctrl:DUT|clk_1us'
+Slack : -0.680
+TNS   : -50.374
+
+Type  : Slow 1200mV 85C Model Removal 'dht11_ctrl:DUT|clk_1us'
+Slack : 0.054
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clk'
+Slack : 1.187
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -66.941
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'dht11_ctrl:DUT|clk_1us'
+Slack : -1.487
+TNS   : -172.492
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'seven_tube:TUBE|clk_1khz'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Slow 1200mV 0C Model Setup 'dht11_ctrl:DUT|clk_1us'
+Slack : -6.098
+TNS   : -510.767
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -3.573
+TNS   : -117.388
+
+Type  : Slow 1200mV 0C Model Setup 'seven_tube:TUBE|clk_1khz'
+Slack : -0.230
+TNS   : -0.413
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.091
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'dht11_ctrl:DUT|clk_1us'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'seven_tube:TUBE|clk_1khz'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'dht11_ctrl:DUT|clk_1us'
+Slack : -0.546
+TNS   : -36.643
+
+Type  : Slow 1200mV 0C Model Recovery 'clk'
+Slack : -0.541
+TNS   : -4.869
+
+Type  : Slow 1200mV 0C Model Removal 'dht11_ctrl:DUT|clk_1us'
+Slack : 0.006
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clk'
+Slack : 1.095
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -66.941
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'dht11_ctrl:DUT|clk_1us'
+Slack : -1.487
+TNS   : -172.492
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'seven_tube:TUBE|clk_1khz'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Fast 1200mV 0C Model Setup 'dht11_ctrl:DUT|clk_1us'
+Slack : -2.431
+TNS   : -176.174
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.022
+TNS   : -29.054
+
+Type  : Fast 1200mV 0C Model Setup 'seven_tube:TUBE|clk_1khz'
+Slack : 0.388
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.122
+TNS   : -0.194
+
+Type  : Fast 1200mV 0C Model Hold 'dht11_ctrl:DUT|clk_1us'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'seven_tube:TUBE|clk_1khz'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'dht11_ctrl:DUT|clk_1us'
+Slack : 0.140
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'clk'
+Slack : 0.221
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'dht11_ctrl:DUT|clk_1us'
+Slack : 0.038
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clk'
+Slack : 0.504
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -48.825
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'dht11_ctrl:DUT|clk_1us'
+Slack : -1.000
+TNS   : -116.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'seven_tube:TUBE|clk_1khz'
+Slack : -1.000
+TNS   : -3.000
+
+------------------------------------------------------------

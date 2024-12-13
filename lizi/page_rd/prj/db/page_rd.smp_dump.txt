@@ -1,0 +1,19 @@
+
+State Machine - |page_rd_top|page_rd:page_rd_dut|state
+Name state.STOP state.STOP_READY state.NO_ACK state.RD_ACK state.RD_DATA state.ACK4 state.RD_CTRL state.RD_START state.START_READY state.ACK3 state.ADDR_LOW state.ACK2 state.ADDR_HIGH state.ACK1 state.CONTROL_BYTE state.S0 
+state.S0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.CONTROL_BYTE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.ACK1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.ADDR_HIGH 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.ACK2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.ADDR_LOW 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.ACK3 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.START_READY 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.RD_START 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.RD_CTRL 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.ACK4 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.RD_DATA 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.RD_ACK 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.NO_ACK 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STOP_READY 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STOP 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

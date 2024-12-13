@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\86188\Desktop\FPGA\0720\prj\simulation\modelsim
+vbcd_top
+IHnZ:OG;iX?[n57FdUU3K53
+VWk?m?2T]oPQHCWgOQSJAe0
+Z1 dC:\Users\86188\Desktop\FPGA\0720\prj\simulation\modelsim
+w1658294782
+8C:/Users/86188/Desktop/FPGA/0720/src/bcd_top.v
+FC:/Users/86188/Desktop/FPGA/0720/src/bcd_top.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0720/src -O0
+!i10b 1
+!s100 V;lgUAWX47DUBn>P5_hPV3
+!s85 0
+!s108 1658297973.886000
+!s107 C:/Users/86188/Desktop/FPGA/0720/src/bcd_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/86188/Desktop/FPGA/0720/src|C:/Users/86188/Desktop/FPGA/0720/src/bcd_top.v|
+!s101 -O0
+vbcd_top_tb
+!i10b 1
+!s100 US2h0=TaeTJVL3>oeVJhI3
+I<cn9n5GVQ7o>z:TV:n`Td3
+V0i@3bi0WiRdkJ]@O3nf0:2
+R1
+w1658297905
+8C:/Users/86188/Desktop/FPGA/0720/prj/../sim/bcd_top_tb.v
+FC:/Users/86188/Desktop/FPGA/0720/prj/../sim/bcd_top_tb.v
+L0 2
+R2
+r1
+!s85 0
+31
+!s108 1658297973.991000
+!s107 C:/Users/86188/Desktop/FPGA/0720/prj/../sim/bcd_top_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/86188/Desktop/FPGA/0720/prj/../sim|C:/Users/86188/Desktop/FPGA/0720/prj/../sim/bcd_top_tb.v|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0720/prj/../sim -O0
+vbijiao
+I?k1[c`CCdM[N@6bTXHk5@2
+VC5nNC4;38TC_;k6nmhgQG3
+R1
+w1658294818
+8C:/Users/86188/Desktop/FPGA/0720/src/bijiao.v
+FC:/Users/86188/Desktop/FPGA/0720/src/bijiao.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 I=ML@<GDl>m1R<:0?:PfY0
+!s85 0
+!s108 1658297973.625000
+!s107 C:/Users/86188/Desktop/FPGA/0720/src/bijiao.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/86188/Desktop/FPGA/0720/src|C:/Users/86188/Desktop/FPGA/0720/src/bijiao.v|
+!s101 -O0
+vyiwei
+IkDP[1^O2Z<OfBT:Y>:6a_0
+V:LWaGBlkj>]SBiQJIdg?o0
+R1
+w1658297829
+8C:/Users/86188/Desktop/FPGA/0720/src/yiwei.v
+FC:/Users/86188/Desktop/FPGA/0720/src/yiwei.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 0LDT9kLK`35XGf<oATNAo2
+!s85 0
+!s108 1658297973.762000
+!s107 C:/Users/86188/Desktop/FPGA/0720/src/yiwei.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/86188/Desktop/FPGA/0720/src|C:/Users/86188/Desktop/FPGA/0720/src/yiwei.v|
+!s101 -O0

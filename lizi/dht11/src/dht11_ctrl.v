@@ -1,0 +1,315 @@
+module dht11_ctrl(
+	input	clk,
+	input rst_n,
+	
+	output  reg [31:0] data,	//湿度高8+湿度低8+温度高8+温度低8
+	
+	inout dht11
+);
+
+	parameter 	t_1s 		= 1_000_000 - 1,    	//1s延时计数值
+					t_18ms	= 18_000 - 1,			//20ms
+					t_83us	= 83 - 1;
+					
+	reg dht11_en;		//总线输出使能
+	reg dht11_out;		//总线输出数据
+	reg clk_1us;
+	reg sys_rst_n;
+	
+	reg [19:0] cnt_1us;		
+	reg [7:0] cnt;
+	reg [11:0] cnt_low;
+	reg [11:0] cnt_high;
+	reg [5:0] bit_cnt;
+	reg [39:0] data_tmp;
+	
+//状态机定义
+	reg [2:0] state;
+	parameter   S_WAIT_1S  			= 3'd1   ,   //上电等待1s状态
+					S_LOW_18MS 			= 3'd2   ,   //主机拉低18ms，发送开始信号状态
+					S_DELAY				= 3'd3	,	 //等待13us
+					S_READY_LOW     	= 3'd4   ,   //等待dht11拉低83us状态
+					S_READY_HIGH    	= 3'd5   ,   //等待dht11拉高87us状态
+					S_RD_DATA     		= 3'd6	;   //接收数据状态
+	
+/******异步复位同步释放*****开始*******/
+	always @ (posedge clk) begin
+		if (!rst_n)
+			sys_rst_n <= 0;
+		else	
+			sys_rst_n <= rst_n; 	
+	end
+/******异步复位同步释放*****结束*******/
+	
+	
+//当使能信号为1时：总线的值为dht11_out，否则为高阻态  
+	assign dht11 = (dht11_en) ? dht11_out : 1'bz;//dht11_en==1时，为out，此时dht11要用dht11_out表示
+	
+/******产生1us时钟*********开始***/
+	always @ (posedge clk,negedge sys_rst_n) begin
+		if (!sys_rst_n)
+			begin
+				clk_1us <= 0;
+				cnt <= 0;
+			end
+		else	
+			if (cnt == 8'd24)
+				begin
+					clk_1us <= ~clk_1us;
+					cnt <= 0;
+				end
+			else
+				cnt <= cnt + 8'd1;
+	end
+/******产生1us时钟*********结束***/
+	
+/********检测数据信号的跳变沿*******开始****/
+	wire            dht11_fall; //总线下降沿
+	wire            dht11_rise; //总线上升沿
+	reg dht11_d2,dht11_d1;
+	
+	assign  dht11_rise =   (~dht11_d2) & (dht11_d1)    ;
+	assign  dht11_fall =   (dht11_d2)  & (~dht11_d1)   ;
+
+	//对dht11信号打拍
+	always@(posedge clk_1us or  negedge sys_rst_n)
+		 if(sys_rst_n == 1'b0)
+			  begin
+					dht11_d1  <=  1'b0 ;
+					dht11_d2  <=  1'b0 ;
+			  end
+		 else
+			  begin
+					dht11_d1  <=  dht11    ;
+					dht11_d2  <=  dht11_d1 ;
+			  end
+/********检测数据信号的跳变沿*******结束****/	
+
+/********状态机实现*******开始****/
+
+//状态跳转	
+	always @ (posedge clk_1us, negedge sys_rst_n) begin
+		if (!sys_rst_n)
+			state <= S_WAIT_1S;
+		else
+			case (state)
+				S_WAIT_1S	:	begin
+										if (cnt_1us == t_1s)
+											state <= S_LOW_18MS;
+										else
+											state <= S_WAIT_1S;
+									end
+									
+				S_LOW_18MS	:	begin
+										if (cnt_1us == t_18ms)
+											state <= S_DELAY;
+										else
+											state <= S_LOW_18MS;
+									end
+									
+					S_DELAY	:	begin
+										if (cnt_1us >= 13)
+											state <= S_READY_LOW;
+										else
+											state <= S_DELAY;					
+									end
+									
+				S_READY_LOW	:	begin
+										if (dht11_rise == 1 && cnt_low >= 80)
+											state <= S_READY_HIGH;
+										else if (cnt_1us >= 1000)
+											state <= S_WAIT_1S;
+										else
+											state <= S_READY_LOW;
+									end
+								
+				S_READY_HIGH:	begin
+										if (dht11_fall == 1 && cnt_high >= 80)
+											state <= S_RD_DATA;
+										else if (cnt_1us >= 1000)
+											state <= S_WAIT_1S;
+										else
+											state <= S_READY_HIGH;
+									end
+									
+				S_RD_DATA	:	begin
+										if (bit_cnt == 40 && dht11_rise == 1)
+											state <= S_WAIT_1S;
+										else 
+											state <= S_RD_DATA;
+									end									
+				
+				default		:	;
+			endcase
+	end
+
+//计数
+	always @ (posedge clk_1us, negedge sys_rst_n) begin
+		if (!sys_rst_n)
+			begin
+				cnt_low <= 0;
+				cnt_high <= 0;
+				cnt_1us <= 0;
+			end
+		else
+			case (state)
+				S_WAIT_1S	:	begin
+										if (cnt_1us == t_1s)
+											cnt_1us <= 0;
+										else
+											cnt_1us <= cnt_1us + 20'd1;
+									end
+				
+				S_LOW_18MS	:	begin
+										if (cnt_1us == t_18ms)
+											cnt_1us <= 0;
+										else
+											cnt_1us <= cnt_1us + 20'd1;
+									end
+				
+				S_DELAY		:	begin
+										if (cnt_1us >= 13)
+											cnt_1us <= 0;
+										else
+											cnt_1us <= cnt_1us + 20'd1;
+									end
+									
+				S_READY_LOW	:	begin
+										if (dht11_rise == 1 && cnt_low >= 12'd80)
+											begin
+												cnt_low <= 0;
+												cnt_1us <= 0;
+											end
+										else if (dht11 == 0)
+											begin
+												cnt_low <= cnt_low + 12'd1;
+												cnt_1us <= cnt_1us + 20'd1;
+											end
+										else if (cnt_1us >= 1000)
+											begin
+												cnt_low <= 0;
+												cnt_1us <= 0;
+											end
+										else
+											cnt_1us <= cnt_1us + 20'd1;
+									end
+									
+				S_READY_HIGH:	begin
+										if (dht11_fall == 1 && cnt_high >= 12'd80)
+											begin
+												cnt_high <= 0;
+												cnt_1us	<= 0;
+											end
+										else if (dht11 == 1)
+											begin
+												cnt_high <= cnt_high + 12'd1;
+												cnt_1us  <= cnt_1us  + 20'd1;
+											end
+										else if (cnt_1us >= 1000)
+											begin
+												cnt_high <= 0;
+												cnt_1us <= 0;
+											end
+										else
+											cnt_1us <= cnt_1us + 20'd1;
+									end
+									
+				S_RD_DATA	:	begin
+										if (dht11_fall == 1 || dht11_rise == 1)
+											cnt_1us <= 0;
+										else
+											cnt_1us <= cnt_1us + 20'd1;
+									end
+					
+					default	:	begin
+										cnt_low <= 0;
+										cnt_high <= 0;
+										cnt_1us <= 0;
+									end	
+			endcase 
+	end
+	
+//数据传输
+	always @ (posedge clk_1us, negedge sys_rst_n) begin
+		if (!sys_rst_n)
+			begin
+				dht11_en 	<= 0;
+				dht11_out 	<= 0;
+			end
+		else
+			case (state)
+				S_WAIT_1S	:	begin
+										dht11_en 	<= 0;
+										dht11_out 	<= 0;
+									end
+									
+				S_LOW_18MS	:	begin
+										dht11_en 	<= 1;
+										dht11_out 	<= 0;
+									end
+				
+				S_DELAY		:	begin
+										dht11_en 	<= 0;
+										dht11_out 	<= 0;
+									end
+				
+				S_READY_LOW	:	begin
+										dht11_en 	<= 0;
+										dht11_out 	<= 0;
+									end
+									
+				S_READY_HIGH:	begin
+										dht11_en 	<= 0;
+										dht11_out 	<= 0;
+									end
+									
+				S_RD_DATA	:	begin
+										dht11_en 	<= 0;
+										dht11_out 	<= 0;
+									end
+									
+					default	:	begin
+										dht11_en 	<= 0;
+										dht11_out 	<= 0;
+									end
+			endcase
+	end
+/********状态机实现*******结束****/
+
+//数据计数器
+	always @ (posedge clk_1us, negedge sys_rst_n) begin
+		if (!sys_rst_n)
+			bit_cnt <= 0;
+		else if (bit_cnt >= 40 && dht11_rise == 1)
+			bit_cnt <= 0;
+		else if (dht11_fall == 1 && state == S_RD_DATA)
+			bit_cnt <= bit_cnt + 6'd1;
+		else
+			bit_cnt <= bit_cnt;
+	end
+	
+//读取数据并存到data_tmp
+	always @ (posedge clk_1us, negedge sys_rst_n) begin
+		if (!sys_rst_n)
+			data_tmp <= 0;
+		else if (state == S_RD_DATA && dht11_fall == 1 && cnt_1us < 30)
+			data_tmp[39 - bit_cnt] <= 0;
+		else if (state == S_RD_DATA && dht11_fall == 1 && cnt_1us > 60)
+			data_tmp[39 - bit_cnt] <= 1;
+		else
+			data_tmp <= data_tmp;
+	end
+
+//验证数据准确
+	always @ (posedge clk_1us, negedge sys_rst_n) begin
+		if (!sys_rst_n)
+			data <= 0;
+		else if (data_tmp[7:0] == (data_tmp[39:32] + data_tmp[31:24] + data_tmp[23:16] + data_tmp[15:8]))
+			begin
+				data <= data_tmp[39:8];
+			end
+		else
+			data <= data;
+	end
+	
+endmodule 

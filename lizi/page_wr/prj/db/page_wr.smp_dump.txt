@@ -1,0 +1,14 @@
+
+State Machine - |page_wr|page_wr_ctrl:page_wr_ctrl_dut|state
+Name state.DELAY state.STOP state.STOP_READY state.WR_DATA state.ACK3 state.ADDR_LOW state.ACK2 state.ADDR_HIGH state.ACK1 state.CONTROL_BYTE state.S0 
+state.S0 0 0 0 0 0 0 0 0 0 0 0 
+state.CONTROL_BYTE 0 0 0 0 0 0 0 0 0 1 1 
+state.ACK1 0 0 0 0 0 0 0 0 1 0 1 
+state.ADDR_HIGH 0 0 0 0 0 0 0 1 0 0 1 
+state.ACK2 0 0 0 0 0 0 1 0 0 0 1 
+state.ADDR_LOW 0 0 0 0 0 1 0 0 0 0 1 
+state.ACK3 0 0 0 0 1 0 0 0 0 0 1 
+state.WR_DATA 0 0 0 1 0 0 0 0 0 0 1 
+state.STOP_READY 0 0 1 0 0 0 0 0 0 0 1 
+state.STOP 0 1 0 0 0 0 0 0 0 0 1 
+state.DELAY 1 0 0 0 0 0 0 0 0 0 1 

@@ -1,0 +1,299 @@
+# Reading D:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do key_scan_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src {C:/Users/86188/Desktop/FPGA/0730/key_scan/src/seven_tube.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module seven_tube
+# 
+# Top level modules:
+# 	seven_tube
+# vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src {C:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan_top.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan_top
+# 
+# Top level modules:
+# 	key_scan_top
+# vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src {C:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan
+# 
+# Top level modules:
+# 	key_scan
+# vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src {C:/Users/86188/Desktop/FPGA/0730/key_scan/src/beep_ctrl.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module beep_ctrl
+# 
+# Top level modules:
+# 	beep_ctrl
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/prj/../sim {C:/Users/86188/Desktop/FPGA/0730/key_scan/prj/../sim/key_scan_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan_tb
+# 
+# Top level modules:
+# 	key_scan_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  key_scan_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps key_scan_tb 
+# Loading work.key_scan_tb
+# Loading work.key_scan_top
+# Loading work.key_scan
+# Loading work.seven_tube
+# Loading work.beep_ctrl
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break in Module key_scan_tb at C:/Users/86188/Desktop/FPGA/0730/key_scan/prj/../sim/key_scan_tb.v line 48
+# Simulation Breakpoint: Break in Module key_scan_tb at C:/Users/86188/Desktop/FPGA/0730/key_scan/prj/../sim/key_scan_tb.v line 48
+# MACRO ./key_scan_run_msim_rtl_verilog.do PAUSED at line 20
+add wave -position insertpoint sim:/key_scan_tb/key_scan_top_dut/key_scan_dut/*
+run
+restart
+run -all
+# Break in Module key_scan_tb at C:/Users/86188/Desktop/FPGA/0730/key_scan/prj/../sim/key_scan_tb.v line 48
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/beep_ctrl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module beep_ctrl
+# 
+# Top level modules:
+# 	beep_ctrl
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan
+# 
+# Top level modules:
+# 	key_scan
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/prj/../sim -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/sim/key_scan_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan_tb
+# 
+# Top level modules:
+# 	key_scan_tb
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan_top.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan_top
+# 
+# Top level modules:
+# 	key_scan_top
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/seven_tube.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module seven_tube
+# 
+# Top level modules:
+# 	seven_tube
+restart
+# Loading work.key_scan_tb
+# Loading work.key_scan_top
+# Loading work.key_scan
+# Loading work.seven_tube
+# Loading work.beep_ctrl
+run -all
+# Break in Module key_scan_tb at C:/Users/86188/Desktop/FPGA/0730/key_scan/sim/key_scan_tb.v line 48
+add wave -position insertpoint  \
+sim:/key_scan_tb/key_in
+restart
+run -all
+# Break in Module key_scan_tb at C:/Users/86188/Desktop/FPGA/0730/key_scan/sim/key_scan_tb.v line 48
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/beep_ctrl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module beep_ctrl
+# 
+# Top level modules:
+# 	beep_ctrl
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan
+# 
+# Top level modules:
+# 	key_scan
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/prj/../sim -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/sim/key_scan_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan_tb
+# 
+# Top level modules:
+# 	key_scan_tb
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan_top.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan_top
+# 
+# Top level modules:
+# 	key_scan_top
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/seven_tube.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module seven_tube
+# 
+# Top level modules:
+# 	seven_tube
+restart
+# Loading work.key_scan_tb
+# Loading work.key_scan_top
+# Loading work.key_scan
+# Loading work.seven_tube
+# Loading work.beep_ctrl
+run -all
+# Break in Module key_scan_tb at C:/Users/86188/Desktop/FPGA/0730/key_scan/sim/key_scan_tb.v line 48
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/beep_ctrl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module beep_ctrl
+# 
+# Top level modules:
+# 	beep_ctrl
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan
+# 
+# Top level modules:
+# 	key_scan
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/prj/../sim -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/sim/key_scan_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan_tb
+# 
+# Top level modules:
+# 	key_scan_tb
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan_top.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan_top
+# 
+# Top level modules:
+# 	key_scan_top
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/seven_tube.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module seven_tube
+# 
+# Top level modules:
+# 	seven_tube
+restart
+# Loading work.key_scan_tb
+# Loading work.key_scan_top
+# Loading work.key_scan
+# Loading work.seven_tube
+# Loading work.beep_ctrl
+run -all
+# Break in Module key_scan_tb at C:/Users/86188/Desktop/FPGA/0730/key_scan/sim/key_scan_tb.v line 48
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/beep_ctrl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module beep_ctrl
+# 
+# Top level modules:
+# 	beep_ctrl
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan
+# 
+# Top level modules:
+# 	key_scan
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/prj/../sim -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/sim/key_scan_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan_tb
+# 
+# Top level modules:
+# 	key_scan_tb
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan_top.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan_top
+# 
+# Top level modules:
+# 	key_scan_top
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/seven_tube.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module seven_tube
+# 
+# Top level modules:
+# 	seven_tube
+restart
+# Loading work.key_scan_tb
+# Loading work.key_scan_top
+# Loading work.key_scan
+# Loading work.seven_tube
+# Loading work.beep_ctrl
+run -all
+# Break in Module key_scan_tb at C:/Users/86188/Desktop/FPGA/0730/key_scan/sim/key_scan_tb.v line 48
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/beep_ctrl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module beep_ctrl
+# 
+# Top level modules:
+# 	beep_ctrl
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan
+# 
+# Top level modules:
+# 	key_scan
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/prj/../sim -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/sim/key_scan_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan_tb
+# 
+# Top level modules:
+# 	key_scan_tb
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan_top.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan_top
+# 
+# Top level modules:
+# 	key_scan_top
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/seven_tube.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module seven_tube
+# 
+# Top level modules:
+# 	seven_tube
+restart
+# Loading work.key_scan_tb
+# Loading work.key_scan_top
+# Loading work.key_scan
+# Loading work.seven_tube
+# Loading work.beep_ctrl
+run -all
+# Break in Module key_scan_tb at C:/Users/86188/Desktop/FPGA/0730/key_scan/sim/key_scan_tb.v line 48
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/beep_ctrl.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module beep_ctrl
+# 
+# Top level modules:
+# 	beep_ctrl
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan
+# 
+# Top level modules:
+# 	key_scan
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/prj/../sim -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/sim/key_scan_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan_tb
+# 
+# Top level modules:
+# 	key_scan_tb
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/key_scan_top.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module key_scan_top
+# 
+# Top level modules:
+# 	key_scan_top
+vlog -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0730/key_scan/src -O0 C:/Users/86188/Desktop/FPGA/0730/key_scan/src/seven_tube.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module seven_tube
+# 
+# Top level modules:
+# 	seven_tube
+restart
+# Loading work.key_scan_tb
+# Loading work.key_scan_top
+# Loading work.key_scan
+# Loading work.seven_tube
+# Loading work.beep_ctrl
+run -all
+# Break in Module key_scan_tb at C:/Users/86188/Desktop/FPGA/0730/key_scan/sim/key_scan_tb.v line 48

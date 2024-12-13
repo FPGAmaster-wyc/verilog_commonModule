@@ -1,0 +1,126 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\86188\Desktop\FPGA\0816\page_wr\prj\simulation\modelsim
+vM24LC64
+IM9F^<^jnoW[DFj1m_loE13
+VYXM1[O=YaDMNXU8M0^Fk62
+Z1 dC:\Users\86188\Desktop\FPGA\0816\page_wr\prj\simulation\modelsim
+w1660461295
+8C:/Users/86188/Desktop/FPGA/0816/page_wr/sim/M24LC64.v
+FC:/Users/86188/Desktop/FPGA/0816/page_wr/sim/M24LC64.v
+L0 87
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/../sim -O0
+n@m24@l@c64
+!i10b 1
+!s100 ]=7XO?3N=09=n_:hV6]ZQ3
+!s85 0
+!s108 1660631915.436000
+!s107 C:/Users/86188/Desktop/FPGA/0816/page_wr/sim/M24LC64.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/../sim|-O0|C:/Users/86188/Desktop/FPGA/0816/page_wr/sim/M24LC64.v|
+!s101 -O0
+vmy_pll
+ImdCi1lUTLQSK8F[f<21I_2
+V[GE<Nz@2BCL4=NfHYN;fh0
+R1
+w1660630337
+8C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/my_pll.v
+FC:/Users/86188/Desktop/FPGA/0816/page_wr/prj/my_pll.v
+L0 39
+R2
+r1
+31
+R3
+!i10b 1
+!s100 WNB=ALl[YeOk?0<f<f3[D0
+!s85 0
+!s108 1660631915.534000
+!s107 C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/my_pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/prj|-O0|C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/my_pll.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/prj -O0
+vmy_pll_altpll
+I`WRjZHK4>UPmM>a:DVaVG2
+VJUDQD[gfafn`ZOUFdaQ>C2
+R1
+w1660630472
+8C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/db/my_pll_altpll.v
+FC:/Users/86188/Desktop/FPGA/0816/page_wr/prj/db/my_pll_altpll.v
+L0 30
+R2
+r1
+31
+R3
+!i10b 1
+!s100 ]GSD`]aBQQ?E`0z:cRjmP3
+!s85 0
+!s108 1660631915.626000
+!s107 C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/db/my_pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/db|-O0|C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/db/my_pll_altpll.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/db -O0
+vpage_wr
+Im^:ge5RHHlV]>YZ6n7fBz1
+VWYePzjK97HOmi3e2]b[AU2
+R1
+w1660630464
+8C:/Users/86188/Desktop/FPGA/0816/page_wr/src/page_wr.v
+FC:/Users/86188/Desktop/FPGA/0816/page_wr/src/page_wr.v
+L0 1
+R2
+r1
+31
+R3
+Z5 !s92 -vlog01compat -work work +incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/src -O0
+!i10b 1
+!s100 _1F3aDl9_`C?RbW8^S9_;1
+!s85 0
+!s108 1660631915.718000
+!s107 C:/Users/86188/Desktop/FPGA/0816/page_wr/src/page_wr.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/src|-O0|C:/Users/86188/Desktop/FPGA/0816/page_wr/src/page_wr.v|
+!s101 -O0
+vpage_wr_ctrl
+ISKGg2<;zB[B@OI71XYi0_2
+VJmh_D7hhQ?7n=UaWhme[n2
+R1
+w1660631903
+8C:/Users/86188/Desktop/FPGA/0816/page_wr/src/page_wr_ctrl.v
+FC:/Users/86188/Desktop/FPGA/0816/page_wr/src/page_wr_ctrl.v
+L0 1
+R2
+r1
+31
+R3
+R5
+!i10b 1
+!s100 3R0bo]PV>9:2im>J:X1ac1
+!s85 0
+!s108 1660631915.814000
+!s107 C:/Users/86188/Desktop/FPGA/0816/page_wr/src/page_wr_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/src|-O0|C:/Users/86188/Desktop/FPGA/0816/page_wr/src/page_wr_ctrl.v|
+!s101 -O0
+vpage_wr_tb
+!i10b 1
+!s100 nDkH8bAMCh8hbTN3R;]Sa1
+I:VWMXR;1Nzd4Bdc:a^^IC2
+VUFj<nSadhPJIU6ERnajT42
+R1
+w1660631676
+8C:/Users/86188/Desktop/FPGA/0816/page_wr/sim/page_wr_tb.v
+FC:/Users/86188/Desktop/FPGA/0816/page_wr/sim/page_wr_tb.v
+L0 2
+R2
+r1
+!s85 0
+31
+!s108 1660631915.912000
+!s107 C:/Users/86188/Desktop/FPGA/0816/page_wr/sim/page_wr_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/86188/Desktop/FPGA/0816/page_wr/prj/../sim|-O0|C:/Users/86188/Desktop/FPGA/0816/page_wr/sim/page_wr_tb.v|
+!s101 -O0
+R3
+R4

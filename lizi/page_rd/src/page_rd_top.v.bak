@@ -1,0 +1,33 @@
+ module	page_rd_top(clk,rst_n,sda,scl,rd_data);
+	
+	input clk,rst_n;
+	
+	output scl;
+	output [7:0] rd_data;
+	
+	inout sda;
+	
+	wire	clk_400khz;
+	wire	clk_800khz;
+	wire 	locked;
+ 
+	//分频 c0：400khz
+	my_pll my_pll_dut(
+	.areset(~rst_n),
+	.inclk0(clk),
+	.c0(clk_400khz),
+	.c1(clk_800khz),
+	.locked(locked)
+	);
+	
+	//读的控制
+	byte_rd byte_rd_dut(
+	.clk_400khz(clk_400khz),
+	.rst_n(locked),
+	.rd_data(rd_data),
+	.scl(scl),
+	.sda(sda)
+	);
+ 
+ 
+ endmodule 
