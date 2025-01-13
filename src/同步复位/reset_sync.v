@@ -1,3 +1,19 @@
+////////////////////////////////////////////////////////////////////////////////
+// File:	reset_sync.v
+// Author:	FPGA_master <1975670198@qq.com>
+// Description:
+//	Resolve different clocks with the same reset.
+//
+/*
+reset_sync u_reset_sync(
+    .clk    ( clk    ),
+    .rst_in ( rst_in ),
+    .reset  ( reset  ),
+    .resetn  ( resetn  )
+);
+*/
+////////////////////////////////////////////////////////////////////////////////
+
 module reset_sync(
 	clk,
 	rst_in,

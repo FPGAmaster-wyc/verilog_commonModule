@@ -1,3 +1,18 @@
+////////////////////////////////////////////////////////////////////////////////
+// File:	edge_detector.v
+// Author:	FPGA_master <1975670198@qq.com>
+// Description:
+//	edge_detector module.
+/*
+edge_detector u_edge_detector(
+    .clk         ( clk         ),
+    .rst_n       ( rst_n       ),
+    .signal_in   ( signal_in   ),
+    .rising_edge ( rising_edge ),
+    .falling_edge  ( falling_edge  )
+);
+*/
+//
 module edge_detector (
     input wire clk,
     input wire rst_n,

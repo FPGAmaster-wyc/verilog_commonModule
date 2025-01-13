@@ -1,26 +1,36 @@
-/*****
-*单bit信号 
-*慢时钟域信号同步到快时钟域
-
-*使用条件：
-*慢时钟域下的单比特信号的脉冲宽度，必须要大于或等于快时钟域下2个时钟周期。
-*这样才能保证慢时钟域的脉冲信号是足够保持到被快时钟域的同步器拿到。
-****/
+////////////////////////////////////////////////////////////////////////////////
+// File:	asy_1bit_slow2fast.v
+// Author:	FPGA_master <1975670198@qq.com>
+// Description:
+//	Single bit signal synchronization from slow clock domain signal to fast clock domain signal.
+// Usage conditions:
+//	The pulse width of a single bit signal in the slow clock domain must be greater than or equal to 2 clock cycles in the fast clock domain.
+//
+/*
+asy_1bit_slow2fast u_asy_1bit_slow2fast(
+    .clk_slow ( clk_slow ),
+    .clk_fast ( clk_fast ),
+    .rst_n    ( rst_n    ),
+    .din      ( din      ),
+    .dout     ( dout     )
+);
+*/
+////////////////////////////////////////////////////////////////////////////////
 
 module asy_1bit_slow2fast(
-	input  clk_slow, //慢时钟
-	input  clk_fast, //快时钟
-	input  rst_n,		//块时钟的
+	input  clk_slow, 
+	input  clk_fast, 
+	input  rst_n,		
 
 	input  din,
 	output dout
 );
 
-(* ASYNC_REG = "TRUE" *)		//避免出现时序违约
+(* ASYNC_REG = "TRUE" *)		//To avoid timing defaults
 reg       q1,q2,q3;
 
 assign dout = q2 & (~q3);
-//------同步打拍-------
+//------SYNC shooting-------
 always@(posedge clk_fast or negedge rst_n) begin
 	if(!rst_n)
 	begin

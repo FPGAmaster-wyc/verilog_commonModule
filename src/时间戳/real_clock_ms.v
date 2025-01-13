@@ -1,3 +1,9 @@
+////////////////////////////////////////////////////////////////////////////////
+// File:	real_clock_ms.v
+// Author:	FPGA_master <1975670198@qq.com>
+// Description:
+//	Add timestamp during data transmission.
+//
 /******
 
 *用于数据传输的时候添加时间戳
@@ -5,22 +11,27 @@
 *输入的时钟，要把时钟周期替换掉CLOCK_PERIOD_NS的值  
 	例子：100M  	CLOCK_PERIOD_NS = 10; 
 
-*****/
-
-
+real_clock_ms u_real_clock_ms(
+    .rst_n   ( rst_n   ),
+    .clk     ( clk     ),
+    .time_ms ( time_ms ),
+    .time_sec  ( time_sec  )
+);
+*/
+////////////////////////////////////////////////////////////////////////////////
 
 module real_clock_ms(
     input rst_n,
     input clk,
     //input [31:0] set_sec,
     //input [23:0] set_ms,
-    //input set_en,               //1 ： 外部时钟   0  ：自己产生
+    //input set_en,               
     
     output [15:0] time_ms,
     output [15:0] time_sec
     //output reg pps
 );
-parameter CLOCK_PERIOD_NS = 10;         //周期 ns
+parameter CLOCK_PERIOD_NS = 10;         //cycle ns
 
     reg set_en = 0;
 function integer clogb2 (input integer size);

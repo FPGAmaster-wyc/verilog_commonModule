@@ -4,6 +4,19 @@
 // Description:
 //	rs232 uart_rx module.
 //
+/*
+uart_rx#(   
+    .UART_BPS   ( 9600 ),           //串口波特率
+    .CLK_FREQ   ( 50_000_000 )      //时钟频率
+)u_uart_rx(
+    .sys_clk    ( sys_clk    ),     //系统时钟50MHz
+    .sys_rst_n  ( sys_rst_n  ),     //全局复位
+    .rx         ( rx         ),     //串口接收数据
+    .po_data    ( po_data    ),     //串转并后的数据有效标志信号
+    .po_flag    ( po_flag    )      //串转并后的8bit数据
+);
+
+*/
 ////////////////////////////////////////////////////////////////////////////////
 
 module  uart_rx

@@ -6,6 +6,18 @@ CLK_VCO = CLK_IN * M / D
 CLK_OUT = CLK_IN * M / (D * O)
 	O£ºCLKOUT_DIVIDE  £¨out0 Îª CLKOUT0_DIVIDE_F£©
 */
+/*
+get_clk#(
+    .CLK_DEVICE ( "MMCM" )
+)u_get_clk(
+    .reset    ( reset    ),
+    .clk_in   ( clk_in   ),
+    .pclk     ( pclk     ),
+    .lvds_clk ( lvds_clk ),
+    .locked   ( locked   )
+);
+
+*/
 
 module get_clk #(
     parameter CLK_DEVICE = "MMCM"

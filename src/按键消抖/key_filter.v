@@ -3,7 +3,14 @@
 // Author:	FPGA_master <1975670198@qq.com>
 // Description:
 //	按键消抖模块
-//
+/*
+key_filter u_key_filter(
+    .sys_clk    ( sys_clk    ),  //系统时钟50Mhz
+    .sys_rst_n  ( sys_rst_n  ),	//全局复位
+    .key_in     ( key_in     ),	//按键输入信号 （按下为低电平）
+    .key_flag   ( key_flag   )	//key_flag为1时表示消抖后检测到按键被按下
+);
+*/
 ////////////////////////////////////////////////////////////////////////////////
 
 module  key_filter(

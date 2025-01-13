@@ -4,6 +4,19 @@
 // Description:
 //	rs232 uart_tx module.
 //
+/*
+uart_tx#(
+    .UART_BPS   ( 9600 ),        //串口波特率
+    .CLK_FREQ   ( 50_000_000 )   //时钟频率
+)u_uart_tx(
+    .sys_clk    ( sys_clk    ), //系统时钟50MHz
+    .sys_rst_n  ( sys_rst_n  ),  //全局复位
+    .pi_data    ( pi_data    ),  //模块输入的8bit数据
+    .pi_flag    ( pi_flag    ),  //并行数据有效标志信号
+    .tx         ( tx         )   //串转并后的1bit数据
+);
+
+*/
 ////////////////////////////////////////////////////////////////////////////////
 
 module  uart_tx
