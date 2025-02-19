@@ -64,7 +64,7 @@ module top(
 
     GenData u_GenData(
         .clk   ( user_clk   ),
-        .rst_n ( locked ),
+        .rst_n ( ~locked ),
         .valid ( fifo_valid ),
         .last  ( fifo_last  ),
         .data  ( fifo_data  )
@@ -86,6 +86,8 @@ module top(
         .m_axis_tdata(s_axi_tx_tdata),    // output wire [63 : 0] m_axis_tdata
         .m_axis_tlast(s_axi_tx_tlast)    // output wire m_axis_tlast
     );
+	
+	
 
     aurora_64b66b_0 Aurora64B (
     // TX DATA pass

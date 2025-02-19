@@ -97,16 +97,16 @@ module axi_write #
     assign S_WR_tready  = o_ready                   ;
 	assign i_data       = S_WR_tdata                ;
 	
-	assign i_data = {
-				S_WR_tdata[7:0],
-				S_WR_tdata[15:8],
-				S_WR_tdata[23:16],
-				S_WR_tdata[31:24],
-				S_WR_tdata[39:32],
-				S_WR_tdata[47:40],
-				S_WR_tdata[55:48],
-				S_WR_tdata[63:56]
-	};
+	//assign i_data = {
+	//			S_WR_tdata[7:0],
+	//			S_WR_tdata[15:8],
+	//			S_WR_tdata[23:16],
+	//			S_WR_tdata[31:24],
+	//			S_WR_tdata[39:32],
+	//			S_WR_tdata[47:40],
+	//			S_WR_tdata[55:48],
+	//			S_WR_tdata[63:56]
+	//};
             
     //×´Ì¬×ª»» FSM31
     always @ (posedge i_clk, negedge i_rst_n) begin  :   W_FMS1

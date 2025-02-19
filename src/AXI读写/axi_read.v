@@ -87,12 +87,12 @@ module axi_read #
     assign M_RD_tlast   = o_last                    ;
     assign M_RD_tvalid  = o_valid                   ;
     assign i_ready      = M_RD_tready               ;
-    //assign M_RD_tdata   = o_data                    ;
-    assign M_RD_tdata = {   o_data[7:0]   ,
-                            o_data[15:8]  ,
-                            o_data[23:16] ,
-                            o_data[31:24] 
-                        };
+    assign M_RD_tdata   = o_data                    ;
+    //assign M_RD_tdata = {   o_data[7:0]   ,
+    //                        o_data[15:8]  ,
+    //                        o_data[23:16] ,
+    //                        o_data[31:24] 
+    //                    };
 
     //×´Ì¬×ª»» FSM31
     always @ (posedge i_clk, negedge i_rst_n) begin  :   R_FMS1
