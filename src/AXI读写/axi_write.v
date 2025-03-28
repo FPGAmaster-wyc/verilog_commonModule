@@ -226,6 +226,10 @@ module axi_write #
                 WR_STOP :   begin
                                 w_last  <= 0        ;
                                 w_valid <= 0        ;
+//								  if (aw_addr_cnt >= 32'h100000-1)
+//                                	  aw_addr_cnt <= 0;
+//                                else
+//                              	  aw_addr_cnt <= aw_addr_cnt + 256*8;
                 end
 
                 default :   ;

@@ -206,6 +206,10 @@ module axi_read #
                 RD_STOP :   begin
                                 o_last <= 0;
                                 o_valid <= 0;
+//								  if (rd_addr_buff >= 32'h100000-1)
+//                                	  rd_addr_buff <= 0;
+//                                else
+//                              	  rd_addr_buff <= rd_addr_buff + 256*8;
                 end 
 
             endcase 
