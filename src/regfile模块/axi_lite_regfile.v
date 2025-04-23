@@ -69,13 +69,25 @@ module axi_lite_regfile #(
 	input						s_axi_rready	,
 
 	//PS PL interface
-	output	[31:0] 				RD_NEXT_ADDRESS	,
-	output 						ps_pl_flag0		,
-	output  					ps_pl_flag1		,
-	input                 		pl_wr_done		,
-    input	[31:0]  			end_addr  
+	//write
+    input	[31:0]  			C2H_WR_NEXT  	,	//FPGA2PC FPGA下一次要写入的帧的起始地址
+	output	[31:0]  			C2H_RD_NEXT  	,	//PC2FPGA 软件下一次要读的帧的起始地址
+	
+	//read
+	input 	[31:0] 				H2C_RD_NEXT		,	//FPGA2PC FPGA下一次要读取的帧的起始地址
+	output 	[31:0] 				H2C_WR_NEXT		,	//PC2FPGA 软件下一次要写的帧的起始地址	
+	
+	output 	[31:0] 				H2C_FRM_SIZE		//PC2FPGA 软件要写的数据帧大小
 );
 
+	localparam 	C2H_START 		= 32'h0,			//FPGA2PC FPGA写DDR缓冲区起始地址
+				C2H_END			= 32'h1000_0000,	//FPGA2PC FPGA写DDR缓冲区结束地址
+				C2H_BUF_SIZE	= 32'd2048,		//FPGA2PC FPGA写DDR缓冲区的每一帧大小  单位：字节  ，但是并不是帧大小
+				C2H_FRM_SIZE	= 32'd2048,		//FPGA2PC FPGA写DDR数据的每一帧大小  单位：字节
+				H2C_BUF_START	= 32'h1000_0000,	//FPGA2PC FPGA读DDR缓冲区起始地址
+				H2C_BUF_END     = 32'h2000_0000,	//FPGA2PC FPGA读DDR缓冲区结束地址
+				H2C_BUF_SIZE	= 32'd2048 	   ;	//FPGA2PC FPGA读DDR缓冲区的每一帧大小  单位：字节  ，但是并不是帧大小
+				
 	wire					wr_ready = 1;
 	wire					rd_ready = 1;
 
@@ -118,9 +130,9 @@ module axi_lite_regfile #(
 	reg [31:0] reg_ctrl_0_w;
 	
 	//read message
-	assign ps_pl_flag0 = reg_ctrl_0[0];
-	assign ps_pl_flag1 = reg_ctrl_1[0];
-	assign RD_NEXT_ADDRESS = reg_ctrl_2;
+	assign C2H_RD_NEXT = reg_ctrl_0;
+	assign H2C_WR_NEXT = reg_ctrl_1;
+	assign H2C_FRM_SIZE = reg_ctrl_2;
 
 	// PS to PL write machine   （读写地址不能覆盖，写进去的数据，在读的地方写一下，要不然会清零）
 	always @(posedge s_axi_aclk, negedge s_axi_aresetn) begin
@@ -128,58 +140,57 @@ module axi_lite_regfile #(
         begin
             reg_ctrl_0 <= 'b0;
             reg_ctrl_1 <= 'b0;
-            reg_ctrl_2 <= 'b0;
+			reg_ctrl_2 <= 'b0;
         end
     else if(wr_en) 
         begin
-            case(wr_addr[7:2])            
-                // rd_next_address
-                2:  begin  
+            case(wr_addr)            
+                // C2H_RD_NEXT
+                32'h4C:  begin  
                     if(wr_be[0]) reg_ctrl_0[7:0] <= wr_dout[7:0];
                     if(wr_be[1]) reg_ctrl_0[15:8] <= wr_dout[15:8];
                     if(wr_be[2]) reg_ctrl_0[23:16] <= wr_dout[23:16];
                     if(wr_be[3]) reg_ctrl_0[31:24] <= wr_dout[31:24];
                 end
-
-                3: begin
+                //H2C_WR_NEXT
+                32'h90: begin
                     if(wr_be[0]) reg_ctrl_1[7:0] <= wr_dout[7:0];
                     if(wr_be[1]) reg_ctrl_1[15:8] <= wr_dout[15:8];
                     if(wr_be[2]) reg_ctrl_1[23:16] <= wr_dout[23:16];
                     if(wr_be[3]) reg_ctrl_1[31:24] <= wr_dout[31:24];
                 end
-
-                4: begin
+                //H2C_FRM_SIZE
+				32'h94: begin
                     if(wr_be[0]) reg_ctrl_2[7:0] <= wr_dout[7:0];
                     if(wr_be[1]) reg_ctrl_2[15:8] <= wr_dout[15:8];
                     if(wr_be[2]) reg_ctrl_2[23:16] <= wr_dout[23:16];
                     if(wr_be[3]) reg_ctrl_2[31:24] <= wr_dout[31:24];
                 end
-                
+				
+				default :	;
             endcase
-        end
-    else 
-        begin
-            // self-clean 会把PS接收到的信号清零，一般复位采用，其余千万不要清零）
-            reg_ctrl_1 <= 0; 
         end
 	end
 
 	// PL to PS read machine
 	always @(*)	begin
-		case(rd_addr[7:2])
-			//
-			0: rd_din = {31'd0,pl_wr_done};          
-			// 
-			1: rd_din = {end_addr};
-
-
-			// 
-			2: rd_din = reg_ctrl_0;
-			//
-			3: rd_din = reg_ctrl_1;   
-			//
-			4: rd_din = reg_ctrl_2;  
-
+		case(rd_addr)
+			//从PC读的数据 要在幅值一下
+			32'h4C: rd_din = reg_ctrl_0;  
+			32'h90: rd_din = reg_ctrl_1; 
+			32'h94: rd_din = reg_ctrl_2; 
+			
+			//发送给PC的数据
+			32'h40: rd_din = C2H_START;
+			32'h44: rd_din = C2H_END;
+			32'h48: rd_din = C2H_BUF_SIZE;
+			32'h50: rd_din = C2H_WR_NEXT;
+			32'h54: rd_din = C2H_FRM_SIZE;
+			32'h80: rd_din = H2C_BUF_START;
+			32'h84: rd_din = H2C_BUF_END;
+			32'h88: rd_din = H2C_BUF_SIZE;
+			32'h8c: rd_din = H2C_RD_NEXT;
+			
 			default: rd_din = 'bx;
 		endcase
 	end
@@ -331,10 +342,5 @@ module axi_lite_regfile #(
 	assign rd_en = read_enable;
 	assign read_data = rd_din;
 	assign read_done = read_enable && rd_ready;
-
-
-
-
-
-
+	
 endmodule

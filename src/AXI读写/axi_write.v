@@ -8,9 +8,10 @@
 
 module axi_write #
 (
-    parameter integer ADDR_WIDTH	= 32    ,
-    parameter integer DATA_WIDTH	= 64    ,
-    parameter integer AW_LIN	    = 16     //1-256
+    parameter integer FLIP_BYTE   = 0     ,//0：不翻转  1：翻转    //大小端是否翻转
+    parameter integer ADDR_WIDTH	= 32    ,                      //地址位宽
+    parameter integer DATA_WIDTH	= 64    ,//32,64,128           //数据位宽
+    parameter integer AW_LIN	    = 16     //1-256               //突发长度
 )
 (        
     //写入数据
@@ -95,19 +96,25 @@ module axi_write #
     assign i_valid      = S_WR_tvalid               ;
     assign i_last       = S_WR_tlast                ;
     assign S_WR_tready  = o_ready                   ;
-	assign i_data       = S_WR_tdata                ;
 	
-	//assign i_data = {
-	//			S_WR_tdata[7:0],
-	//			S_WR_tdata[15:8],
-	//			S_WR_tdata[23:16],
-	//			S_WR_tdata[31:24],
-	//			S_WR_tdata[39:32],
-	//			S_WR_tdata[47:40],
-	//			S_WR_tdata[55:48],
-	//			S_WR_tdata[63:56]
-	//};
-            
+	//大小端转换
+	generate
+		if (FLIP_BYTE == 1) begin
+			assign i_data = {
+				S_WR_tdata[7:0],     S_WR_tdata[15:8], 
+				S_WR_tdata[23:16],   S_WR_tdata[31:24],
+				S_WR_tdata[39:32],   S_WR_tdata[47:40],
+				S_WR_tdata[55:48],   S_WR_tdata[63:56],
+				S_WR_tdata[71:64],   S_WR_tdata[79:72],
+				S_WR_tdata[87:80],   S_WR_tdata[95:88],
+				S_WR_tdata[103:96],  S_WR_tdata[111:104],
+				S_WR_tdata[119:112], S_WR_tdata[127:120]
+			};
+		end else begin
+			assign i_data = S_WR_tdata;  // 不翻转
+		end
+	endgenerate
+
     //状态转换 FSM31
     always @ (posedge i_clk, negedge i_rst_n) begin  :   W_FMS1
         if (~i_rst_n)
