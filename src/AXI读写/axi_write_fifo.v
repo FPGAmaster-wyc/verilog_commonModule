@@ -7,16 +7,16 @@
 
 module axi_write #
 (
-    parameter integer FLIP_BYTE   = 0     ,//0：不翻转  1：翻转    //大小端是否翻转
-    parameter integer ADDR_WIDTH	= 32    ,                      //地址位宽
-    parameter integer DATA_WIDTH	= 64    ,//32,64,128           //数据位宽
-    parameter integer AW_LIN	    = 16     //1-256               //突发长度
+    parameter integer WR_FLIP_BYTE   = 0     ,//0：不翻转  1：翻转    //大小端是否翻转
+    parameter integer WR_ADDR_WIDTH	= 32    ,                      //地址位宽
+    parameter integer WR_DATA_WIDTH	= 64    ,//32,64,128           //数据位宽
+    parameter integer WR_LIN	    = 16     //1-256               //突发长度
 )
 (        
     //写入数据
     input                               S_WR_aclk       ,
     input                               S_WR_aresetn    ,
-    input   wire [DATA_WIDTH-1:0]       S_WR_tdata      ,
+    input   wire [WR_DATA_WIDTH-1:0]       S_WR_tdata      ,
     input                               S_WR_tvalid     ,
     input                               S_WR_tlast      ,
     output                              S_WR_tready     ,
@@ -24,7 +24,7 @@ module axi_write #
     input   wire                        m_axi_aclk      ,
     input   wire                        m_axi_aresetn   ,
     output  wire                        m_axi_awid      ,
-    output  wire [ADDR_WIDTH-1 : 0]     m_axi_awaddr    ,
+    output  wire [WR_ADDR_WIDTH-1 : 0]     m_axi_awaddr    ,
     output  wire [7 : 0]                m_axi_awlen     ,
     output  wire [2 : 0]                m_axi_awsize    ,
     output  wire [1 : 0]                m_axi_awburst   ,
@@ -34,8 +34,8 @@ module axi_write #
     output  wire [3 : 0]                m_axi_awqos     ,
     output  wire                        m_axi_awvalid   ,
     input   wire                        m_axi_awready   ,
-    output  wire [DATA_WIDTH-1 : 0]     m_axi_wdata     ,
-    output  wire [DATA_WIDTH/8-1 : 0]   m_axi_wstrb     ,
+    output  wire [WR_DATA_WIDTH-1 : 0]     m_axi_wdata     ,
+    output  wire [WR_DATA_WIDTH/8-1 : 0]   m_axi_wstrb     ,
     output  wire                        m_axi_wlast     ,
     output  wire                        m_axi_wvalid    ,
     input   wire                        m_axi_wready    ,
@@ -46,14 +46,14 @@ module axi_write #
 );
 
     //写数据    
-    reg     [DATA_WIDTH-1:0]    w_data      ;
+    reg     [WR_DATA_WIDTH-1:0]    w_data      ;
     reg                         w_valid     ;
     wire                        w_ready     ;
     reg                         w_last      ;
-    reg     [DATA_WIDTH/8-1:0]  w_strb      ; // 写字节选通信号 64位：1111_1111 (一个字节一位，64bit位8字节，所以是八位)
+    reg     [WR_DATA_WIDTH/8-1:0]  w_strb      ; // 写字节选通信号 64位：1111_1111 (一个字节一位，64bit位8字节，所以是八位)
 
     //写地址    
-    reg     [ADDR_WIDTH-1:0]    aw_addr     ;
+    reg     [WR_ADDR_WIDTH-1:0]    aw_addr     ;
     reg     [7:0]               aw_len      ; // 突发长度类型：传输8个数据，则len=7
     reg     [2:0]               aw_size     ; // 传输中的字节数 011 ：8B
     reg     [1:0]               aw_burst    ; // 突发类型      01 ：递增突发
@@ -79,13 +79,13 @@ module axi_write #
                 WR_STOP         =   3'd4;
 
     //时钟、数据、突发信息传递
-    wire    [DATA_WIDTH-1:0]    i_data      ;
+    wire    [WR_DATA_WIDTH-1:0]    i_data      ;
     wire                        i_valid     ;
     reg                         o_ready     ;
     wire                        i_last      ;
     wire    [2:0]               awsize      ;
     wire    [7:0]               awlen       ;
-    wire    [DATA_WIDTH/8-1:0]  wstrb       ;
+    wire    [WR_DATA_WIDTH/8-1:0]  wstrb       ;
 
     //状态转换 FSM31
     always @(posedge i_clk or negedge i_rst_n) begin
@@ -158,14 +158,14 @@ module axi_write #
 
     //大小端转换
     generate
-        if (FLIP_BYTE == 1) begin
-            if (DATA_WIDTH == 32) begin
+        if (WR_FLIP_BYTE == 1) begin
+            if (WR_DATA_WIDTH == 32) begin
                 // 32-bit 字节翻转
                 assign i_data = {
                     S_WR_tdata[7:0],   S_WR_tdata[15:8],
                     S_WR_tdata[23:16], S_WR_tdata[31:24]
                 };
-            end else if (DATA_WIDTH == 64) begin
+            end else if (WR_DATA_WIDTH == 64) begin
                 // 64-bit 字节翻转
                 assign i_data = {
                     S_WR_tdata[7:0],    S_WR_tdata[15:8],
@@ -173,7 +173,7 @@ module axi_write #
                     S_WR_tdata[39:32],  S_WR_tdata[47:40],
                     S_WR_tdata[55:48],  S_WR_tdata[63:56]
                 };
-            end else if (DATA_WIDTH == 128) begin
+            end else if (WR_DATA_WIDTH == 128) begin
                 // 128-bit 字节翻转
                 assign i_data = {
                     S_WR_tdata[7:0],     S_WR_tdata[15:8], 
@@ -194,7 +194,7 @@ module axi_write #
     //----------------------------------------------------------
     // 位宽计算函数
     // 使用方法
-    // localparam DATA_WIDTH = clogb2(depth); //数据位宽
+    // localparam WR_DATA_WIDTH = clogb2(depth); //数据位宽
     //----------------------------------------------------------
 
     function integer clogb2 (input integer depth);
@@ -221,9 +221,9 @@ module axi_write #
 	assign b_valid          = m_axi_bvalid  ;
 	assign m_axi_bready     = b_ready       ;
 	
-	assign wstrb        = {(DATA_WIDTH/8){1'b1}}    ;
-    assign awsize       = clogb2((DATA_WIDTH/8)-1)  ;
-    assign awlen        = AW_LIN - 1                ;
+	assign wstrb        = {(WR_DATA_WIDTH/8){1'b1}}    ;
+    assign awsize       = clogb2((WR_DATA_WIDTH/8)-1)  ;
+    assign awlen        = WR_LIN - 1                ;
     assign i_clk        = S_WR_aclk                 ;
     assign i_rst_n      = S_WR_aresetn              ;
     assign i_valid      = S_WR_tvalid               ;

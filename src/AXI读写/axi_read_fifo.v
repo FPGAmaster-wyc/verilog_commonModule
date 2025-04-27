@@ -7,10 +7,10 @@
 
 module axi_read #
 (
-    parameter integer AR_FLIP_BYTE   = 0     ,//0：不翻转  1：翻转    //大小端是否翻转
-    parameter integer AR_ADDR_WIDTH	= 32    ,                      //地址位宽
-    parameter integer AR_DATA_WIDTH	= 64    ,//32,64,128           //数据位宽
-    parameter integer AR_LIN	    = 16     //1-256               //突发长度
+    parameter integer RD_FLIP_BYTE   = 0     ,//0：不翻转  1：翻转    //大小端是否翻转
+    parameter integer RD_ADDR_WIDTH	= 32    ,                      //地址位宽
+    parameter integer RD_DATA_WIDTH	= 64    ,//32,64,128           //数据位宽
+    parameter integer RD_LIN	    = 16     //1-256               //突发长度
 )
 (
     //读脉冲信号
@@ -20,13 +20,13 @@ module axi_read #
     input                               M_RD_aresetn    ,
     output  wire                        M_RD_tlast      ,
     output  wire                        M_RD_tvalid     ,
-    output  wire [AR_DATA_WIDTH-1:0]    M_RD_tdata      ,
+    output  wire [RD_DATA_WIDTH-1:0]    M_RD_tdata      ,
     input   wire                        M_RD_tready     , 
     //AXI总线     
     input   wire                        m_axi_aclk      ,
     input   wire                        m_axi_aresetn   ,
     output  wire                        m_axi_arid      ,
-    output  wire [AR_ADDR_WIDTH-1 : 0]  m_axi_araddr    ,
+    output  wire [RD_ADDR_WIDTH-1 : 0]  m_axi_araddr    ,
     output  wire [7 : 0]                m_axi_arlen     ,
     output  wire [2 : 0]                m_axi_arsize    ,
     output  wire [1 : 0]                m_axi_arburst   ,
@@ -37,7 +37,7 @@ module axi_read #
     output  wire                        m_axi_arvalid   ,
     input   wire                        m_axi_arready   ,
     input   wire                        m_axi_rid       ,
-    input   wire [AR_DATA_WIDTH-1 : 0]  m_axi_rdata     ,
+    input   wire [RD_DATA_WIDTH-1 : 0]  m_axi_rdata     ,
     input   wire [1 : 0]                m_axi_rresp     ,
     input   wire                        m_axi_rlast     ,
     input   wire                        m_axi_rvalid    ,
@@ -51,7 +51,7 @@ module axi_read #
     reg     [1:0]               ar_burst    ;
     reg                         ar_valid    ;
     wire                        ar_ready    ;
-    wire    [AR_DATA_WIDTH-1:0] r_data      ;
+    wire    [RD_DATA_WIDTH-1:0] r_data      ;
     wire                        r_resp      ;
     wire                        r_last      ;
     wire                        r_valid     ;
@@ -78,7 +78,7 @@ module axi_read #
     reg                         o_last      ;
     reg                         o_valid     ;
     wire                        i_ready     ;
-    reg     [AR_DATA_WIDTH-1:0]    o_data   ;	
+    reg     [RD_DATA_WIDTH-1:0]    o_data   ;	
 
     //状态转换 FSM31
     always @(posedge i_clk or negedge i_rst_n) begin
@@ -141,14 +141,14 @@ module axi_read #
 	
 	//大小端转换
 	generate
-		if (AR_FLIP_BYTE == 1) begin
-			if (AR_DATA_WIDTH == 32) begin
+		if (RD_FLIP_BYTE == 1) begin
+			if (RD_DATA_WIDTH == 32) begin
 				// 32-bit 字节翻转
 				assign M_RD_tdata = {
 					o_data[7:0],   o_data[15:8],
 					o_data[23:16], o_data[31:24]
 				};
-			end else if (AR_DATA_WIDTH == 64) begin
+			end else if (RD_DATA_WIDTH == 64) begin
 				// 64-bit 字节翻转
 				assign M_RD_tdata = {
 					o_data[7:0],    o_data[15:8],
@@ -156,7 +156,7 @@ module axi_read #
 					o_data[39:32],  o_data[47:40],
 					o_data[55:48],  o_data[63:56]
 				};
-			end else if (AR_DATA_WIDTH == 128) begin
+			end else if (RD_DATA_WIDTH == 128) begin
 				// 128-bit 字节翻转
 				assign M_RD_tdata = {
 					o_data[7:0],     o_data[15:8], 
@@ -177,7 +177,7 @@ module axi_read #
     //----------------------------------------------------------
     // 位宽计算函数
     // 使用方法
-    // localparam AR_DATA_WIDTH = clogb2(depth); //数据位宽
+    // localparam RD_DATA_WIDTH = clogb2(depth); //数据位宽
     //----------------------------------------------------------
 
     function integer clogb2 (input integer depth);
@@ -202,8 +202,8 @@ module axi_read #
 	
 	assign i_clk        = M_RD_aclk                 ;
     assign i_rst_n      = M_RD_aresetn              ;
-    assign arsize       = clogb2((AR_DATA_WIDTH/8)-1);
-    assign arlen        = AR_LIN - 1                ;
+    assign arsize       = clogb2((RD_DATA_WIDTH/8)-1);
+    assign arlen        = RD_LIN - 1                ;
     assign M_RD_tlast   = o_last                    ;
     assign M_RD_tvalid  = o_valid                   ;
     assign i_ready      = M_RD_tready               ;
