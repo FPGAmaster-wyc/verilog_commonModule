@@ -3,7 +3,6 @@
 // Author:	FPGA_master <1975670198@qq.com>
 // Description:
 //	AXI Reading Model.
-//
 ////////////////////////////////////////////////////////////////////////////////
 
 module axi_read #
@@ -79,33 +78,7 @@ module axi_read #
     reg                         o_last      ;
     reg                         o_valid     ;
     wire                        i_ready     ;
-    reg     [AR_DATA_WIDTH-1:0]    o_data      ;
-
-    assign i_clk        = M_RD_aclk                 ;
-    assign i_rst_n      = M_RD_aresetn              ;
-    assign arsize       = clogb2((AR_DATA_WIDTH/8)-1);
-    assign arlen        = AR_LIN - 1                ;
-    assign M_RD_tlast   = o_last                    ;
-    assign M_RD_tvalid  = o_valid                   ;
-    assign i_ready      = M_RD_tready               ;
-	
-	//大小端转换
-	generate
-		if (AR_FLIP_BYTE == 1) begin
-			assign M_RD_tdata = {
-				o_data[7:0],     o_data[15:8], 
-				o_data[23:16],   o_data[31:24],
-				o_data[39:32],   o_data[47:40],
-				o_data[55:48],   o_data[63:56],
-				o_data[71:64],   o_data[79:72],
-				o_data[87:80],   o_data[95:88],
-				o_data[103:96],  o_data[111:104],
-				o_data[119:112], o_data[127:120]
-			};
-		end else begin
-			assign M_RD_tdata = o_data;  // 不翻转
-		end
-	endgenerate
+    reg     [AR_DATA_WIDTH-1:0]    o_data   ;	
 
     //状态转换 FSM31
     always @(posedge i_clk or negedge i_rst_n) begin
@@ -116,7 +89,7 @@ module axi_read #
    //状态跳转条件 FSM32
     always @(*) begin : R_FMS2        
         case (c_state)
-            WAIT_RD:   n_state = (H2C_WR_NEXT != H2C_RD_NEXT) ? RD_ADDR : WAIT_RD;  // 检测到写完成则跳转
+            WAIT_RD:   n_state = (i_wr_done) ? RD_ADDR : WAIT_RD;  // 检测到写完成则跳转
             RD_ADDR:   n_state = ar_ready ? RD_DATA : RD_ADDR;                      // 地址准备好则跳转
             RD_DATA:   n_state = (num_rd_cnt == ar_len-1 && o_valid && i_ready) ? RD_LAST : RD_DATA;  // 读完最后一笔数据则跳转
             RD_LAST:   n_state = (o_valid && i_ready) ? RD_STOP : RD_LAST;          // 最后一笔传输完成则跳转
@@ -129,7 +102,7 @@ module axi_read #
     always @(posedge i_clk or negedge i_rst_n) begin : R_FMS3
         if (~i_rst_n) begin
             {ar_addr, ar_len, ar_burst, ar_size, ar_valid, o_last} <= 0;
-            rd_addr_buff <= `RD_START_ADDR;
+            rd_addr_buff <= 0;
         end
         else case (n_state)
             WAIT_RD: ar_valid <= 0;
@@ -148,7 +121,7 @@ module axi_read #
     
             RD_STOP: begin
                 o_last <= 0;
-                rd_addr_buff <= (rd_addr_buff >= `RD_END_ADDR - 4096) ? 0 : rd_addr_buff + 4096;
+                rd_addr_buff <= (rd_addr_buff >= 32'h10000 - 4096) ? 0 : rd_addr_buff + 4096;
             end
         endcase
     end
@@ -165,6 +138,41 @@ module axi_read #
         if (~i_rst_n)    num_rd_cnt <= 0;
         else             num_rd_cnt <= o_last ? 0 : (r_valid && i_ready) ? num_rd_cnt + 1 : num_rd_cnt;
     end
+	
+	//大小端转换
+	generate
+		if (AR_FLIP_BYTE == 1) begin
+			if (AR_DATA_WIDTH == 32) begin
+				// 32-bit 字节翻转
+				assign M_RD_tdata = {
+					o_data[7:0],   o_data[15:8],
+					o_data[23:16], o_data[31:24]
+				};
+			end else if (AR_DATA_WIDTH == 64) begin
+				// 64-bit 字节翻转
+				assign M_RD_tdata = {
+					o_data[7:0],    o_data[15:8],
+					o_data[23:16],  o_data[31:24],
+					o_data[39:32],  o_data[47:40],
+					o_data[55:48],  o_data[63:56]
+				};
+			end else if (AR_DATA_WIDTH == 128) begin
+				// 128-bit 字节翻转
+				assign M_RD_tdata = {
+					o_data[7:0],     o_data[15:8], 
+					o_data[23:16],   o_data[31:24],
+					o_data[39:32],   o_data[47:40],
+					o_data[55:48],   o_data[63:56],
+					o_data[71:64],   o_data[79:72],
+					o_data[87:80],   o_data[95:88],
+					o_data[103:96],  o_data[111:104],
+					o_data[119:112], o_data[127:120]
+				};
+			end
+		end else begin
+			assign M_RD_tdata = o_data;  // 不翻转
+		end
+	endgenerate
 
     //----------------------------------------------------------
     // 位宽计算函数
@@ -191,6 +199,14 @@ module axi_read #
     assign r_resp           = m_axi_rresp   ;
     assign r_valid          = m_axi_rvalid  ;
     assign m_axi_rready     = r_ready       ;
+	
+	assign i_clk        = M_RD_aclk                 ;
+    assign i_rst_n      = M_RD_aresetn              ;
+    assign arsize       = clogb2((AR_DATA_WIDTH/8)-1);
+    assign arlen        = AR_LIN - 1                ;
+    assign M_RD_tlast   = o_last                    ;
+    assign M_RD_tvalid  = o_valid                   ;
+    assign i_ready      = M_RD_tready               ;
   
 
 	assign m_axi_arid       = 0;
