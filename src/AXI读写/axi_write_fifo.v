@@ -46,14 +46,14 @@ module axi_write #
 );
 
     //写数据    
-    reg     [WR_DATA_WIDTH-1:0]    w_data      ;
+    reg     [WR_DATA_WIDTH-1:0] w_data 		;
     reg                         w_valid     ;
     wire                        w_ready     ;
     reg                         w_last      ;
-    reg     [WR_DATA_WIDTH/8-1:0]  w_strb      ; // 写字节选通信号 64位：1111_1111 (一个字节一位，64bit位8字节，所以是八位)
+    reg     [WR_DATA_WIDTH/8-1:0]  w_strb	; // 写字节选通信号 64位：1111_1111 (一个字节一位，64bit位8字节，所以是八位)
 
     //写地址    
-    reg     [WR_ADDR_WIDTH-1:0]    aw_addr     ;
+    reg     [WR_ADDR_WIDTH-1:0]    aw_addr	;
     reg     [7:0]               aw_len      ; // 突发长度类型：传输8个数据，则len=7
     reg     [2:0]               aw_size     ; // 传输中的字节数 011 ：8B
     reg     [1:0]               aw_burst    ; // 突发类型      01 ：递增突发
@@ -79,13 +79,15 @@ module axi_write #
                 WR_STOP         =   3'd4;
 
     //时钟、数据、突发信息传递
-    wire    [WR_DATA_WIDTH-1:0]    i_data      ;
+	wire                        i_clk       ;
+    wire                        i_rst_n     ;
+    wire    [WR_DATA_WIDTH-1:0] i_data      ;
     wire                        i_valid     ;
     reg                         o_ready     ;
     wire                        i_last      ;
     wire    [2:0]               awsize      ;
     wire    [7:0]               awlen       ;
-    wire    [WR_DATA_WIDTH/8-1:0]  wstrb       ;
+    wire    [WR_DATA_WIDTH/8-1:0]  wstrb 	;
 
     //状态转换 FSM31
     always @(posedge i_clk or negedge i_rst_n) begin
