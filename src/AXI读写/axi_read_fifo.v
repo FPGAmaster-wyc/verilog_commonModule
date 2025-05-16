@@ -59,7 +59,7 @@ module axi_read #
 
     //读地址缓存和计数
     reg     [31:0]              rd_addr_buff;
-    reg     [31:0]              num_rd_cnt  ;
+    reg     [7:0]               num_rd_cnt  ;
 
     //状态机
     reg     [2:0]               c_state     ;

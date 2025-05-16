@@ -66,7 +66,7 @@ module axi_write #
     reg                         b_ready     ;
 
     //计数器
-    reg     [11:0]  num_wr_cnt  ;       // 一次突发传输的数据计数
+    reg     [7:0]   num_wr_cnt  ;       // 一次突发传输的数据计数
     reg     [31:0]  aw_addr_cnt ;       // 写地址计数
 
     //状态机
