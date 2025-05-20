@@ -87,29 +87,6 @@ module axi_lite_regfile #(
 				H2C_BUF_START	= 32'h1000_0000,	//FPGA2PC FPGA读DDR缓冲区起始地址
 				H2C_BUF_END     = 32'h2000_0000,	//FPGA2PC FPGA读DDR缓冲区结束地址
 				H2C_BUF_SIZE	= 32'd2048 	   ;	//FPGA2PC FPGA读DDR缓冲区的每一帧大小  单位：字节  ，但是并不是帧大小
-				
-	wire					wr_ready = 1;
-	wire					rd_ready = 1;
-
-	reg 					awready_r	;
-	reg 					wready_r	;
-	reg	[1:0] 				bresp_r		;
-	reg 					bvalid_r	;
-	reg 					arready_r	;
-	reg [31:0] 				rdata_r		;
-	reg 					rvalid_r	;
-	reg [1:0] 				rresp_r		;
-
-	reg [ADDR_BITS-1:0] 	write_addr	;
-	reg [31:0] 				write_data	;
-	reg 					write_enable;
-	reg [3:0] 				write_be	;
-	wire 					write_done	;
-
-	reg [ADDR_BITS-1:0] 	read_addr	;
-	wire [31:0] 			read_data	;
-	reg 					read_enable	;
-	wire 					read_done	;
 
 	reg	[31:0] 				rd_din		;
 	wire [31:0] 			wr_addr		;
@@ -201,6 +178,29 @@ module axi_lite_regfile #(
 // AXI stage
 //% Write Stage
 //% Address acknowledge
+
+	wire					wr_ready = 1;
+	wire					rd_ready = 1;
+
+	reg 					awready_r	;
+	reg 					wready_r	;
+	reg	[1:0] 				bresp_r		;
+	reg 					bvalid_r	;
+	reg 					arready_r	;
+	reg [31:0] 				rdata_r		;
+	reg 					rvalid_r	;
+	reg [1:0] 				rresp_r		;
+
+	reg [ADDR_BITS-1:0] 	write_addr	;
+	reg [31:0] 				write_data	;
+	reg 					write_enable;
+	reg [3:0] 				write_be	;
+	wire 					write_done	;
+
+	reg [ADDR_BITS-1:0] 	read_addr	;
+	wire [31:0] 			read_data	;
+	reg 					read_enable	;
+	wire 					read_done	;
 	always @(posedge s_axi_aclk,negedge s_axi_aresetn)
 	begin
 		if(!s_axi_aresetn) begin
