@@ -68,6 +68,9 @@ module axi_lite_regfile #(
 	output						s_axi_rvalid	,
 	input						s_axi_rready	,
 
+	//soft reset
+	output 						soft_reset		,	//软件复位
+
 	//PS PL interface
 	//write
     input	[31:0]  			C2H_WR_NEXT  	,	//FPGA2PC FPGA下一次要写入的帧的起始地址
@@ -88,7 +91,7 @@ module axi_lite_regfile #(
 				H2C_BUF_END     = 32'h2000_0000,	//FPGA2PC FPGA读DDR缓冲区结束地址
 				H2C_BUF_SIZE	= 32'd2048 	   ;	//FPGA2PC FPGA读DDR缓冲区的每一帧大小  单位：字节  ，但是并不是帧大小
 
-	reg	[31:0] 				rd_din		;
+	reg	 [31:0] 			rd_din		;
 	wire [31:0] 			wr_addr		;
 	wire [31:0] 			rd_addr		;
 	wire [31:0] 			wr_dout		;
@@ -102,10 +105,8 @@ module axi_lite_regfile #(
 	reg [31:0] reg_ctrl_0;	
 	reg [31:0] reg_ctrl_1;
 	reg [31:0] reg_ctrl_2;
+	reg [31:0] reg_softreset;
 
-	// write register file
-	reg [31:0] reg_ctrl_0_w;
-	
 	//read message
 	assign C2H_RD_NEXT = reg_ctrl_0;
 	assign H2C_WR_NEXT = reg_ctrl_1;
@@ -113,40 +114,52 @@ module axi_lite_regfile #(
 
 	// PS to PL write machine   （读写地址不能覆盖，写进去的数据，在读的地方写一下，要不然会清零）
 	always @(posedge s_axi_aclk, negedge s_axi_aresetn) begin
-    if(!s_axi_aresetn) 
-        begin
-            reg_ctrl_0 <= 'b0;
-            reg_ctrl_1 <= 'b0;
-			reg_ctrl_2 <= 'b0;
-        end
-    else if(wr_en) 
-        begin
-            case(wr_addr)            
-                // C2H_RD_NEXT
-                32'h4C:  begin  
-                    if(wr_be[0]) reg_ctrl_0[7:0] <= wr_dout[7:0];
-                    if(wr_be[1]) reg_ctrl_0[15:8] <= wr_dout[15:8];
-                    if(wr_be[2]) reg_ctrl_0[23:16] <= wr_dout[23:16];
-                    if(wr_be[3]) reg_ctrl_0[31:24] <= wr_dout[31:24];
-                end
-                //H2C_WR_NEXT
-                32'h90: begin
-                    if(wr_be[0]) reg_ctrl_1[7:0] <= wr_dout[7:0];
-                    if(wr_be[1]) reg_ctrl_1[15:8] <= wr_dout[15:8];
-                    if(wr_be[2]) reg_ctrl_1[23:16] <= wr_dout[23:16];
-                    if(wr_be[3]) reg_ctrl_1[31:24] <= wr_dout[31:24];
-                end
-                //H2C_FRM_SIZE
-				32'h94: begin
-                    if(wr_be[0]) reg_ctrl_2[7:0] <= wr_dout[7:0];
-                    if(wr_be[1]) reg_ctrl_2[15:8] <= wr_dout[15:8];
-                    if(wr_be[2]) reg_ctrl_2[23:16] <= wr_dout[23:16];
-                    if(wr_be[3]) reg_ctrl_2[31:24] <= wr_dout[31:24];
-                end
-				
-				default :	;
-            endcase
-        end
+		if(!s_axi_aresetn) 
+			begin
+				reg_ctrl_0 <= 'b0;
+				reg_ctrl_1 <= 'b0;
+				reg_ctrl_2 <= 'b0;
+			end
+		else if(wr_en) 
+			begin
+				case(wr_addr)  
+					// softreset
+					32'h10:  begin  
+						if(wr_be[0]) reg_softreset[7:0] <= wr_dout[7:0];
+						if(wr_be[1]) reg_softreset[15:8] <= wr_dout[15:8];
+						if(wr_be[2]) reg_softreset[23:16] <= wr_dout[23:16];
+						if(wr_be[3]) reg_softreset[31:24] <= wr_dout[31:24];
+					end
+					// C2H_RD_NEXT
+					32'h4C:  begin  
+						if(wr_be[0]) reg_ctrl_0[7:0] <= wr_dout[7:0];
+						if(wr_be[1]) reg_ctrl_0[15:8] <= wr_dout[15:8];
+						if(wr_be[2]) reg_ctrl_0[23:16] <= wr_dout[23:16];
+						if(wr_be[3]) reg_ctrl_0[31:24] <= wr_dout[31:24];
+					end
+					//H2C_WR_NEXT
+					32'h90: begin
+						if(wr_be[0]) reg_ctrl_1[7:0] <= wr_dout[7:0];
+						if(wr_be[1]) reg_ctrl_1[15:8] <= wr_dout[15:8];
+						if(wr_be[2]) reg_ctrl_1[23:16] <= wr_dout[23:16];
+						if(wr_be[3]) reg_ctrl_1[31:24] <= wr_dout[31:24];
+					end
+					//H2C_FRM_SIZE
+					32'h94: begin
+						if(wr_be[0]) reg_ctrl_2[7:0] <= wr_dout[7:0];
+						if(wr_be[1]) reg_ctrl_2[15:8] <= wr_dout[15:8];
+						if(wr_be[2]) reg_ctrl_2[23:16] <= wr_dout[23:16];
+						if(wr_be[3]) reg_ctrl_2[31:24] <= wr_dout[31:24];
+					end
+					
+					default :	;
+				endcase
+			end
+		else 
+			begin
+				// self-clean registers 自主清零，比如：软件复位，只需要一个脉冲即可，就需要把这个信号拉高后，FPGA给他清零。
+				reg_softreset[0] <= 1'b0; // soft-reset
+			end
 	end
 
 	// PL to PS read machine
@@ -171,8 +184,6 @@ module axi_lite_regfile #(
 			default: rd_din = 'bx;
 		endcase
 	end
-
-
 
 ////////////////////////////////////////////////////////////////////////////////
 // AXI stage
