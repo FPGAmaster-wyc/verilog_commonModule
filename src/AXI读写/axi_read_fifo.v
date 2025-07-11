@@ -90,7 +90,7 @@ module axi_read #
     always @(*) begin : R_FMS2        
         case (c_state)
             WAIT_RD:   n_state = (i_wr_done) ? RD_ADDR : WAIT_RD;  // 检测到写完成则跳转
-            RD_ADDR:   n_state = ar_ready ? RD_DATA : RD_ADDR;                      // 地址准备好则跳转
+            RD_ADDR:   n_state = (ar_valid && ar_ready) ? RD_DATA : RD_ADDR;                      // 地址准备好则跳转
             RD_DATA:   n_state = (num_rd_cnt == ar_len-1 && o_valid && i_ready) ? RD_LAST : RD_DATA;  // 读完最后一笔数据则跳转
             RD_LAST:   n_state = (o_valid && i_ready) ? RD_STOP : RD_LAST;          // 最后一笔传输完成则跳转
             RD_STOP:   n_state = WAIT_RD;                                          // 自动回到等待状态
@@ -104,9 +104,7 @@ module axi_read #
             {ar_addr, ar_len, ar_burst, ar_size, ar_valid, o_last} <= 0;
             rd_addr_buff <= 0;
         end
-        else case (n_state)
-            WAIT_RD: ar_valid <= 0;
-            
+        else case (n_state)            
             RD_ADDR: begin
                 ar_valid <= 1;
                 ar_addr  <= rd_addr_buff;
@@ -136,7 +134,7 @@ module axi_read #
     //读突发数据计数
     always @(posedge i_clk or negedge i_rst_n) begin
         if (~i_rst_n)    num_rd_cnt <= 0;
-        else             num_rd_cnt <= o_last ? 0 : (r_valid && i_ready) ? num_rd_cnt + 1 : num_rd_cnt;
+        else             num_rd_cnt <= o_last ? 0 : (r_valid && r_ready) ? num_rd_cnt + 1 : num_rd_cnt;
     end
 	
 	//大小端转换
