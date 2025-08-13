@@ -72,11 +72,11 @@ module axi_write #
     //状态机
     reg     [2:0]   c_state     ;
     reg     [2:0]   n_state     ;
-    localparam  WR_IDLE         =   3'd0,
-                WR_ADDR         =   3'd1,
-                WR_DATA         =   3'd2,
-                WR_LAST         =   3'd3,
-                WR_STOP         =   3'd4;
+    localparam  WR_IDLE_0         =   3'd0,
+                WR_ADDR_1         =   3'd1,
+                WR_DATA_2         =   3'd2,
+                WR_LAST_3         =   3'd3,
+                WR_STOP_4         =   3'd4;
 
     //时钟、数据、突发信息传递
 	wire                        i_clk       ;
@@ -91,18 +91,18 @@ module axi_write #
 
     //状态转换 FSM31
     always @(posedge i_clk or negedge i_rst_n) begin
-        if (~i_rst_n) c_state <= WR_IDLE;  // 异步复位
+        if (~i_rst_n) c_state <= WR_IDLE_0;  // 异步复位
         else          c_state <= n_state;   // 状态更新
     end
    
     // 写操作状态机组合逻辑 FSM32
     always @(*) begin : W_FMS2
         case (c_state)
-            WR_IDLE:  n_state = i_valid ? WR_ADDR : WR_IDLE;  // 有数据则进入地址发送状态            
-            WR_ADDR:  n_state = aw_ready ? WR_DATA : WR_ADDR; // 地址准备好则进入数据传输            
-            WR_DATA:  n_state = (num_wr_cnt == aw_len-1 && w_ready && w_valid) ? WR_LAST : WR_DATA;  // 最后一笔数据时进入结束状态                     
-            WR_LAST:  n_state = (w_ready && w_valid && w_last) ? WR_STOP : WR_LAST;  // 完成最后传输后进入停止状态            
-            WR_STOP:  n_state = WR_IDLE;  // 传输完全结束后回到初始状态           
+            WR_IDLE_0:  n_state = i_valid ? WR_ADDR_1 : WR_IDLE_0;  // 有数据则进入地址发送状态            
+            WR_ADDR_1: n_state = (aw_len == 0 && aw_ready && aw_valid) ? WR_LAST_3 : ((aw_ready && aw_valid) ? WR_DATA_2 : WR_ADDR_1); // 地址准备好则进入数据传输            
+            WR_DATA_2: n_state = (num_wr_cnt == aw_len-1 && w_ready && w_valid) ? WR_LAST_3 : WR_DATA_2; // 最后一笔数据时进入结束状态                     
+            WR_LAST_3:  n_state = (w_ready && w_valid && w_last) ? WR_STOP_4 : WR_LAST_3;  // 完成最后传输后进入停止状态            
+            WR_STOP_4:  n_state = WR_IDLE_0;  // 传输完全结束后回到初始状态           
             default:  n_state = 'bx;  // 异常情况处理
         endcase
     end
@@ -118,7 +118,7 @@ module axi_write #
             aw_addr_cnt <= 32'h0; 
         end
         else case (n_state)            
-            WR_ADDR : begin  // 地址发送状态
+            WR_ADDR_1 : begin  // 地址发送状态
                 w_strb   <= wstrb;      // 设置写数据选通信号
                 aw_size  <= awsize;     // 设置传输数据大小
                 aw_burst <= 2'd1;       // 固定为增量突发模式
@@ -127,9 +127,12 @@ module axi_write #
                 aw_addr  <= aw_addr_cnt; // 输出当前地址
             end
             
-            WR_DATA :   aw_valid <= 0;          // 地址通道握手完成           
-            WR_LAST :   w_last <= 1;            // 标记最后一笔数据              
-            WR_STOP : begin // 传输结束状态
+            WR_DATA_2 : aw_valid <= 0;          // 地址通道握手完成           
+            WR_LAST_3 : begin               // 标记最后一笔数据 
+                w_last <= 1;                         
+                aw_valid <= 0;
+            end 
+            WR_STOP_4 : begin // 传输结束状态
                 w_last  <= 0;           // 清除最后数据标记
                 // 地址计数器循环处理
                 aw_addr_cnt <= (aw_addr_cnt >= 32'h10000-4096) ? 
@@ -147,9 +150,9 @@ module axi_write #
 
     //data valid ready信号处理
     always @(*) begin
-        o_ready = (c_state == WR_DATA || c_state == WR_LAST) ? w_ready : 0;
-        w_data  = (c_state == WR_DATA || c_state == WR_LAST) ? i_data  : 0;
-        w_valid = (c_state == WR_DATA || c_state == WR_LAST) ? i_valid : 0;
+        o_ready = (c_state == WR_DATA_2 || c_state == WR_LAST_3) ? w_ready : 0;
+        w_data  = (c_state == WR_DATA_2 || c_state == WR_LAST_3) ? i_data  : 0;
+        w_valid = (c_state == WR_DATA_2 || c_state == WR_LAST_3) ? i_valid : 0;
     end
 
     //写响应处理

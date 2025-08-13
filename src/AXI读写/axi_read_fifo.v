@@ -64,11 +64,11 @@ module axi_read #
     //状态机
     reg     [2:0]               c_state     ;
     reg     [2:0]               n_state     ;
-    localparam  WAIT_RD     = 0,           
-                RD_ADDR     = 1,
-                RD_DATA     = 2,
-                RD_LAST     = 3,
-                RD_STOP     = 4;
+    localparam  RD_IDLE_0     = 0,           
+                RD_ADDR_1     = 1,
+                RD_DATA_2     = 2,
+                RD_LAST_3     = 3,
+                RD_STOP_4     = 4;
 
     //时钟、数据、突发信息传递
     wire                        i_clk       ;
@@ -82,18 +82,18 @@ module axi_read #
 
     //状态转换 FSM31
     always @(posedge i_clk or negedge i_rst_n) begin
-        if (~i_rst_n) c_state <= WAIT_RD;  // 异步复位
+        if (~i_rst_n) c_state <= RD_IDLE_0;  // 异步复位
         else          c_state <= n_state;   // 状态更新
     end
 
    //状态跳转条件 FSM32
     always @(*) begin : R_FMS2        
         case (c_state)
-            WAIT_RD:   n_state = (i_wr_done) ? RD_ADDR : WAIT_RD;  // 检测到写完成则跳转
-            RD_ADDR:   n_state = (ar_valid && ar_ready) ? RD_DATA : RD_ADDR;                      // 地址准备好则跳转
-            RD_DATA:   n_state = (num_rd_cnt == ar_len-1 && o_valid && i_ready) ? RD_LAST : RD_DATA;  // 读完最后一笔数据则跳转
-            RD_LAST:   n_state = (o_valid && i_ready) ? RD_STOP : RD_LAST;          // 最后一笔传输完成则跳转
-            RD_STOP:   n_state = WAIT_RD;                                          // 自动回到等待状态
+            RD_IDLE_0:   n_state = (i_wr_done) ? RD_ADDR_1 : RD_IDLE_0;  // 检测到写完成则跳转
+            RD_ADDR_1:   n_state = (ar_len == 0 && ar_ready && ar_valid) ? RD_LAST_3 : ((ar_valid && ar_ready) ? RD_DATA_2 : RD_ADDR_1); // 地址准备好则跳转
+            RD_DATA_2:   n_state = (num_rd_cnt == ar_len-1 && r_valid && r_ready) ? RD_LAST_3 : RD_DATA_2;  // 读完最后一笔数据则跳转
+            RD_LAST_3:   n_state = (r_valid && r_ready) ? RD_STOP_4 : RD_LAST_3;          // 最后一笔传输完成则跳转
+            RD_STOP_4:   n_state = RD_IDLE_0;                                          // 自动回到等待状态
             default:   n_state = 0;                                                 // 异常情况复位
         endcase
     end
@@ -105,7 +105,7 @@ module axi_read #
             rd_addr_buff <= 0;
         end
         else case (n_state)            
-            RD_ADDR: begin
+            RD_ADDR_1: begin
                 ar_valid <= 1;
                 ar_addr  <= rd_addr_buff;
                 ar_len   <= arlen;
@@ -113,11 +113,14 @@ module axi_read #
                 ar_size  <= arsize;
             end
     
-            RD_DATA: ar_valid <= 0;
+            RD_DATA_2: ar_valid <= 0;
     
-            RD_LAST: o_last <= 1;
+            RD_LAST_3: begin
+                o_last <= 1;
+                ar_valid <= 0;
+            end
     
-            RD_STOP: begin
+            RD_STOP_4: begin
                 o_last <= 0;
                 rd_addr_buff <= (rd_addr_buff >= 32'h10000 - 4096) ? 0 : rd_addr_buff + 4096;
             end
@@ -126,9 +129,9 @@ module axi_read #
  
     // data valid ready 处理    
     always @(*) begin
-        r_ready = (c_state == RD_DATA || c_state == RD_LAST) ? i_ready : 0;
-        o_data  = (c_state == RD_DATA || c_state == RD_LAST) ? r_data  : 0;
-        o_valid = (c_state == RD_DATA || c_state == RD_LAST) ? r_valid : 0;
+        r_ready = (c_state == RD_DATA_2 || c_state == RD_LAST_3) ? i_ready : 0;
+        o_data  = (c_state == RD_DATA_2 || c_state == RD_LAST_3) ? r_data  : 0;
+        o_valid = (c_state == RD_DATA_2 || c_state == RD_LAST_3) ? r_valid : 0;
     end
 
     //读突发数据计数
