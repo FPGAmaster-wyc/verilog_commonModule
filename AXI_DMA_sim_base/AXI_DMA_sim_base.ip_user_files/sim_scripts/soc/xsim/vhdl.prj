@@ -1,5 +1,0 @@
-vhdl xil_defaultlib  \
-"../../../bd/soc/ip/soc_axi_bram_ctrl_0_0/sim/soc_axi_bram_ctrl_0_0.vhd" \
-"../../../bd/soc/ip/soc_smartconnect_0_0/bd_0/ip/ip_1/sim/bd_9a87_psr_aclk_0.vhd" \
-
-nosort

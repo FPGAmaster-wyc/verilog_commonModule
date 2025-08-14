@@ -23,12 +23,14 @@
 module tb_top;
 
     reg clk_100M;
+    reg key;
     reg rst_n;
     reg i_wr_done;
 
     soc_wrapper DUT
        (.clk_100M(clk_100M),
        .i_wr_done(i_wr_done),
+       .key(key),
         .rst_n(rst_n)
         );
         
@@ -38,9 +40,23 @@ module tb_top;
     clk_100M = 1;
     rst_n = 0;
     i_wr_done = 0;
+    key = 1;
     
     #201
     rst_n = 1;
+    
+    #200
+    
+    #200
+    key = 0;
+    #200
+    key = 1;
+    
+    
+    #1288
+    i_wr_done = 1;
+    @ (posedge clk_100M)
+    i_wr_done = 0;
     
     #1288
     i_wr_done = 1;
