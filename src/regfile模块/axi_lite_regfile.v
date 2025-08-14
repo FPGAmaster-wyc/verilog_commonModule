@@ -96,6 +96,7 @@ module axi_lite_regfile #(
 	wire [31:0] 			rd_addr		;
 	wire [31:0] 			wr_dout		;
 	wire [3:0] 				wr_be		;
+	wire   					wr_en		;
 
 
 ////////////////////////////////////////////////////////////////////////////////
