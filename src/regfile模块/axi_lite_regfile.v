@@ -194,6 +194,7 @@ module axi_lite_regfile #(
 	wire					wr_ready = 1;
 	wire					rd_ready = 1;
 
+	wire   					rd_en		;
 	reg 					awready_r	;
 	reg 					wready_r	;
 	reg	[1:0] 				bresp_r		;
