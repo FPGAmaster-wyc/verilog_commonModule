@@ -87,15 +87,15 @@ proc run_build {} {
     upgrade_ip [get_ips]
 
     # Synthesis
-    launch_runs -jobs 12 [current_run -synthesis]
+    launch_runs -jobs 6 [current_run -synthesis]
     wait_on_run [current_run -synthesis]
 
     # Implementation
-    launch_runs -jobs 12 [current_run -implementation] -to_step write_bitstream
+    launch_runs -jobs 6 [current_run -implementation] -to_step write_bitstream
     wait_on_run [current_run -implementation]
 }
 
-# 导出 xsa 文件  
+# 导出 & 打包   
 proc run_dist {} {
     global projName
     global top
@@ -117,11 +117,12 @@ proc run_dist {} {
     # Export without bitstream
     #file mkdir $sdk_path
     #write_hwdef -force -file $hdf_fn
-    # Post 2019.2
+	
+    # Post 2019.2 导出.xsa文件
     set xsa_fn [format "%s.xsa" $projName]
-    write_hw_platform -fixed -force -file $xsa_fn
+	write_hw_platform -fixed -force  -include_bit -file $xsa_fn
 
-    # Archieve project
+    # Archieve project 将工程压缩成一个干净的.zip
     set timestamp [clock format [clock seconds] -format "%Y%m%d_%H%M%S"]
     archive_project -force [format "%s_%s.xpr" [current_project] $timestamp]
 }
