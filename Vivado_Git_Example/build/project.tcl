@@ -1,5 +1,5 @@
 # Product Version: Vivado v2019.2 (64-bit)
-# 使用教程：在对应的vivado下面，Tcl console界面，cd进入build.Tcl目录，然后table，然后source ./build.tcl即可
+
 set projName Aurora_xdma_ddr	
 set part xc7z100ffg900-2	
 set top top	
@@ -71,12 +71,27 @@ proc run_build {} {
     upgrade_ip [get_ips]
 
     # Synthesis
-    launch_runs -jobs 12 [current_run -synthesis]
+    launch_runs -jobs 6 [current_run -synthesis]
     wait_on_run [current_run -synthesis]
 
     # Implementation
-    launch_runs -jobs 12 [current_run -implementation] -to_step write_bitstream
+    launch_runs -jobs 6 [current_run -implementation] -to_step write_bitstream
     wait_on_run [current_run -implementation]
+}
+
+# 导出 & 打包   
+proc run_dist {} {
+    global projName
+    global top
+	
+    # Post 2019.2 导出.xsa文件
+    #set xsa_fn [format "%s.xsa" $projName]
+	write_hw_platform -fixed -force  -include_bit -file $xsa_fn
+
+    # Archieve project 将工程压缩成一个干净的.zip
+    set timestamp [clock format [clock seconds] -format "%Y%m%d_%H%M%S"]
+    archive_project -force [format "%s_%s.xpr" [current_project] $timestamp]
+	
 }
 
 
